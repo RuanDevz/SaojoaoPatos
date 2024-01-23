@@ -1,0 +1,21 @@
+.avaliar{
+    display: flex;
+    align-items: center;
+}
+
+.avaliar span{
+    margin-top: 15px;
+}
+img{
+    width: 140px;
+    margin-top: 50px;
+    transition: transform .3s ease-in-out;
+}
+span{
+    color: #fff;
+    font-size: 1.3em;
+}
+
+img:hover{
+    transform: scale(1.3);
+}

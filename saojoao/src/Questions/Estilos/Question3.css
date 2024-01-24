@@ -1,0 +1,45 @@
+img{
+    width: 135px;
+    transition: transform .3s ease-in-out;
+}
+img#muitobom{
+    position: relative;
+    right: 10px;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.container-bonecos{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+
+.container-bonecos p {
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 210px;
+}
+
+.card{
+    transition: transform .3s ease-in-out;
+}
+
+.card.selected {
+    transform: scale(1.1) translateX(5px); /* Adjust the translateX value as needed */
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+
+
+.container_button{
+    position: relative;
+    top: 100px;
+}

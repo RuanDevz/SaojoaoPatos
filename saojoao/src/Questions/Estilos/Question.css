@@ -33,12 +33,6 @@ h1{
     gap: 10px;
 }
 
-/* Adicione esta classe para destacar a seleção */
-.selected {
-    border: 2px solid #fff; /* Adicione uma borda branca para destacar */
-  }
-  
-  /* Suas regras de estilização para as respectivas divs */
   div#red {
     background-color: red;
   }

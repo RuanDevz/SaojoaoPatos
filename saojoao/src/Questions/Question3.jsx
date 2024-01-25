@@ -6,10 +6,12 @@ import Indiferente from '../assets/bonecos/Indiferente.png';
 import Bom from '../assets/bonecos/Bom.png';
 import Muitobom from '../assets/bonecos/Muitobom.png';
 import './Estilos/Question3.css';
-import Button from '../Components/Form/Button/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const navigate = useNavigate();
 
   const handleCardClick = (index) => {
     if (selectedCard === index) {
@@ -40,7 +42,7 @@ const Question3 = () => {
         ))}
       </div>
       <div className='container_button'>
-        <Button  Children='Próxima Pergunta'/>
+        <button onClick={() => navigate("/question4")}>Próxima Pergunta</button>
       </div>
     </div>
   );

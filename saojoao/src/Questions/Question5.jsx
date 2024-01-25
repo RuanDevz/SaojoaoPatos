@@ -1,11 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 import Input from '../Components/Form/Input/Input'
-import Button from '../Components/Form/Button/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Question5 = () => {
 
   const [input, setInput] = useState('')
+  const navigate = useNavigate();
   return (
     <div>
       <h1>Quais os pontos mais positivos do evento?</h1>
@@ -13,7 +14,7 @@ const Question5 = () => {
         <Input type='text' placeholder='Escreva aqui' onchange={(e) => setInput(e.target.value)} />
       </div>
       <div className='container_button'>
-        <Button Children='Próxima pergunta'/>
+        <button onClick={() => navigate('/question6')}>Próxima pergunta</button>
       </div>
     </div>
   )

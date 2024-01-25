@@ -6,18 +6,10 @@ import './Estilos/Question.css';
 
 const Question1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
-  const navigate = useNavigate(); // Importa o hook useNavigate do react-router-dom
+  const navigate = useNavigate(); 
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-  };
-
-  const handleNextQuestion = () => {
-    // Lógica para armazenar a resposta, se necessário
-    // ...
-
-    // Navega para a próxima pergunta, substituindo a entrada atual no histórico
-    navigate('/question3', { replace: true });
   };
 
   return (
@@ -61,8 +53,7 @@ const Question1 = () => {
         </div>
       </div>
       <div className='container_button'>
-        {/* Use o botão diretamente e chame a função handleNextQuestion */}
-        <Link to='Question2'><Button Children='Próxima Pergunta' onClick={handleNextQuestion}>Próxima Pergunta</Button></Link>
+        <button onClick={() => navigate('/question2')}>Próxima Pergunta</button>
       </div>
     </div>
   );

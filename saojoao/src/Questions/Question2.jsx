@@ -6,22 +6,22 @@ import Indiferente from '../assets/rostinhos/Indiferente.png';
 import Ruim from '../assets/rostinhos/Ruim.png';
 import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
-import Button from '../Components/Form/Button/Button';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Question2 = () => {
   const [avaliacao, setAvaliacao] = useState(null);
+  const navigate = useNavigate(); // Mova a declaração do hook para dentro do componente
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     // Atualiza o estado com a avaliação selecionada
     setAvaliacao(valorAvaliacao);
   };
 
-  const enviarAvaliacao = () => {
-    // Aqui você pode enviar a avaliação para um servidor ou armazenar localmente, conforme necessário
-    console.log('Avaliação:', avaliacao);
-    // Adicione sua lógica de armazenamento aqui
-  };
+
+  function navegar(){
+    navigate("/question3")
+  }
+
 
   return (
     <div>
@@ -37,7 +37,7 @@ const Question2 = () => {
       </div>
       <div className='container_button'>
         {/* Adiciona um botão para enviar a avaliação */}
-        <Link to='question3'><Button Children='Próxima Pergunta' onClick={enviarAvaliacao}>Próxima Pergunta</Button></Link>
+        <button onClick={navegar}>Próximam Pergunta</button>
       </div>
     </div>
   );

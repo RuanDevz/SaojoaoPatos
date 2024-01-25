@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import '../Questions/Estilos/Question4.css';
-import Button from '../Components/Form/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Question4 = () => {
   const [nota, setNota] = useState(null);
+  const navigate = useNavigate();
 
   const handleNotaClick = (notaSelecionada) => {
     setNota(notaSelecionada);
@@ -33,7 +35,7 @@ const Question4 = () => {
         <p id='satisfeito'>Muito satisfeito</p>
       </div>
       <div className='container_button'>
-        <Button Children='Próxima Pergunta' />
+        <button onClick={() => navigate('/question5')} >Próxima Pergunta</button>
       </div>
     </div>
   );

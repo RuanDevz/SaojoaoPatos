@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import './Estilos/Question6.css';
 import Button from '../Components/Form/Button/Button'
+import { useNavigate } from 'react-router-dom';
 
 const FaixaEtariaQuestion = () => {
+
+  const negative = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
 
   const handleFaixaEtariaChange = (event) => {
@@ -100,7 +103,7 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div className='container_button'>
-        <Button Children='Próxima Pergunta' />
+        <button onClick={() => negative('/question7')}>Proxima Pergunta</button>
       </div>
     </div>
   );

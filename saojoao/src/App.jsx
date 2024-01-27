@@ -1,11 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Question1 from './Questions/Question1'
+import Start from './Questions/Start'
 
 const App = () => {
   return (
     <div>
-      <Question1 />
+      <Start/>
     </div>
   )
 }

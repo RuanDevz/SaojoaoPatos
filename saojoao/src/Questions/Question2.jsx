@@ -25,7 +25,7 @@ const Question2 = () => {
 
   return (
     <div>
-      <h1>Você ficou satisfeito com a programação?</h1>
+      <h1>O que você achou das atrações ?</h1>
       <div className='avaliar'>
         <span>Fraco</span>
         <img src={Pessimo} alt="Muito bom" onClick={() => handleAvaliacaoClick('Péssimo')} />
@@ -37,7 +37,7 @@ const Question2 = () => {
       </div>
       <div className='container_button'>
         {/* Adiciona um botão para enviar a avaliação */}
-        <button onClick={navegar}>Próximam Pergunta</button>
+        <button onClick={navegar}>Próxima Pergunta</button>
       </div>
     </div>
   );

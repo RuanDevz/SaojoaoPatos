@@ -1,0 +1,27 @@
+body{
+    background-image: url("../../assets//Background/Background.png");
+}
+
+.cont-logo{
+    max-width: 700px;
+    margin-top: 120px;
+}
+.logo{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 45px;
+}
+
+.paragrafo-start{
+    text-align: justify;
+    font-size: 1.4em;
+    margin: 30px 0px;
+}
+
+p#p_center{
+    display: block;
+    margin: 0 auto;
+    font-size: 1.7em;
+
+}

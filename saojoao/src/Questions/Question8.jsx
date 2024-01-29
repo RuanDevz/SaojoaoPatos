@@ -25,12 +25,12 @@ const FaixaEtariaQuestion = () => {
     <div>
       <h1 className='question-title'>O que você <span id='menos'>menos</span> gostou ?</h1>
       <div className='container_geral'>
-        <label className='container' htmlFor="abaixode20">
+        <label className='container' htmlFor="atracoes">
           <input
             type="checkbox"
-            id='abaixode20'
-            value='abaixode20'
-            checked={selectedFaixaEtaria === 'abaixode20'}
+            id='atracoes'
+            value='atracoes'
+            checked={selectedFaixaEtaria === 'atracoes'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -38,12 +38,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade20">
+        <label className='container' htmlFor="estruturas">
           <input
             type="checkbox"
-            id='acimade20'
-            value='acimade20'
-            checked={selectedFaixaEtaria === 'acimade20'}
+            id='estruturas'
+            value='estruturas'
+            checked={selectedFaixaEtaria === 'estruturas'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -51,12 +51,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade30">
+        <label className='container' htmlFor="ativacoes">
           <input
             type="checkbox"
-            id='acimade30'
-            value='acimade30'
-            checked={selectedFaixaEtaria === 'acimade30'}
+            id='ativacoes'
+            value='ativacoes'
+            checked={selectedFaixaEtaria === 'ativacoes'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -64,12 +64,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade40">
+        <label className='container' htmlFor="bares">
           <input
             type="checkbox"
-            id='acimade40'
-            value='acimade40'
-            checked={selectedFaixaEtaria === 'acimade40'}
+            id='bares'
+            value='bares'
+            checked={selectedFaixaEtaria === 'bares'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -77,12 +77,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade50">
+        <label className='container' htmlFor="organizacao">
           <input
             type="checkbox"
-            id='acimade50'
-            value='acimade50'
-            checked={selectedFaixaEtaria === 'acimade50'}
+            id='organizacao'
+            value='organizacao'
+            checked={selectedFaixaEtaria === 'organizacao'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -90,12 +90,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="limpeza">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='limpeza'
+            value='limpeza'
+            checked={selectedFaixaEtaria === 'limpeza'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -103,12 +103,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="seguranca">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='seguranca'
+            value='seguranca'
+            checked={selectedFaixaEtaria === 'seguranca'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -116,12 +116,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="outros">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='outros'
+            value='outros'
+            checked={selectedFaixaEtaria === 'outros'}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -129,10 +129,10 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question9')}>Próxima pergunta</button>
+        <button id='button_question8' onClick={() => navigate('/question9')}>Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logo_question8' src={logo} alt="logo" />
       </div>
     </div>
   );

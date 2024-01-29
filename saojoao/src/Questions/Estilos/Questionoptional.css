@@ -1,11 +1,26 @@
 input{
-    width: 450px;
-    height: 40px;
+    width: 600px;
+    height: 45px;
     font-size: 20px;
     border: none;
 }
 
 input:focus{
     outline: 0;
+}
+
+.title-question{
+    text-align: center;
+}
+
+button#button_questions{
+    position: relative;
+    top: 70px;
+    width: 630px;
+}
+
+img#logo_questions{
+    position: fixed;
+    top: 800px;
 }
 

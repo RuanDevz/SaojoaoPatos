@@ -16,8 +16,11 @@ import BellMarques from '../assets/Artistas/12.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import logo from '../assets/Logo/Logo.png'
+import { useNavigate } from 'react-router-dom';
 
 const Question10 = () => {
+
+  const navigate = useNavigate()
   const settings = {
     dots: true,
     infinite: true,
@@ -80,7 +83,7 @@ const Question10 = () => {
         </div>
       </div>
       <div className='container_button'>
-        <button>Finalizar</button>
+        <button onClick={() => navigate('/Questionsoptional')}>Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img src={logo} alt="logo" />

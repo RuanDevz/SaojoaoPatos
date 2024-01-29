@@ -13,6 +13,12 @@ span#mais{
     color: rgb(43, 255, 0);
 }
 
-.container_button button{
-    
+button#button_7{
+    position: relative;
+    bottom: 80px;
+}
+
+img#logo_question7{
+    position: absolute;
+    transform: translateY(-30%);
 }

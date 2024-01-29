@@ -1,3 +1,13 @@
 span#menos{
     color: red;
 }
+
+img#logo_question8{
+    position: absolute;
+    bottom: -90px;
+}
+
+button#button_question8{
+    position: relative;
+    bottom: 40px;
+}

@@ -1,37 +1,41 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './Estilos/Question7.css';
-import Button from '../Components/Form/Button/Button'
+import Button from '../Components/Form/Button/Button';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png'
+import logo from '../assets/Logo/Logo.png';
 
 const FaixaEtariaQuestion = () => {
-  const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
+  const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState({
+    atracoes: false,
+    estruturas: false,
+    ativacoes: false,
+    bares: false,
+    organizacao: false,
+    limpeza: false,
+    seguranca: false,
+    outros: false,
+  });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleFaixaEtariaChange = (event) => {
-    const selectedValue = event.target.value;
-
-    // Se a opção já estiver selecionada, desmarca todas as opções
-    if (selectedFaixaEtaria === selectedValue) {
-      setSelectedFaixaEtaria('');
-    } else {
-      // Se a opção não estiver selecionada, marca a opção e desmarca as outras
-      setSelectedFaixaEtaria(selectedValue);
-    }
+    const { id, checked } = event.target;
+    setSelectedFaixaEtaria((prevSelected) => ({
+      ...Object.fromEntries(Object.entries(prevSelected).map(([key]) => [key, key === id ? checked : false])),
+    }));
   };
 
   return (
     <div>
       <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
       <div className='container_geral'>
-        <label className='container' htmlFor="abaixode20">
+        <label className='container' htmlFor="atracoes">
           <input
             type="checkbox"
-            id='abaixode20'
-            value='abaixode20'
-            checked={selectedFaixaEtaria === 'abaixode20'}
+            id='atracoes'
+            value='atracoes'
+            checked={selectedFaixaEtaria.atracoes}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -39,12 +43,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade20">
+        <label className='container' htmlFor="estruturas">
           <input
             type="checkbox"
-            id='acimade20'
-            value='acimade20'
-            checked={selectedFaixaEtaria === 'acimade20'}
+            id='estruturas'
+            value='estruturas'
+            checked={selectedFaixaEtaria.estruturas}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -52,12 +56,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade30">
+        <label className='container' htmlFor="ativacoes">
           <input
             type="checkbox"
-            id='acimade30'
-            value='acimade30'
-            checked={selectedFaixaEtaria === 'acimade30'}
+            id='ativacoes'
+            value='ativacoes'
+            checked={selectedFaixaEtaria.ativacoes}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -65,12 +69,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade40">
+        <label className='container' htmlFor="bares">
           <input
             type="checkbox"
-            id='acimade40'
-            value='acimade40'
-            checked={selectedFaixaEtaria === 'acimade40'}
+            id='bares'
+            value='bares'
+            checked={selectedFaixaEtaria.bares}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -78,12 +82,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade50">
+        <label className='container' htmlFor="organizacao">
           <input
             type="checkbox"
-            id='acimade50'
-            value='acimade50'
-            checked={selectedFaixaEtaria === 'acimade50'}
+            id='organizacao'
+            value='organizacao'
+            checked={selectedFaixaEtaria.organizacao}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -91,12 +95,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="limpeza">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='limpeza'
+            value='limpeza'
+            checked={selectedFaixaEtaria.limpeza}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -104,12 +108,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="seguranca">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='seguranca'
+            value='seguranca'
+            checked={selectedFaixaEtaria.seguranca}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -117,12 +121,12 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div>
-        <label className='container' htmlFor="acimade60">
+        <label className='container' htmlFor="outros">
           <input
             type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
+            id='outros'
+            value='outros'
+            checked={selectedFaixaEtaria.outros}
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
@@ -130,10 +134,10 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question8')} >Próxima pergunta</button>
+        <button id='button_7' onClick={() => navigate('/question8')} >Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logo_question7' src={logo} alt="logo" />
       </div>
     </div>
   );

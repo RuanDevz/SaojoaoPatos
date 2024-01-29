@@ -36,11 +36,12 @@ const Question9 = () => {
         <p id='satisfeito'>Muito Bom</p>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question5')} >Próxima Pergunta</button>
+        <button onClick={() => navigate('/question10')} >Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img src={logo} alt="logo" />
       </div>
+      
     </div>
   );
 };

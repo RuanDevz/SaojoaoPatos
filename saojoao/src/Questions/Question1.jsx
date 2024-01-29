@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate,} from 'react-router-dom';
 import './Estilos/Question.css';
+import logo from '../assets/Logo/Logo.png'
 
 const Question1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -53,6 +54,9 @@ const Question1 = () => {
       </div>
       <div className='container_button'>
         <button onClick={() => navigate('/question2')}>Próxima Pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

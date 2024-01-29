@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Estilos/Question7.css';
 import Button from '../Components/Form/Button/Button'
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo/Logo.png'
 
 const FaixaEtariaQuestion = () => {
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
@@ -130,6 +131,9 @@ const FaixaEtariaQuestion = () => {
       </div>
       <div className='container_button'>
         <button onClick={() => navigate('/question8')} >Próxima pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

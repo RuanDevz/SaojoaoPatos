@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './Estilos/Questionoptional.css'
+import logo from '../assets/Logo/Logo.png'
 
 const Questionsoptional = () => {
   return (
@@ -20,6 +21,9 @@ const Questionsoptional = () => {
            </div>
            <button>Finalizar</button>
         </div>
+        <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
+      </div>
     </div>
   )
 }

@@ -1,10 +1,12 @@
-body{
-    background-image: url("../../assets//Background/Background.png");
-}
 
+body{
+    background-image: url('../../assets/Background/Background.png');
+    background-size: auto;
+}
 .cont-logo{
     max-width: 700px;
-    margin-top: 120px;
+    margin-top: 200px;
+    
 }
 .logo{
     display: block;

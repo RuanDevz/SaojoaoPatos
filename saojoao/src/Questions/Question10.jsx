@@ -15,6 +15,7 @@ import Zevaqueiro from '../assets/Artistas/11.jpg';
 import BellMarques from '../assets/Artistas/12.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import logo from '../assets/Logo/Logo.png'
 
 const Question10 = () => {
   const settings = {
@@ -77,6 +78,12 @@ const Question10 = () => {
           <img src={BellMarques} alt="Bell Marques" />
           <h3>Bell Marques</h3>
         </div>
+      </div>
+      <div className='container_button'>
+        <button>Finalizar</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

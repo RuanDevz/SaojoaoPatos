@@ -32,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/question8' element={<Question8/>}></Route>
       <Route path='/question9' element={<Question9/>}></Route>
       <Route path='/question10' element={<Question10 />}></Route>
+      <Route path='/Questionsoptional' element={<Questionsoptional />}></Route>
       
     </Routes>
   </Router>

@@ -3,7 +3,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 70vh;
-    background-image: url('../../assets/background.png');
 }
 h1{
     color: #fff;
@@ -65,4 +64,18 @@ h1{
 
 .checkbox:hover{
   transform: scale(1.1);
+}
+
+.logosaojoao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+}
+
+.logosaojoao img{
+  width: 210px;
 }

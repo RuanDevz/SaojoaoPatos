@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Estilos/Question6.css';
 import Button from '../Components/Form/Button/Button'
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo/Logo.png'
 
 const FaixaEtariaQuestion = () => {
 
@@ -12,11 +13,11 @@ const FaixaEtariaQuestion = () => {
   const handleFaixaEtariaChange = (event) => {
     const selectedValue = event.target.value;
 
-    // Se a opção já estiver selecionada, desmarca todas as opções
+    
     if (selectedFaixaEtaria === selectedValue) {
       setSelectedFaixaEtaria('');
     } else {
-      // Se a opção não estiver selecionada, marca a opção e desmarca as outras
+      
       setSelectedFaixaEtaria(selectedValue);
     }
   };
@@ -104,6 +105,9 @@ const FaixaEtariaQuestion = () => {
       </div>
       <div className='container_button'>
         <button onClick={() => negative('/question7')}>Proxima Pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo/Logo.png'
 
 const Question9 = () => {
   const [nota, setNota] = useState(null);
@@ -36,6 +37,9 @@ const Question9 = () => {
       </div>
       <div className='container_button'>
         <button onClick={() => navigate('/question5')} >Próxima Pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

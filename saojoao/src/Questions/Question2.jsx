@@ -7,13 +7,14 @@ import Ruim from '../assets/rostinhos/Ruim.png';
 import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo/Logo.png'
 
 const Question2 = () => {
   const [avaliacao, setAvaliacao] = useState(null);
-  const navigate = useNavigate(); // Mova a declaração do hook para dentro do componente
+  const navigate = useNavigate(); 
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
-    // Atualiza o estado com a avaliação selecionada
+    
     setAvaliacao(valorAvaliacao);
   };
 
@@ -38,6 +39,9 @@ const Question2 = () => {
       <div className='container_button'>
         {/* Adiciona um botão para enviar a avaliação */}
         <button onClick={navegar}>Próxima Pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

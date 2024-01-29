@@ -20,3 +20,7 @@ body{
 h1,p{
   text-transform: uppercase;
 }
+
+span{
+  color: #fff;
+}

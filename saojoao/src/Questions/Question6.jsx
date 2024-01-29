@@ -104,10 +104,10 @@ const FaixaEtariaQuestion = () => {
         </label>
       </div>
       <div className='container_button'>
-        <button onClick={() => negative('/question7')}>Proxima Pergunta</button>
+        <button id='button_question6' onClick={() => negative('/question7')}>Proxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logo_question6' src={logo} alt="logo" />
       </div>
     </div>
   );

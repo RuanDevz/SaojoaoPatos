@@ -17,8 +17,6 @@
   }
 
   
-  /* Adicione estilos adicionais conforme necessário */
-  /* Hide the default checkbox */
 .container input {
     position: absolute;
     opacity: 0;
@@ -75,3 +73,16 @@
     border-width: 0 0.15em 0.15em 0;
     transform: rotate(45deg);
    }
+
+img#logo_question6{
+  position: relative;
+  top: 45px;
+}
+span{
+  font-size: 1.2em;
+}
+
+button#button_question6{
+  position: relative;
+  bottom: 40px;
+}

@@ -14,9 +14,12 @@ img{
     margin-top: 50px;
     transition: transform .3s ease-in-out;
 }
-span{
+span#avaliar-carinhas{
     color: #fff;
     font-size: 1.3em;
+    position: relative;
+    top: 15px;
+    
 }
 
 img:hover{

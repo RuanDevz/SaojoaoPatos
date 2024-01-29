@@ -13,6 +13,7 @@ img:hover{
 
 .container-bonecos{
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
     gap: 25px;
 }
@@ -42,4 +43,9 @@ img:hover{
 .container_button{
     position: relative;
     top: 100px;
+}
+
+img#container3{
+    position: absolute;
+    margin-bottom: 140px;
 }

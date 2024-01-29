@@ -16,10 +16,10 @@ const Question3 = () => {
 
   const handleCardClick = (index) => {
     if (selectedCard === index) {
-      // Se o mesmo card foi clicado novamente, desselecione
+      
       setSelectedCard(null);
     } else {
-      // Senão, selecione o novo card
+      
       setSelectedCard(index);
     }
   };
@@ -46,7 +46,7 @@ const Question3 = () => {
         <button onClick={() => navigate("/question4")}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='container3' src={logo} alt="logo" />
       </div>
     </div>
   );

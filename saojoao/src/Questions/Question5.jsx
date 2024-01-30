@@ -16,10 +16,10 @@ const Question5 = () => {
         <Input type='text' placeholder='Escreva aqui' onchange={(e) => setInput(e.target.value)} />
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question6')}>Próxima pergunta</button>
+        <button id='button_question5' onClick={() => navigate('/question6')}>Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='question5_logo' src={logo} alt="logo" />
       </div>
     </div>
   )

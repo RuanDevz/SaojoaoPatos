@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Muitobom from '../assets/rostinhos/Muitobom.png';
 import Bom from '../assets/rostinhos/Bom.png';
 import Indiferente from '../assets/rostinhos/Indiferente.png';
@@ -14,34 +13,44 @@ const Question2 = () => {
   const navigate = useNavigate(); 
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
-    
     setAvaliacao(valorAvaliacao);
   };
 
+  useEffect(() => {
+    // Adicione a classe selecionada à carinha clicada
+    const carinhaSelecionada = document.querySelector(`.carinha-${avaliacao}`);
+    const carinhas = document.querySelectorAll('.carinha');
+    carinhas.forEach(carinha => {
+      if (carinha !== carinhaSelecionada) {
+        carinha.classList.remove('selecionada');
+      }
+    });
+    if (carinhaSelecionada) {
+      carinhaSelecionada.classList.add('selecionada');
+    }
+  }, [avaliacao]);
 
   function navegar(){
     navigate("/question3")
   }
 
-
   return (
     <div>
-      <h1>O que você achou das atrações ?</h1>
+      <h1 className='title_question2'>O que você achou das atrações?</h1>
       <div className='avaliar'>
-        <span id='avaliar-carinhas' >Fraco</span>
-        <img id='carinhas-avaliar' src={Pessimo} alt="Muito bom" onClick={() => handleAvaliacaoClick('Péssimo')} />
-        <img id='carinhas-avaliar' src={Ruim} alt="Bom" onClick={() => handleAvaliacaoClick('Ruim')} />
-        <img id='carinhas-avaliar' src={Indiferente} alt="Indiferente" onClick={() => handleAvaliacaoClick('Indiferente')} />
-        <img id='carinhas-avaliar' src={Bom} alt="Ruim" onClick={() => handleAvaliacaoClick('Bom')} />
-        <img id='carinhas-avaliar' src={Muitobom} alt="Pessimo" onClick={() => handleAvaliacaoClick('Muito Bom')} />
-        <span id='avaliar-carinhas'>Excelente</span>
+        <span id='fraco'>Fraco</span>
+        <img className='carinha carinha-Péssimo' src={Pessimo} alt="Péssimo" onClick={() => handleAvaliacaoClick('Péssimo')} />
+        <img className='carinha carinha-Ruim' src={Ruim} alt="Ruim" onClick={() => handleAvaliacaoClick('Ruim')} />
+        <img className='carinha carinha-Indiferente' src={Indiferente} alt="Indiferente" onClick={() => handleAvaliacaoClick('Indiferente')} />
+        <img className='carinha carinha-Bom' src={Bom} alt="Bom" onClick={() => handleAvaliacaoClick('Bom')} />
+        <img className='carinha carinha-MuitoBom' src={Muitobom} alt="Muito Bom" onClick={() => handleAvaliacaoClick('Muito Bom')} />
+        <span id='excelente'>Excelente</span>
       </div>
       <div className='container_button'>
-
-        <button onClick={navegar}>Próxima Pergunta</button>
+        <button id='question2_button' onClick={navegar}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logoquestion2' src={logo} alt="logo" />
       </div>
     </div>
   );

@@ -85,3 +85,41 @@ img#logo_question1{
   position: absolute;
   bottom: -35px;
 }
+
+@media only screen and (max-width: 600px){
+  .title_question1{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 1.2em;
+  }
+
+  .checkbox{
+    width: 135px;
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 90px;
+  }
+
+  .container_box{
+    background-color: red;
+    max-height: 200px;
+    max-width: 400px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+
+  button#button_question1{
+    position: relative;
+    top: 15px;
+    margin: 0;
+    padding: 30px 60px;
+  }
+  img#logo_question1{
+    width: 150px;
+    bottom: 0;
+    margin: 0;
+    top: -30px;
+  }
+}

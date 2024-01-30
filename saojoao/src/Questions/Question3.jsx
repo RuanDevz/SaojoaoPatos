@@ -26,7 +26,7 @@ const Question3 = () => {
 
   return (
     <div>
-      <h1>Sobre a estrutura do evento, você gostou?</h1>
+      <h1 id='title_question3'>Sobre a estrutura do evento, você gostou?</h1>
       <div className='container-bonecos'>
         {[Muitobom, Bom, Indiferente, Ruim, Pessimo].map((src, index) => (
           <div
@@ -43,10 +43,10 @@ const Question3 = () => {
         ))}
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate("/question4")}>Próxima Pergunta</button>
+        <button id='button_question3' onClick={() => navigate("/question4")}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img id='container3' src={logo} alt="logo" />
+        <img  id='container3' src={logo} alt="logo" />
       </div>
     </div>
   );

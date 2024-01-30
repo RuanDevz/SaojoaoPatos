@@ -8,10 +8,6 @@
     margin-bottom: 80px;
   }
   
-  label {
-    transform: translateX(30%);
-  }
-  
   span{
     margin-bottom: 30px;
   }
@@ -27,6 +23,7 @@
    
    .container {
     display: flex;
+    justify-content: center;
     gap: 15px;
     position: relative;
     cursor: pointer;
@@ -46,7 +43,7 @@
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0,5);
    }
    
-   /* When the checkbox is checked, add a blue background */
+
    .container input:checked ~ .checkmark {
     background-image: linear-gradient(#255CD2,#1D52C1)
    }
@@ -85,4 +82,50 @@ span{
 button#button_question6{
   position: relative;
   bottom: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title-question5{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 1.5em;
+  }
+  .container_input_question5 input{
+    position: relative;
+    top: 50px;
+    width: 400px;
+  }
+
+  button#button_question5{
+    position: relative;
+    top: 30px;
+    padding: 30px 50px;
+  }
+
+  img#question5_logo{
+    position: absolute;
+    top: -20px;
+    width: 150px;
+  }
+  @media only screen and (max-width: 600px) {
+    .question-title{
+      font-size: 1.5em;
+    }
+
+    button#button_question6{
+      top: -100px;
+      position: relative;
+      padding: 10px 50px;
+    }
+    img#logo_question6{
+      position: absolute;
+      top: 20px;
+      width: 120px;
+    }
+
+    span#fontquestion6{
+      font-size: 1em;
+    }
+  }
 }

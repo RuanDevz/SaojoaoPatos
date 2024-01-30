@@ -53,3 +53,29 @@ img#container3{
     position: absolute;
     bottom: -100px;
 }
+
+@media only screen and (max-width: 600px) {
+    h1#title_question3{
+        position: relative;
+        top: 60px;
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+        font-size: 1.5em;
+    }
+    .container-bonecos{
+        margin-top: 120px;
+    }
+
+    .container-bonecos img{
+        width:60px;
+    }
+
+    button#button_question3{
+        padding: 30px 50px;
+    }
+
+    img#container3{
+        width: 150px;
+    }
+}

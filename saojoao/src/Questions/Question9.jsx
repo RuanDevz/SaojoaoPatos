@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png'
+import './Estilos/Question9.css'
 
 const Question9 = () => {
   const [nota, setNota] = useState(null);
@@ -16,7 +17,7 @@ const Question9 = () => {
       <h1 className='title'>De 1 a 5, qual nota você daria para o São João 2023? No qual 1 representa a pior avaliação e 05 é a melhor.</h1>
       <div className='container-block'>
         <div className='Block'></div>
-        <p>Ruim</p>
+        <p className='nota_question9'>Ruim</p>
         <div className={`block ${nota === 1 ? 'selected' : ''}`} id='red' onClick={() => handleNotaClick(1)}>
           <span>1</span>
         </div>
@@ -32,13 +33,13 @@ const Question9 = () => {
         <div className={`block ${nota === 5 ? 'selected' : ''}`} id='green' onClick={() => handleNotaClick(5)}>
           <span>5</span>
         </div>
-        <p id='satisfeito'>Muito Bom</p>
+        <p className='nota_question9' id='satisfeito'>Muito Bom</p>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question10')} >Próxima Pergunta</button>
+        <button id='button_question9' onClick={() => navigate('/question10')} >Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logo_question9' src={logo} alt="logo" />
       </div>
       
     </div>

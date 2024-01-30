@@ -1,27 +1,71 @@
-body{
-    
-}
-.avaliar{
+/* Mantenha seu estilo existente */
+body {
+    /* Seus estilos para o corpo aqui */
+  }
+  
+  .avaliar {
     display: flex;
     align-items: center;
-}
-
-.avaliar span{
+  }
+  
+  .avaliar span {
     margin-top: 15px;
-}
-img#carinhas-avaliar{
+  }
+  
+  .avaliar img {
     width: 130px;
     margin-top: 50px;
-    transition: transform .3s ease-in-out;
-}
-span#avaliar-carinhas{
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .avaliar img:hover {
+    transform: scale(1.3);
+  }
+  
+  span#avaliar-carinhas {
     color: #fff;
     font-size: 1.3em;
     position: relative;
     top: 15px;
-    
-}
-
-img:hover{
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .title_question2 {
+      position: relative;
+      bottom: 50px;
+      font-size: 1.5em;
+    }
+  
+    .avaliar img {
+      position: relative;
+      bottom: 50px;
+      width: 80px;
+    }
+  
+    span#fraco,
+    span#excelente {
+      display: none;
+    }
+  
+    .avaliar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    button#question2_button {
+      padding: 30px 50px;
+    }
+  
+    img#logoquestion2 {
+      position: absolute;
+      top: -10px;
+      bottom: 0;
+      width: 150px;
+    }
+  }
+  
+  /* Adicione a estilização para a carinha selecionada */
+  .avaliar .selecionada {
     transform: scale(1.3);
-}
+  }
+  

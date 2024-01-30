@@ -154,7 +154,7 @@ const Question10 = () => {
 
       
       <div className='container_button'>
-        <button onClick={() => navigate('/Questionsoptional')}>Próxima pergunta</button>
+        <button id='button_question10' onClick={() => navigate('/Questionsoptional')}>Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question10' src={logo} alt="logo" />

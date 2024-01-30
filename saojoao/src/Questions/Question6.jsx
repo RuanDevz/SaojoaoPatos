@@ -35,7 +35,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Abaixo de 20 anos</span>
+          <span id='fontquestion6'>Abaixo de 20 anos</span>
         </label>
       </div>
       <div>
@@ -48,7 +48,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Entre 20 e 29 anos</span>
+          <span id='fontquestion6'>Entre 20 e 29 anos</span>
         </label>
       </div>
       <div>
@@ -61,7 +61,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Entre 30 e 39 anos</span>
+          <span id='fontquestion6'>Entre 30 e 39 anos</span>
         </label>
       </div>
       <div>
@@ -74,7 +74,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Entre 40 e 49 anos</span>
+          <span id='fontquestion6'>Entre 40 e 49 anos</span>
         </label>
       </div>
       <div>
@@ -87,7 +87,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Entre 50 e 59 anos</span>
+          <span id='fontquestion6'>Entre 50 e 59 anos</span>
         </label>
       </div>
       <div>
@@ -100,7 +100,7 @@ const FaixaEtariaQuestion = () => {
             onChange={handleFaixaEtariaChange}
           />
           <div className='checkmark'></div>
-          <span>Acima de 60 anos</span>
+          <span id='fontquestion6'>Acima de 60 anos</span>
         </label>
       </div>
       <div className='container_button'>

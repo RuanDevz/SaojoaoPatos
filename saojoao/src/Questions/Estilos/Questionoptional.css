@@ -24,3 +24,20 @@ img#logo_questions{
     top: 800px;
 }
 
+@media only screen and (max-width: 600px) {
+    .inputoptional{
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+    }
+    
+    .title-question{
+        
+    }
+
+    button#button_questions{
+        width: 400px;
+        padding: 20px 10px;
+    }
+  }
+

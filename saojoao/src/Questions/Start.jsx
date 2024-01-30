@@ -17,7 +17,7 @@ const Start = () => {
         <p  id='p_center'>Contamos com seu feedback,Vamos lá?!</p>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/Question1')}>INICIAR</button>
+        <button id='' onClick={() => navigate('/Question1')}>INICIAR</button>
       </div>
     </div>
   )

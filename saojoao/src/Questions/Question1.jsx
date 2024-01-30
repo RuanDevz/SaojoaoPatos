@@ -14,7 +14,9 @@ const Question1 = () => {
 
   return (
     <div className='container_question'>
-      <h1>Sobre sua expectativa em relação ao São João 2023:</h1>
+      <div className='container_title_question1'>
+        <h1 className='title_question1'>Sobre sua expectativa em relação ao São João 2023:</h1>
+      </div>
       <div className='container_box'>
         <div
           className={`checkbox ${selectedOption === 'red-light' ? 'selected' : ''}`}
@@ -53,7 +55,7 @@ const Question1 = () => {
         </div>
       </div>
       <div className='container_button'>
-        <button onClick={() => navigate('/question2')}>Próxima Pergunta</button>
+        <button id='button_question1' onClick={() => navigate('/question2')}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question1' src={logo} alt="logo" />

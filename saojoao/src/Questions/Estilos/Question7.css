@@ -22,3 +22,24 @@ img#logo_question7{
     position: absolute;
     transform: translateY(-10%);
 }
+
+@media only screen and (max-width: 600px) {
+    .question-title{
+        position: relative;
+        top: 60px;
+        font-size: 1.3em;
+    }
+    .container{
+        font-size: 1em;
+    }
+
+    button#button_7{
+        position: relative;
+        top: -70px;
+        padding: 10px 20px;
+    }
+
+    img#logo_question7{
+        display: none;
+    }
+  }

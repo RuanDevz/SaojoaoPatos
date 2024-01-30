@@ -29,15 +29,15 @@ const Question2 = () => {
       <h1>O que você achou das atrações ?</h1>
       <div className='avaliar'>
         <span id='avaliar-carinhas' >Fraco</span>
-        <img src={Pessimo} alt="Muito bom" onClick={() => handleAvaliacaoClick('Péssimo')} />
-        <img src={Ruim} alt="Bom" onClick={() => handleAvaliacaoClick('Ruim')} />
-        <img src={Indiferente} alt="Indiferente" onClick={() => handleAvaliacaoClick('Indiferente')} />
-        <img src={Bom} alt="Ruim" onClick={() => handleAvaliacaoClick('Bom')} />
-        <img src={Muitobom} alt="Pessimo" onClick={() => handleAvaliacaoClick('Muito Bom')} />
+        <img id='carinhas-avaliar' src={Pessimo} alt="Muito bom" onClick={() => handleAvaliacaoClick('Péssimo')} />
+        <img id='carinhas-avaliar' src={Ruim} alt="Bom" onClick={() => handleAvaliacaoClick('Ruim')} />
+        <img id='carinhas-avaliar' src={Indiferente} alt="Indiferente" onClick={() => handleAvaliacaoClick('Indiferente')} />
+        <img id='carinhas-avaliar' src={Bom} alt="Ruim" onClick={() => handleAvaliacaoClick('Bom')} />
+        <img id='carinhas-avaliar' src={Muitobom} alt="Pessimo" onClick={() => handleAvaliacaoClick('Muito Bom')} />
         <span id='avaliar-carinhas'>Excelente</span>
       </div>
       <div className='container_button'>
-        {/* Adiciona um botão para enviar a avaliação */}
+
         <button onClick={navegar}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>

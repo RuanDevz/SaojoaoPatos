@@ -26,6 +26,10 @@ img:hover{
     top: 210px;
 }
 
+.container-bonecos img{
+    width: 120px;
+}
+
 .card{
     transition: transform .3s ease-in-out;
 }
@@ -47,5 +51,5 @@ img:hover{
 
 img#container3{
     position: absolute;
-    margin-bottom: 140px;
+    bottom: -100px;
 }

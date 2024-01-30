@@ -80,3 +80,8 @@ h1{
 .logosaojoao img{
   width: 210px;
 }
+
+img#logo_question1{
+  position: absolute;
+  bottom: -35px;
+}

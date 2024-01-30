@@ -9,8 +9,8 @@ body{
 .avaliar span{
     margin-top: 15px;
 }
-img{
-    width: 140px;
+img#carinhas-avaliar{
+    width: 130px;
     margin-top: 50px;
     transition: transform .3s ease-in-out;
 }

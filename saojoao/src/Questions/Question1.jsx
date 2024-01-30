@@ -56,7 +56,7 @@ const Question1 = () => {
         <button onClick={() => navigate('/question2')}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
-        <img src={logo} alt="logo" />
+        <img id='logo_question1' src={logo} alt="logo" />
       </div>
     </div>
   );

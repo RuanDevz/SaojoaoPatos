@@ -50,3 +50,9 @@ img#logo_finish{
         display: none;
     }
 }
+
+@media only screen and (min-width: 1367px){
+    img#logo_finish{
+        display: none;
+    }
+}

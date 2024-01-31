@@ -63,3 +63,9 @@ img#logo_questions{
     }
   }
 
+  @media only screen and (min-width: 1367px)
+  {
+    img#logo_question10{
+        width: 150px;
+    }
+  }

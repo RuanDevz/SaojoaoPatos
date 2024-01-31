@@ -1,0 +1,52 @@
+.container_finish{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.title_finish{
+    font-size: 4em;
+}
+.happyface{
+    font-size: 24em;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.container_face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_logo_finish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img#logo_finish{
+    position: absolute;
+    bottom: 120px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 750px){
+    .title_finish{
+        font-size: 2em;
+    }
+    
+    .happyface{
+        font-size: 15em;
+    }
+
+    img#logo_finish{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    img#logo_finish{
+        display: none;
+    }
+}

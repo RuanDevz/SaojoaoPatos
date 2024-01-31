@@ -152,13 +152,15 @@ const FaixaEtariaQuestion = () => {
           <span>OUTROS</span>
         </label>
         {selectedFaixaEtaria.outros && (
-          <input
-          className='especifique'
-            type="text"
-            value={selectedFaixaEtaria.outrosText}
-            onChange={handleOutrosTextChange}
-            placeholder="Especifique"
-          />
+          <div className='container_input_especifique'>
+            <input
+            className='especifique'
+              type="text"
+              value={selectedFaixaEtaria.outrosText}
+              onChange={handleOutrosTextChange}
+              placeholder="Especifique"
+            />
+          </div>
         )}
       </div>
       <div className='container_button'>

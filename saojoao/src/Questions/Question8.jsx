@@ -162,7 +162,7 @@ const FaixaEtariaQuestion = () => {
         )}
       </div>
       <div className='container_button'>
-        <button id='button_7' onClick={() => navigate('/question8')} >Próxima pergunta</button>
+        <button id='button_7' onClick={() => navigate('/question9')} >Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question7' src={logo} alt="logo" />

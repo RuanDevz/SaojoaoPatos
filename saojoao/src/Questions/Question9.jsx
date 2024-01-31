@@ -41,7 +41,6 @@ const Question9 = () => {
       <div className='logosaojoao'>
         <img id='logo_question9' src={logo} alt="logo" />
       </div>
-      
     </div>
   );
 };

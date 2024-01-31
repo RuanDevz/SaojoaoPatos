@@ -54,7 +54,7 @@ img#container3{
     bottom: -100px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     h1#title_question3{
         position: relative;
         top: 60px;
@@ -77,5 +77,19 @@ img#container3{
 
     img#container3{
         width: 150px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    img#container3{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1367px){
+    img#container3{
+        position: fixed;
+        width: 150px;
+        bottom: 5px;
     }
 }

@@ -27,7 +27,7 @@ img#logo_question7{
     
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .question-title{
         position: relative;
         top: 60px;
@@ -43,6 +43,29 @@ img#logo_question7{
         padding: 10px 20px;
     }
 
+    img#logo_question7{
+        display: none;
+    }
+
+    .container_input_especifique{
+        display: flex;
+        justify-content: center;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1366px){
+    img#logo_question7{
+        display: none;
+    }
+
+    .question-title{
+        position: relative;
+        top: 10px;
+        font-size: 1.7em;
+    }
+  }
+
+  @media only screen and (min-width: 1367px){
     img#logo_question7{
         display: none;
     }

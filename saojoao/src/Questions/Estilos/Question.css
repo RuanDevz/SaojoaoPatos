@@ -1,73 +1,72 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-h1{
-    color: #fff;
-    text-align: center;
-    margin-top: 140px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
 
-.checkbox{
-    width: 145px;
-    height: 100px;
-    border-radius: 10px;
-    margin-top: 90px;
-    cursor: pointer;
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 140px;
 }
 
-.checkbox p{
-    color: #fff;
-    height: 8vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1em;
+.checkbox {
+  width: 145px;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 90px;
+  cursor: pointer;
 }
 
-.container_box{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.checkbox p {
+  color: #fff;
+  height: 8vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
 }
 
-  div#red {
-    
-    background-color: red;
-  }
-  
-  div#red_light {
-    background-color: rgb(248, 40, 40);
-  }
-  
-  div#yellow {
-    background-color: yellow;
-  }
-  
-  div#green_light {
-    background-color: rgb(10, 192, 10);
-  }
-  
-  div#green {
-    background-color: green;
-  }
-  
-
-.container_button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 200px;
+.container_box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-.checkbox:hover{
+div#red {
+  background-color: red;
+}
+
+div#red_light {
+  background-color: rgb(248, 40, 40);
+}
+
+div#yellow {
+  background-color: yellow;
+}
+
+div#green_light {
+  background-color: rgb(10, 192, 10);
+}
+
+div#green {
+  background-color: green;
+}
+
+.container_button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 200px;
+}
+
+.checkbox:hover {
   transform: scale(1.1);
 }
 
-.logosaojoao{
+.logosaojoao {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,49 +76,72 @@ h1{
   bottom: 150px;
 }
 
-.logosaojoao img{
+.logosaojoao img {
   width: 210px;
 }
 
-img#logo_question1{
+img#logo_question1 {
   position: absolute;
   bottom: -35px;
 }
 
-@media only screen and (max-width: 600px){
-  .title_question1{
-    display: block;
-    margin: 0 auto;
-    max-width: 300px;
-    font-size: 1.2em;
+@media only screen and (max-width: 750px) {
+  .title_question1 {
+      position: relative;
+      transform: translateY(140%);
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
+      font-size: 1.3em;
   }
 
-  .checkbox{
-    width: 135px;
-    height: 80px;
-    border-radius: 10px;
-    margin-top: 90px;
+  .checkbox {
+      position: relative;
+      transform: translateY(120%);
+      width: 160px;
+      height: 80px;
+      border-radius: 10px;
+      margin-top: 90px;
   }
 
-  .container_box{
-    background-color: red;
-    max-height: 200px;
-    max-width: 400px;
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
+  .container_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+  }
+
+  button#button_question1 {
+      position: relative;
+      top: 15px;
+      margin: 0;
+      padding: 30px 60px;
+  }
+
+  img#logo_question1 {
+      display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  img#logo_question1{
+    position: fixed;
+    bottom: 10px;
+    width: 150px;
   }
 
   button#button_question1{
     position: relative;
-    top: 15px;
-    margin: 0;
-    padding: 30px 60px;
-  }
-  img#logo_question1{
-    width: 150px;
-    bottom: 0;
-    margin: 0;
-    top: -30px;
+    bottom: 50px;
+    padding: 15px 90px;
   }
 }
+@media only screen and (min-width: 1367px) {
+  img#logo_question1{
+    position: fixed;
+    bottom: 10px;
+    width: 150px;
+  }
+}
+

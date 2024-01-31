@@ -10,14 +10,14 @@ const Start = () => {
 
   return (
      <div className='cont-logo'>
-      <img className='logo' src={Logo} alt="Logo" />
+      <img id='logo_start' className='logo' src={Logo} alt="Logo" />
       <div>
         <p className='paragrafo-start'>O São João 2023 foi um sucesso, mas queremos deixar tudo cada vez melhor, então bora contar o que você achou na nossa Pesquisa de Satisfação? </p>
         <p className='paragrafo-start'>Queremos saber tudo: o que curtiu, o que não curtiu, e como podemos fazer o São João ficar ainda mais a nossa cara nas próximas edições.</p>
         <p  id='p_center'>Contamos com seu feedback,Vamos lá?!</p>
       </div>
       <div className='container_button'>
-        <button id='' onClick={() => navigate('/Question1')}>INICIAR</button>
+        <button id='start_button' onClick={() => navigate('/Question1')}>INICIAR</button>
       </div>
     </div>
   )

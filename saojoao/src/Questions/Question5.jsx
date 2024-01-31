@@ -10,7 +10,7 @@ const Question5 = () => {
   const [input, setInput] = useState('')
   const navigate = useNavigate();
   return (
-    <div>
+    <div className='container_question5'>
       <h1 className='title-question5'>Quais os pontos mais positivos do evento?</h1>
       <div className='container_input_question5'>
         <Input type='text' placeholder='Escreva aqui' onchange={(e) => setInput(e.target.value)} />

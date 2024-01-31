@@ -5,3 +5,22 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    img#question5_logo{
+        position: fixed;
+        width: 150px;
+        bottom: 10px;
+    }
+
+    .container_question5{
+        margin-bottom: 120px;
+    }
+}
+
+@media only screen and (min-width: 1367px){
+    img#question5_logo{
+        position: fixed;
+        width: 150px;
+    }
+}

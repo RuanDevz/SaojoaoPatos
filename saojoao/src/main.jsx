@@ -15,6 +15,7 @@ import Question8 from './Questions/Question8.jsx'
 import Question9 from './Questions/Question9.jsx'
 import Question10 from './Questions/Question10.jsx'
 import Questionsoptional from './Questions/Questionsoptional.jsx'
+import Finish from './Questions/Finish.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/question9' element={<Question9/>}></Route>
       <Route path='/question10' element={<Question10 />}></Route>
       <Route path='/Questionsoptional' element={<Questionsoptional />}></Route>
+      <Route path='/Finish' element={<Finish />}></Route>
       
     </Routes>
   </Router>

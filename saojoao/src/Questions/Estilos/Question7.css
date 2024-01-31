@@ -23,6 +23,10 @@ img#logo_question7{
     transform: translateY(-10%);
 }
 
+.especifique{
+    
+}
+
 @media only screen and (max-width: 600px) {
     .question-title{
         position: relative;

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './Estilos/Question7.css';
 import Button from '../Components/Form/Button/Button';
@@ -15,14 +14,31 @@ const FaixaEtariaQuestion = () => {
     limpeza: false,
     seguranca: false,
     outros: false,
+    outrosText: '',
   });
 
   const navigate = useNavigate();
 
   const handleFaixaEtariaChange = (event) => {
     const { id, checked } = event.target;
+    const updatedSelection = { ...selectedFaixaEtaria, [id]: checked };
+
+    // Desmarca todas as outras caixas de seleção se uma é marcada
+    if (checked) {
+      for (const key in updatedSelection) {
+        if (key !== id) {
+          updatedSelection[key] = false;
+        }
+      }
+    }
+
+    setSelectedFaixaEtaria(updatedSelection);
+  };
+
+  const handleOutrosTextChange = (event) => {
     setSelectedFaixaEtaria((prevSelected) => ({
-      ...Object.fromEntries(Object.entries(prevSelected).map(([key]) => [key, key === id ? checked : false])),
+      ...prevSelected,
+      outrosText: event.target.value,
     }));
   };
 
@@ -30,96 +46,99 @@ const FaixaEtariaQuestion = () => {
     <div>
       <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
       <div className='container_geral'>
-        <label className='container' htmlFor="atracoes">
-          <input
-            type="checkbox"
-            id='atracoes'
-            value='atracoes'
-            checked={selectedFaixaEtaria.atracoes}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>ATRACOES</span>
-        </label>
+        <div>
+          <label className='container' htmlFor="atracoes">
+            <input
+              type="checkbox"
+              id='atracoes'
+              value='atracoes'
+              checked={selectedFaixaEtaria.atracoes}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>ATRACOES</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="estruturas">
+            <input
+              type="checkbox"
+              id='estruturas'
+              value='estruturas'
+              checked={selectedFaixaEtaria.estruturas}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>ESTRUTURAS</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="ativacoes">
+            <input
+              type="checkbox"
+              id='ativacoes'
+              value='ativacoes'
+              checked={selectedFaixaEtaria.ativacoes}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>ATIVAÇÕES</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="bares">
+            <input
+              type="checkbox"
+              id='bares'
+              value='bares'
+              checked={selectedFaixaEtaria.bares}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>BARES</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="organizacao">
+            <input
+              type="checkbox"
+              id='organizacao'
+              value='organizacao'
+              checked={selectedFaixaEtaria.organizacao}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>ORGANIZAÇÃO</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="limpeza">
+            <input
+              type="checkbox"
+              id='limpeza'
+              value='limpeza'
+              checked={selectedFaixaEtaria.limpeza}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>LIMPEZA</span>
+          </label>
+        </div>
+        <div>
+          <label className='container' htmlFor="seguranca">
+            <input
+              type="checkbox"
+              id='seguranca'
+              value='seguranca'
+              checked={selectedFaixaEtaria.seguranca}
+              onChange={handleFaixaEtariaChange}
+            />
+            <div className='checkmark'></div>
+            <span>SEGURANÇA</span>
+          </label>
+        </div>
       </div>
-      <div>
-        <label className='container' htmlFor="estruturas">
-          <input
-            type="checkbox"
-            id='estruturas'
-            value='estruturas'
-            checked={selectedFaixaEtaria.estruturas}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>ESTRUTURAS</span>
-        </label>
-      </div>
-      <div>
-        <label className='container' htmlFor="ativacoes">
-          <input
-            type="checkbox"
-            id='ativacoes'
-            value='ativacoes'
-            checked={selectedFaixaEtaria.ativacoes}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>ATIVAÇÕES</span>
-        </label>
-      </div>
-      <div>
-        <label className='container' htmlFor="bares">
-          <input
-            type="checkbox"
-            id='bares'
-            value='bares'
-            checked={selectedFaixaEtaria.bares}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>BARES</span>
-        </label>
-      </div>
-      <div>
-        <label className='container' htmlFor="organizacao">
-          <input
-            type="checkbox"
-            id='organizacao'
-            value='organizacao'
-            checked={selectedFaixaEtaria.organizacao}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>ORGANIZAÇÃO</span>
-        </label>
-      </div>
-      <div>
-        <label className='container' htmlFor="limpeza">
-          <input
-            type="checkbox"
-            id='limpeza'
-            value='limpeza'
-            checked={selectedFaixaEtaria.limpeza}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>LIMPEZA</span>
-        </label>
-      </div>
-      <div>
-        <label className='container' htmlFor="seguranca">
-          <input
-            type="checkbox"
-            id='seguranca'
-            value='seguranca'
-            checked={selectedFaixaEtaria.seguranca}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>SEGURANÇA</span>
-        </label>
-      </div>
+      {/* Adicione o campo de texto para "OUTROS" */}
       <div>
         <label className='container' htmlFor="outros">
           <input
@@ -132,6 +151,15 @@ const FaixaEtariaQuestion = () => {
           <div className='checkmark'></div>
           <span>OUTROS</span>
         </label>
+        {selectedFaixaEtaria.outros && (
+          <input
+          className='especifique'
+            type="text"
+            value={selectedFaixaEtaria.outrosText}
+            onChange={handleOutrosTextChange}
+            placeholder="Especifique"
+          />
+        )}
       </div>
       <div className='container_button'>
         <button id='button_7' onClick={() => navigate('/question8')} >Próxima pergunta</button>

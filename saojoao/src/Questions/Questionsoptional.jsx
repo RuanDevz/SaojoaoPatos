@@ -1,34 +1,68 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import './Estilos/Questionoptional.css'
-import logo from '../assets/Logo/Logo.png'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import './Estilos/Question7.css';
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo/Logo.png';
 
-const Questionsoptional = () => {
+const FaixaEtariaQuestion = () => {
+  const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState({
+    atracoes: false,
+    estruturas: false,
+    ativacoes: false,
+    bares: false,
+    organizacao: false,
+    limpeza: false,
+    seguranca: false,
+    outros: false,
+  });
+  const [otherValue, setOtherValue] = useState('');
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  const handleFaixaEtariaChange = (event) => {
+    const { id, checked } = event.target;
+    setSelectedFaixaEtaria((prevSelected) => ({
+      ...prevSelected,
+      [id]: checked,
+    }));
+    
+    if (id === 'outros') {
+      setOtherValue('');
+    }
+  };
+
   return (
     <div>
+      <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
+      <div className='container_geral'>
+        <label>
+          <input
+            type="checkbox"
+            id="outros"
+            checked={selectedFaixaEtaria.outros}
+            onChange={handleFaixaEtariaChange}
+          />
+          Outros
+        </label>
+      </div>
+      {selectedFaixaEtaria.outros && (
         <div>
-           <h1 className='title-question'>Qual seu nome ?</h1>
-           <div>
-            <label htmlFor="name">
-                <input className='inputoptional' id='name' type="text" placeholder=' Seu nome (opcional)' />
-            </label>
-           </div>
-           <div>
-            <h1 className='title-question'>Qual seu e-mail ?</h1>
-            <label htmlFor="email">
-                <input className='inputoptional' type="email" name="email" id="email" placeholder=' Seu email (Opcional)' />
-            </label>
-           </div>
-           <button id='button_questions' onClick={() => navigate('/')}>Finalizar</button>
+          <label htmlFor="outrosInput">Por favor, especifique:</label>
+          <input
+            type="text"
+            id="outrosInput"
+            value={otherValue}
+            onChange={(event) => setOtherValue(event.target.value)}
+          />
         </div>
-        <div className='logosaojoao'>
-        <img id='logo_questions' src={logo} alt="logo" />
+      )}
+      <div className='container_button'>
+        <button id='button_7' onClick={() => navigate('/question8')} >Próxima pergunta</button>
+      </div>
+      <div className='logosaojoao'>
+        <img id='logo_question7' src={logo} alt="logo" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Questionsoptional
+export default FaixaEtariaQuestion;

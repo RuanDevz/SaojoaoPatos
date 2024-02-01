@@ -22,6 +22,10 @@ span{
   color: #fff;
 }
 
+img{
+  cursor: pointer;
+}
+
 button{
   z-index: 1;
 }

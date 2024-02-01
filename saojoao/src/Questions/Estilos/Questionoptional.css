@@ -25,6 +25,7 @@ img#logo_questions{
 }
 
 img#optional_logo{
+    width: 190px;
     position: fixed;
     bottom: 0;
 }
@@ -60,11 +61,18 @@ img#optional_logo{
         padding: 20px 30px;
         width: 400px;
     }
+
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1366px){
     img#optional_logo{
         display: none;
+    }
+
+    .optional_title{
+        position: relative;
+        top: 100px;
+        margin: 10px 0px;
     }
   }
 
@@ -82,4 +90,5 @@ img#optional_logo{
         position: relative;
         top: 100px;
     }
+    
   }

@@ -30,7 +30,7 @@ const Question5 = () => {
     <div className='container_question5'>
       <h1 className='title-question5'>Quais os pontos mais positivos do evento?</h1>
       <div className='container_input_question5'>
-      <Input type='text' placeholder='escreva aqui' onchange={handleInputChange}/>
+      <Input type='text' placeholder='Escreva aqui...' onchange={handleInputChange}/>
       
       </div>
       {error && <p className="error_message">É necessário preencher este campo.</p>}

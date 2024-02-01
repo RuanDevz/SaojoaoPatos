@@ -43,26 +43,15 @@ const Question10 = () => {
     speed: 500,
     swipeToSlide: true,
     touchMove: true,
+    slidesToShow: 5,
     responsive: [
-      {
-        breakpoint: 1367,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
       {
         breakpoint: 750,
         settings: {
           slidesToShow: 3,
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
   
   return (

@@ -1,7 +1,4 @@
 
-body {
-    
-  }
   
   .avaliar {
     display: flex;
@@ -9,6 +6,7 @@ body {
   }
 
   span#fraco{
+    font-size: 1em;
     position: relative;
     top: 20px;
   }
@@ -19,6 +17,7 @@ body {
   }
 
   span#excelente{
+    font-size: 1em;
     position: relative;
     top: 20px;
   }

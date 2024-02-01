@@ -26,7 +26,7 @@ img {
 h3 {
     color: #fff;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 img#logo_question10 {
@@ -34,21 +34,7 @@ img#logo_question10 {
     bottom: -70px;
 }
 
-.arrowleft{
-    font-size: 2em;
-    position: absolute;
-    left: 10px;
-    top: 420px;
-    color: #fff;
-}
 
-.arrowright{
-    font-size: 2em;
-    position: absolute;
-    right: 50px;
-    top: 420px;
-    color: #fff;
-}
 
 @media only screen and (max-width: 750px) {
     .title_question10{
@@ -75,6 +61,12 @@ img#logo_question10 {
         top: -20px;
         width: 150px;
     }
+
+    h3{
+        position: relative;
+        right: 30px;
+    }
+    
 
 }
 
@@ -104,7 +96,7 @@ img#logo_question10 {
     }
 
     .container_images{
-        max-width: 1000px;
+        max-width: 1200px;
         cursor: pointer;
     }
 }

@@ -69,4 +69,9 @@ img#logo_question7{
     img#logo_question7{
         display: none;
     }
+
+    .container_input_especifique{
+        display: flex;
+        justify-content: center;
+    }
   }

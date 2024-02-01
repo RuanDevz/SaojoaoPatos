@@ -31,14 +31,14 @@ const Questionsoptional = () => {
         <h1 className='optional_title'>Qual seu nome ?</h1>
         <div className='container_inputs'>
           <label htmlFor='name'>
-          <Input type='text' id='name' placeholder='Seu nome (Opcional)' onchange={(e) => setName(e.target.value)}/>
+          <Input className='input_questions_optionals' type='text' id='name' placeholder='Seu nome (Opcional)' onchange={(e) => setName(e.target.value)}/>
           </label>
         </div>
         <div>
           <h1 className='optional_title'>Qual seu e-mail ?</h1>
           <div className='container_inputs'>
             <label htmlFor='email'>
-              <Input type='email' id='email' name='email' placeholder='Seu E-mail (opcional)' value={email} onchange={(e) => setEmail(e.target.value)}/>
+              <Input className='input_questions_optionals' type='email' id='email' name='email' placeholder='Seu E-mail (opcional)' value={email} onchange={(e) => setEmail(e.target.value)}/>
             </label>
           </div>
           {error && <p className='error_message'>Por favor, insira um e-mail válido.</p>}

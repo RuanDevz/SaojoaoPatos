@@ -13,6 +13,7 @@ body{
   background-size: cover;
   background-repeat: repeat;
   background-position:center center;
+  background-image: url('./assets//Background/Background1.png');
 }
 h1,p{
   text-transform: uppercase;

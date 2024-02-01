@@ -15,12 +15,12 @@ const Question2 = () => {
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     setAvaliacao(valorAvaliacao);
-    setError(false); // Reset error when an option is selected
+    setError(false); 
   };
 
   const handleNextQuestion = () => {
     if (!avaliacao) {
-      setError(true); // Show error if no option is selected
+      setError(true); 
     } else {
       navigate('/question3');
     }

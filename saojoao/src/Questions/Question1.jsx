@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
+import Usecontext from '../context/Usecontext';
+
+const use
 
 const Question1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);

@@ -15,12 +15,12 @@ const Question3 = () => {
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
-    setError(false); // Reset error when a card is selected
+    setError(false); 
   };
 
   const handleNextQuestion = () => {
     if (selectedCard === null) {
-      setError(true); // Show error if no card is selected
+      setError(true); 
     } else {
       navigate("/question4");
     }

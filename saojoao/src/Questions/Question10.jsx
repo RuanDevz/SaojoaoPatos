@@ -28,8 +28,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import logo from '../assets/Logo/Logo.png'
 import { useNavigate } from 'react-router-dom';
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
 
 
 

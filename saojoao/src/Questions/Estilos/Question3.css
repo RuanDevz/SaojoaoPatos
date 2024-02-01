@@ -76,7 +76,9 @@ img#container3{
     }
 
     img#container3{
-        width: 150px;
+        position: fixed;
+        bottom: 0;
+        width: 140px;
     }
 }
 

@@ -1,24 +1,30 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './Estilos/Question6.css';
-import Button from '../Components/Form/Button/Button'
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png'
 
 const FaixaEtariaQuestion = () => {
 
-  const negative = useNavigate();
+  const navigate = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
+  const [error, setError] = useState(false);
 
   const handleFaixaEtariaChange = (event) => {
     const selectedValue = event.target.value;
 
-    
     if (selectedFaixaEtaria === selectedValue) {
       setSelectedFaixaEtaria('');
     } else {
-      
       setSelectedFaixaEtaria(selectedValue);
+    }
+  };
+
+  const handleNextQuestion = () => {
+    if (!selectedFaixaEtaria) {
+      setError(true); 
+    } else {
+      navigate('/question7');
     }
   };
 
@@ -103,8 +109,9 @@ const FaixaEtariaQuestion = () => {
           <span id='fontquestion6'>Acima de 60 anos</span>
         </label>
       </div>
+      {error && <p className="error_message">É necessário selecionar uma faixa etária.</p>}
       <div className='container_button'>
-        <button id='button_question6' onClick={() => negative('/question7')}>Proxima Pergunta</button>
+        <button id='button_question6' onClick={handleNextQuestion}>Proxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question6' src={logo} alt="logo" />

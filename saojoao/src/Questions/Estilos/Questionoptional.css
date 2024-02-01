@@ -24,6 +24,11 @@ img#logo_questions{
     top: 800px;
 }
 
+img#optional_logo{
+    position: fixed;
+    bottom: 0;
+}
+
 @media only screen and (max-width: 750px) {
     .inputoptional{
         display: block;
@@ -65,7 +70,11 @@ img#logo_questions{
 
   @media only screen and (min-width: 1367px)
   {
-    img#logo_question10{
-        width: 150px;
+    img#optional_logo{
+        width: 140px;
+    }
+
+    .container_question_optional{
+        margin-bottom: 120px;
     }
   }

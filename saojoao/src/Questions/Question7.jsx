@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png';
 
 const FaixaEtariaQuestion = () => {
+  const navigate = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState({
     atracoes: false,
     estruturas: false,
@@ -16,17 +17,15 @@ const FaixaEtariaQuestion = () => {
     outros: false,
     outrosText: '',
   });
-
-  const navigate = useNavigate();
+  const [error, setError] = useState(false);
 
   const handleFaixaEtariaChange = (event) => {
     const { id, checked } = event.target;
     const updatedSelection = { ...selectedFaixaEtaria, [id]: checked };
 
-    // Desmarca todas as outras caixas de seleção se uma é marcada
     if (checked) {
       for (const key in updatedSelection) {
-        if (key !== id) {
+        if (key !== id && key !== 'outrosText') {
           updatedSelection[key] = false;
         }
       }
@@ -42,129 +41,56 @@ const FaixaEtariaQuestion = () => {
     }));
   };
 
+  const handleNextQuestion = () => {
+    const { atracoes, estruturas, ativacoes, bares, organizacao, limpeza, seguranca, outros} = selectedFaixaEtaria;
+    
+    if (!(atracoes || estruturas || ativacoes || bares || organizacao || limpeza || seguranca || outros)) {
+      setError(true);
+    } else {
+      setError(false);
+      navigate('/question8');
+    }
+  };
+
   return (
     <div>
       <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
       <div className='container_geral'>
-        <div>
-          <label className='container' htmlFor="atracoes">
-            <input
-              type="checkbox"
-              id='atracoes'
-              value='atracoes'
-              checked={selectedFaixaEtaria.atracoes}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>ATRACOES</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="estruturas">
-            <input
-              type="checkbox"
-              id='estruturas'
-              value='estruturas'
-              checked={selectedFaixaEtaria.estruturas}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>ESTRUTURAS</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="ativacoes">
-            <input
-              type="checkbox"
-              id='ativacoes'
-              value='ativacoes'
-              checked={selectedFaixaEtaria.ativacoes}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>ATIVAÇÕES</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="bares">
-            <input
-              type="checkbox"
-              id='bares'
-              value='bares'
-              checked={selectedFaixaEtaria.bares}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>BARES</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="organizacao">
-            <input
-              type="checkbox"
-              id='organizacao'
-              value='organizacao'
-              checked={selectedFaixaEtaria.organizacao}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>ORGANIZAÇÃO</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="limpeza">
-            <input
-              type="checkbox"
-              id='limpeza'
-              value='limpeza'
-              checked={selectedFaixaEtaria.limpeza}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>LIMPEZA</span>
-          </label>
-        </div>
-        <div>
-          <label className='container' htmlFor="seguranca">
-            <input
-              type="checkbox"
-              id='seguranca'
-              value='seguranca'
-              checked={selectedFaixaEtaria.seguranca}
-              onChange={handleFaixaEtariaChange}
-            />
-            <div className='checkmark'></div>
-            <span>SEGURANÇA</span>
-          </label>
-        </div>
+        {/* Opções de seleção */}
+        {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
+          if (key !== 'outrosText') {
+            return (
+              <div key={key}>
+                <label className='container' htmlFor={key}>
+                  <input
+                    type="checkbox"
+                    id={key}
+                    checked={value}
+                    onChange={handleFaixaEtariaChange}
+                  />
+                  <div className='checkmark'></div>
+                  <span>{key.toUpperCase()}</span>
+                </label>
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
-      {/* Adicione o campo de texto para "OUTROS" */}
-      <div>
-        <label className='container' htmlFor="outros">
+      {selectedFaixaEtaria.outros && (
+        <div className='container_input_especifique'>
           <input
-            type="checkbox"
-            id='outros'
-            value='outros'
-            checked={selectedFaixaEtaria.outros}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span>OUTROS</span>
-        </label>
-        {selectedFaixaEtaria.outros && (
-          <div className='container_input_especifique'>
-            <input
             className='especifique'
-              type="text"
-              value={selectedFaixaEtaria.outrosText}
-              onChange={handleOutrosTextChange}
-              placeholder="Especifique"
-            />
-          </div>
-        )}
-      </div>
+            type="text"
+            value={selectedFaixaEtaria.outrosText}
+            onChange={handleOutrosTextChange}
+            placeholder="Especifique"
+          />
+        </div>
+      )}
+      {error && <p className="error_message">Selecione pelo menos uma opção.</p>}
       <div className='container_button'>
-        <button id='button_7' onClick={() => navigate('/question8')} >Próxima pergunta</button>
+        <button id='button_7' onClick={handleNextQuestion}>Próxima pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question7' src={logo} alt="logo" />

@@ -6,19 +6,25 @@ import Ruim from '../assets/rostinhos/Ruim.png';
 import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png'
+import logo from '../assets/Logo/Logo.png';
 
 const Question2 = () => {
   const [avaliacao, setAvaliacao] = useState(null);
+  const [error, setError] = useState(false);
   const navigate = useNavigate(); 
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     setAvaliacao(valorAvaliacao);
+    setError(false); // Reset error when an option is selected
   };
 
-  function navegar(){
-    navigate("/question3")
-  }
+  const handleNextQuestion = () => {
+    if (!avaliacao) {
+      setError(true); // Show error if no option is selected
+    } else {
+      navigate('/question3');
+    }
+  };
 
   return (
     <div>
@@ -32,8 +38,9 @@ const Question2 = () => {
         <img className={`carinha carinha-MuitoBom ${avaliacao === 'Muito Bom' && 'selecionada'}`} src={Muitobom} alt="Muito Bom" onClick={() => handleAvaliacaoClick('Muito Bom')} />
         <span id='excelente'>Excelente</span>
       </div>
+      {error && <p className="error_message">É necessário escolher uma opção.</p>}
       <div className='container_button'>
-        <button id='question2_button' onClick={navegar}>Próxima Pergunta</button>
+        <button id='question2_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logoquestion2' src={logo} alt="logo" />

@@ -22,3 +22,7 @@ h1,p{
 span{
   color: #fff;
 }
+
+button{
+  z-index: 1;
+}

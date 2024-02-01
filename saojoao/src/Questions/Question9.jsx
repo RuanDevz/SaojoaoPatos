@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png'
@@ -6,10 +5,20 @@ import './Estilos/Question9.css'
 
 const Question9 = () => {
   const [nota, setNota] = useState(null);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleNotaClick = (notaSelecionada) => {
     setNota(notaSelecionada);
+  };
+
+  const handleNextQuestion = () => {
+    if (nota === null) {
+      setError(true);
+    } else {
+      setError(false);
+      navigate('/question10');
+    }
   };
 
   return (
@@ -35,8 +44,9 @@ const Question9 = () => {
         </div>
         <p className='nota_question9' id='satisfeito'>Muito Bom</p>
       </div>
+      {error && <p className="error_message">Selecione uma nota antes de continuar.</p>}
       <div className='container_button'>
-        <button id='button_question9' onClick={() => navigate('/question10')} >Próxima Pergunta</button>
+        <button id='button_question9' onClick={handleNextQuestion}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img id='logo_question9' src={logo} alt="logo" />

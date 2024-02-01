@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Pessimo from '../assets/bonecos/Pessimo.png';
 import Ruim from '../assets/bonecos/Ruim.png';
@@ -7,20 +6,23 @@ import Bom from '../assets/bonecos/Bom.png';
 import Muitobom from '../assets/bonecos/Muitobom.png';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png'
-
+import logo from '../assets/Logo/Logo.png';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleCardClick = (index) => {
-    if (selectedCard === index) {
-      
-      setSelectedCard(null);
+    setSelectedCard(index);
+    setError(false); // Reset error when a card is selected
+  };
+
+  const handleNextQuestion = () => {
+    if (selectedCard === null) {
+      setError(true); // Show error if no card is selected
     } else {
-      
-      setSelectedCard(index);
+      navigate("/question4");
     }
   };
 
@@ -35,15 +37,16 @@ const Question3 = () => {
             onClick={() => handleCardClick(index)}
           >
             <img src={src} alt={`Opção ${index + 1}`} />
-            <p id={index === 0 ? 'otima' : index === 1 ? 'gosteimuito' : index === 2 ? 'indiferente' : index === 3 ? 'ruim' : 'naogostei'}
-               className={selectedCard === index ? 'selected-text' : ''}
-            >
-            </p>
+            <p
+              id={index === 0 ? 'otima' : index === 1 ? 'gosteimuito' : index === 2 ? 'indiferente' : index === 3 ? 'ruim' : 'naogostei'}
+              className={selectedCard === index ? 'selected-text' : ''}
+            ></p>
           </div>
         ))}
       </div>
+      {error && <p className="error_message">É necessário escolher uma opção.</p>}
       <div className='container_button'>
-        <button id='button_question3' onClick={() => navigate("/question4")}>Próxima Pergunta</button>
+        <button id='button_question3' onClick={handleNextQuestion}>Próxima Pergunta</button>
       </div>
       <div className='logosaojoao'>
         <img  id='container3' src={logo} alt="logo" />

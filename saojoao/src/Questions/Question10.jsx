@@ -36,30 +36,38 @@ import { FaArrowLeft } from "react-icons/fa";
 const Question10 = () => {
 
   const navigate = useNavigate()
-  const sliderRef = useRef(null);
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
     swipeToSlide: true,
     touchMove: true,
+    responsive: [
+      {
+        breakpoint: 1367,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
-
-  const goToPrevSlide = () => {
-    sliderRef.current.slickPrev();
-  };
-
-  const goToNextSlide = () => {
-    sliderRef.current.slickNext();
-  };
-  
   
   return (
     <div>
       <h1 className='title_question10'>Quem você chamaria para o São João 2024? (Escolha até 3 opções)</h1>
-      <FaArrowLeft onClick={goToPrevSlide} className='arrowleft' />
         <Slider className='container_images' {...settings}>
         <div>
           <img src={BellMarques} alt="BellMarques" />
@@ -150,7 +158,6 @@ const Question10 = () => {
           <h3>Ze Vaqueiro</h3>
         </div>
         </Slider>
-        <FaArrowRight onClick={goToNextSlide} className='arrowright' />
 
       
       <div className='container_button'>

@@ -7,6 +7,21 @@ body {
     display: flex;
     align-items: center;
   }
+
+  span#fraco{
+    position: relative;
+    top: 20px;
+  }
+
+  span#fraco{
+    position: relative;
+    top: 20px;
+  }
+
+  span#excelente{
+    position: relative;
+    top: 20px;
+  }
   
   .avaliar span {
     margin-top: 15px;
@@ -58,10 +73,9 @@ body {
     }
   
     img#logoquestion2 {
-      position: absolute;
-      top: -10px;
+      position: fixed;
       bottom: 0;
-      width: 150px;
+      width: 140px;
     }
   }
   

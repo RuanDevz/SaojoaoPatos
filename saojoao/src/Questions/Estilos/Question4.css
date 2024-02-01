@@ -94,13 +94,10 @@ span#cores1a5{
     p#mediravaliacao{
         display: none;
     }
-
     img#logo_question4{
-        position: absolute;
-        top: -30px;
-        width: 150px;
+        display: block;
+        margin-top: 20px;
     }
-
     button#question4_button{
         padding: 30px 50px;
     }

@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import '../Input/input.css'
+import '../../Form/Input/Input.css'
 
 // eslint-disable-next-line react/prop-types
-const Input = ({text,placeholder,onchange,value}) => {
+const Input = ({text,id,placeholder,onchange,value}) => {
   return (
     <div>
-      <input className='search-input' type={text} placeholder={placeholder} onChange={onchange} value={value} />
+      <input className='search-input' id={id} type={text} placeholder={placeholder} onChange={onchange} value={value} />
     </div>
   )
 }

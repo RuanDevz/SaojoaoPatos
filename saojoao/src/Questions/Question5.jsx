@@ -1,8 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import Input from '../Components/Form/Input/Input';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png';
 import './Estilos/Question5.css';
+import Input from '../Components/Form/Input/Input';
 
 const Question5 = () => {
   const [input, setInput] = useState('');
@@ -29,7 +30,8 @@ const Question5 = () => {
     <div className='container_question5'>
       <h1 className='title-question5'>Quais os pontos mais positivos do evento?</h1>
       <div className='container_input_question5'>
-       <input type="text" placeholder='Escreva aqui' onChange={handleInputChange} />
+      <Input type='text' placeholder='escreva aqui' onchange={handleInputChange}/>
+      
       </div>
       {error && <p className="error_message">É necessário preencher este campo.</p>}
       <div className='container_button'>

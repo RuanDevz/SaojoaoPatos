@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './Estilos/Questionoptional.css';
 import logo from '../assets/Logo/Logo.png';
 import { useNavigate } from 'react-router-dom';
+import Input from '../Components/Form/Input/Input';
 
 const Questionsoptional = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState(false);
+  const [name, setName] = useState('')
   const navigate = useNavigate();
 
   const isValidEmail = (email) => {
@@ -26,24 +28,17 @@ const Questionsoptional = () => {
   return (
     <div className='container_question_optional'>
       <div>
-        <h1>Qual seu nome ?</h1>
+        <h1 className='optional_title'>Qual seu nome ?</h1>
         <div className='container_inputs'>
           <label htmlFor='name'>
-            <input id='name' type='text' placeholder='Seu nome (opcional)' />
+          <Input type='text' id='name' placeholder='Seu nome (Opcional)' onchange={(e) => setName(e.target.value)}/>
           </label>
         </div>
         <div>
-          <h1>Qual seu e-mail ?</h1>
+          <h1 className='optional_title'>Qual seu e-mail ?</h1>
           <div className='container_inputs'>
             <label htmlFor='email'>
-              <input
-                type='email'
-                name='email'
-                id='email'
-                placeholder='Seu email (Opcional)'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              <Input type='email' id='email' name='email' placeholder='Seu E-mail (opcional)' value={email} onchange={(e) => setEmail(e.target.value)}/>
             </label>
           </div>
           {error && <p className='error_message'>Por favor, insira um e-mail válido.</p>}

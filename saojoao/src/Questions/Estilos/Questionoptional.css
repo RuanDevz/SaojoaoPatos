@@ -77,4 +77,9 @@ img#optional_logo{
     .container_question_optional{
         margin-bottom: 120px;
     }
+
+    .optional_title{
+        position: relative;
+        top: 100px;
+    }
   }

@@ -193,6 +193,7 @@ button#button_question6{
 
   .container_geral{
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 }

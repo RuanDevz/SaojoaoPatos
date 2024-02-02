@@ -1,28 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useRef} from 'react';
 import './Estilos/Question10.css';
-import BellMarques from '../assets/Artistas/BellMarques.png'
-import Calcinhapreta from '../assets/Artistas/Calcinhapreta.png'
-import Dennisdj from '../assets/Artistas/Dennisdj.png'
-import FelipeAmorim from '../assets/Artistas/FelipeAmorim.png'
-import HenryFreitas from '../assets/Artistas/HenryFreitas.png'
-import Jorgeematheus from '../assets/Artistas/Jorgeematheus.png'
-import JonasEsticado from '../assets/Artistas/JonasEsticado.png'
-import LeoSantana from '../assets/Artistas/LeoSantana.png'
-import LuanSantana from '../assets/Artistas/LuanSantana.png'
-import LuanEstilizado from '../assets/Artistas/LuanEstilizado.png'
-import MariFernandez from '../assets/Artistas/MariFernandez.png'
-import MatheuseKauan from '../assets/Artistas/MatheuseKauan.png'
-import MuriloRulff from '../assets/Artistas/MuriloRulff.png'
-import Nattan from '../assets/Artistas/Nattan.png'
-import PedroSampaio from '../assets/Artistas/PedroSampaio.png'
-import ProjetoAvontade from '../assets/Artistas/ProjetoAvontade.png'
-import RaíSaiaRodada from '../assets/Artistas/RaíSaiaRodada.png'
-import SimoneMendes from '../assets/Artistas/SimoneMendes.png'
-import Vintageculture from '../assets/Artistas/Vintageculture.png'
-import WS from '../assets/Artistas/WS.png'
-import XandAvião from '../assets/Artistas/XandAvião.png'
-import ZeVaqueiro from '../assets/Artistas/ZeVaqueiro.png'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';

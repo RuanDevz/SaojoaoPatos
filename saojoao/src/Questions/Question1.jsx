@@ -3,11 +3,10 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
-import {QuestionContextProvider} from '../context/QuestionContext';
 
 
 const Question1 = () => {
-  const { selectedOption, setSelectedOption} = useContext(QuestionContextProvider)
+  const { selectedOption, setSelectedOption} = useState(null)
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 

@@ -8,12 +8,11 @@ import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png';
-import {QuestionContextProvider} from '../context/QuestionContext';
 
 const Question2 = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate(); 
-  const [avaliacao, setAvaliacao] = useContext(QuestionContextProvider)
+  const [avaliacao, setAvaliacao] = useState(null);
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     setAvaliacao(valorAvaliacao);

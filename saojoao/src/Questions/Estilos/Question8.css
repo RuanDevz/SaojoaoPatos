@@ -31,4 +31,12 @@ button#button_question8{
     img#logo_question8{
         display: none;
     }
+    .container_geral{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        left: 8px;
+    }
   }

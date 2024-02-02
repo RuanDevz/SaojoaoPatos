@@ -73,9 +73,6 @@ const Question1 = () => {
         <button id="button_question1" onClick={handleNextQuestion}>Próxima Pergunta
         </button>
       </div>
-      <div className="logosaojoao">
-        <img id="logo_question1" src={logo} alt="logo" />
-      </div>
     </div>
   );
 };

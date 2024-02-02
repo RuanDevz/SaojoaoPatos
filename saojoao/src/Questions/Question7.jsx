@@ -53,49 +53,46 @@ const FaixaEtariaQuestion = () => {
   };
 
   return (
-    <div>
-      <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
-      <div className='container_geral'>
-        {/* Opções de seleção */}
-        {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
-          if (key !== 'outrosText') {
-            return (
-              <div key={key}>
-                <label className='container' htmlFor={key}>
-                  <input
-                    type="checkbox"
-                    id={key}
-                    checked={value}
-                    onChange={handleFaixaEtariaChange}
-                  />
-                  <div className='checkmark'></div>
-                  <span>{key.toUpperCase()}</span>
-                </label>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>
-      {selectedFaixaEtaria.outros && (
-        <div className='container_input_especifique'>
-          <input
-            className='especifique'
-            type="text"
-            value={selectedFaixaEtaria.outrosText}
-            onChange={handleOutrosTextChange}
-            placeholder="Especifique"
-          />
-        </div>
-      )}
-      {error && <p className="error_message">Selecione pelo menos uma opção.</p>}
-      <div className='container_button'>
-        <button id='button_7' onClick={handleNextQuestion}>Próxima pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='logo_question7' src={logo} alt="logo" />
-      </div>
+<div className='envolvente'>
+  <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
+  <div className='container_geral'>
+    {/* Opções de seleção */}
+    {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
+      if (key !== 'outrosText') {
+        return (
+          <div key={key}>
+            <label className='container' htmlFor={key}>
+              <input
+                type="checkbox"
+                id={key}
+                checked={value}
+                onChange={handleFaixaEtariaChange}
+              />
+              <div className='checkmark'></div>
+              <span>{key.toUpperCase()}</span>
+            </label>
+          </div>
+        );
+      }
+      return null;
+    })}
+  </div>
+  {selectedFaixaEtaria.outros && (
+    <div className='container_input_especifique'>
+      <input
+        className='especifique'
+        type="text"
+        value={selectedFaixaEtaria.outrosText}
+        onChange={handleOutrosTextChange}
+        placeholder="Especifique"
+      />
     </div>
+  )}
+  {error && <p className="error_message">Selecione pelo menos uma opção.</p>}
+  <div className='container_button'>
+    <button id='button_7' onClick={handleNextQuestion}>Próxima pergunta</button>
+  </div>
+</div>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Estilos/Questionoptional.css';
-import logo from '../assets/Logo/Logo.png';
 import { useNavigate } from 'react-router-dom';
 import Input from '../Components/Form/Input/Input';
 
@@ -46,9 +45,6 @@ const Questionsoptional = () => {
         <button onClick={handleFinish} id='optional_button'>
           Finalizar
         </button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='optional_logo' src={logo} alt='logo' />
       </div>
     </div>
   );

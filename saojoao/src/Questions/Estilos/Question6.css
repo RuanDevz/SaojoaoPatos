@@ -24,7 +24,7 @@
    
    .container {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 15px;
     position: relative;
     cursor: pointer;
@@ -32,7 +32,6 @@
     user-select: none;
    }
    
-   /* Create a custom checkbox */
    .checkmark {
     position: relative;
     top: 0;
@@ -122,7 +121,7 @@ button#button_question6{
     display: flex;
     justify-content: left;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 750px) {
     .question-title{
       text-align: center;
       font-size: 1.5em;
@@ -142,6 +141,10 @@ button#button_question6{
     span#fontquestion6{
       font-size: 1em;
     }
+
+    .error_message_question6{
+      color: red;
+    }
   }
 }
 
@@ -149,10 +152,27 @@ button#button_question6{
   img#logo_question6{
     display: none;
   }
+
+  .error_message_question6{
+    color: red;
+    position: absolute;
+  }
 }
 
 @media only screen and (min-width: 1367px){
   img#logo_question6{
     display: none;
+  }
+
+  .container_geral div{
+    display: flex ;
+    justify-content: center;
+    position: relative;
+    right: 50px;
+  }
+
+  .error_message_question6{
+    color: red;
+    position: absolute;
   }
 }

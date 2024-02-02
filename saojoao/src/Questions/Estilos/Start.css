@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../assets/Background/Background1.png');
+    background-image: url('../../assets/Background/Background.png');
     background-size: auto;
 }
 
@@ -67,7 +67,7 @@ button#start_button{
 
 @media only screen and (min-width: 1024px) {
     img#logo_start{
-        width: 230px;
+        width: 170px;
     }
 
     .paragrafo-start{
@@ -78,4 +78,22 @@ button#start_button{
         position: relative;
         bottom: 50px;
     }
+}
+
+@media only screen and (min-width: 1367px){
+img#logo_start{
+    width: 300px;
+}
+.container_paragrafos{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paragrafo-start{
+    font-size: 1.5em;
+}
 }

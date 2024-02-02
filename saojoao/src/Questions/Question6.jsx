@@ -95,7 +95,7 @@ const FaixaEtariaQuestion = () => {
             <span id='fontquestion6'>Entre 50 e 59 anos</span>
           </label>
         </div>
-        <div>
+        <div className='ultimoinput_question6'>
           <label className='container' htmlFor="acimade60">
             <input
               type="checkbox"
@@ -109,7 +109,7 @@ const FaixaEtariaQuestion = () => {
           </label>
         </div>
       </div>
-      {error && <p className="error_message">É necessário selecionar uma faixa etária.</p>}
+      {error && <p className="error_message_question6">É necessário selecionar uma faixa etária.</p>}
       <div className='container_button'>
         <button id='button_question6' onClick={handleNextQuestion}>Proxima Pergunta</button>
       </div>

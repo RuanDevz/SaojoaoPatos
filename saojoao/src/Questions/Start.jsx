@@ -11,7 +11,7 @@ const Start = () => {
   return (
      <div className='cont-logo'>
       <img id='logo_start' className='logo' src={Logo} alt="Logo" />
-      <div>
+      <div className='container_paragrafos'>
         <p className='paragrafo-start'>O São João 2023 sem dúvidas foi um sucesso! Mas como sempre queremos deixar tudo cada vez melhor, precisamos saber achou na nossa da nossa festa, então bora contar o que você Pesquisa de Satisfação? </p>
         <p className='paragrafo-start'>Queremos saber tudo: o que curtiu, o que não curtiu, e como podemos fazer o São João da gente ficar ainda mais a nossa cara nas próximas edições. </p>
         <p  id='p_center'>Contamos com seu feedback, Vamos lá?!</p>

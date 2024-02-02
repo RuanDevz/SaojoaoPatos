@@ -110,7 +110,7 @@ const Question10 = () => {
         </div>
         <div>
           <img src={MuriloRulff} alt="MuriloRulff" />
-          <h3>Murilo</h3>
+          <h3>Murilo Ruff</h3>
         </div>
         <div>
           <img src={Nattan} alt="Nattan" />

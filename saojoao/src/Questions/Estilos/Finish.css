@@ -91,6 +91,7 @@ img#logo_finish{
     }
     .happyface{
         font-size: 13em;
+        margin-bottom: 90px;
     }
     p{
         font-size: 1.7em;
@@ -105,6 +106,7 @@ img#logo_finish{
     }
 
     img#logo_finish{
-        margin-top: 380px;
+        position: relative;
+        top: 120px;
     }
 }

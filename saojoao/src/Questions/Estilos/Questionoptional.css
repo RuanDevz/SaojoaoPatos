@@ -89,7 +89,11 @@ img#optional_logo{
 
     .optional_title{
         position: relative;
-        top: 100px;
+        top: 50px;
+    }
+
+    .input_questions_optionals{
+        font-size: 3em;
     }
     
   }

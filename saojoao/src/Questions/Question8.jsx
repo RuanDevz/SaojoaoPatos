@@ -55,8 +55,7 @@ const FaixaEtariaQuestion = () => {
   return (
     <div>
       <h1 className='question-title'>O que você <span id='menos'>menos</span> gostou ?</h1>
-      <div className='container_geral'>
-        {/* Opções de seleção */}
+      <div className='container_geral_question8'>
         {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
           if (key !== 'outrosText') {
             return (

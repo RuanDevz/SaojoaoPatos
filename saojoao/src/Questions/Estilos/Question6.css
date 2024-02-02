@@ -145,6 +145,11 @@ button#button_question6{
     .error_message_question6{
       color: red;
     }
+
+    .container_geral{
+      margin-left: 70px;
+    }
+
   }
 }
 
@@ -157,6 +162,19 @@ button#button_question6{
     color: red;
     position: absolute;
   }
+  .container_geral{
+    margin-left: 70px;
+  }
+
+  div#checked{
+    position: relative;
+    transform: translateX(-27%);
+  }
+
+  span#fontquestion66{
+    position: relative;
+    transform: translateX(-2%);
+  }
 }
 
 @media only screen and (min-width: 1367px){
@@ -164,15 +182,14 @@ button#button_question6{
     display: none;
   }
 
-  .container_geral div{
-    display: flex ;
-    justify-content: center;
-    position: relative;
-    right: 50px;
-  }
 
   .error_message_question6{
     color: red;
     position: absolute;
+  }
+
+  .container_geral{
+    display: flex;
+    justify-content: center;
   }
 }

@@ -9,6 +9,14 @@
     transition: background 0.3s ease;
     perspective: 1000px;
   }
+
+  input#email{
+    font-size: 2em;
+  }
+
+  input#name{
+    font-size: 2em;
+  }
   
   .label {
     position: absolute;
@@ -136,5 +144,11 @@
   @media only screen and (max-width: 750px){
     .search-input {
       width: 370px;
+    }
+  }
+
+  @media only screen and (min-width: 1367px){
+    .search-input{
+      font-size: 1.5em;
     }
   }

@@ -127,4 +127,7 @@ img#logo_question10 {
         position: relative;
         right: 20px;
     }
+    .title_question10{
+        margin-bottom: 100px;
+    }
 }

@@ -99,4 +99,17 @@
       max-width: 1200px;
     }
   }
+
+  @media only screen and (min-width: 1367px){
+    .avaliar img{
+      width: 140px;
+    }
+
+    span#fraco{
+      font-size: 1.6em;
+    }
+    span#excelente{
+      font-size: 1.6em;
+    }
+}
   

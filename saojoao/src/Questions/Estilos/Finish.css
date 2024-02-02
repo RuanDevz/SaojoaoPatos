@@ -5,10 +5,10 @@
     flex-direction: column;
 }
 .title_finish{
-    font-size: 4em;
+    font-size: 2em;
 }
 .happyface{
-    font-size: 24em;
+    font-size: 20em;
     color: #fff;
     margin-top: 60px;
 }
@@ -26,7 +26,11 @@
 
 
 img#logo_finish{
+    margin-top: 300px;
+}
 
+.last-manssage{
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 750px){
@@ -47,6 +51,10 @@ img#logo_finish{
 
     .container_finish{
         margin-top: 40px;
+    }
+
+    img#logo_finish{
+        margin-top: 0px;
     }
 }
 
@@ -69,6 +77,11 @@ img#logo_finish{
         top: 180px;
         width: 150px;
     }
+
+        img#logo_finish{
+        margin-top: 0px;
+    }
+    
 }
 
 @media only screen and (min-width: 1367px){
@@ -77,15 +90,21 @@ img#logo_finish{
         font-size: 2em;
     }
     .happyface{
-        font-size: 10em;
+        font-size: 13em;
     }
     p{
         font-size: 1.7em;
     }
 
+    .last-manssage{
+        margin-top: 40px;
+    }
+
+    .container_finish{
+        margin-bottom: 100px;
+    }
+
     img#logo_finish{
-        position: relative;
-        top: 150px;
-        width: 200px;
+        margin-top: 380px;
     }
 }

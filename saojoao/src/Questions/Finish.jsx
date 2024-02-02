@@ -12,7 +12,7 @@ const Finish = () => {
       <img id='logo_finish' src={logo} alt="Logo" />
       </div>
       <h1 className='title_finish'>Agradecemos por dedicar seu tempo para compartilhar suas opiniões na nossa Pesquisa de Satisfação do São João 2023. </h1>
-      <p>Te esperamos no São João 2024, até breve!</p>
+      <p className='last-manssage'>Te esperamos no São João 2024, até breve!</p>
       <div className='container_face'>
       <IoMdHappy className='happyface' />
       </div>

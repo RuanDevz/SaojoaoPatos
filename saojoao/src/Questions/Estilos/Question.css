@@ -38,6 +38,7 @@ h1 {
 
 .container_box {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   gap: 10px;
 }
@@ -120,7 +121,6 @@ img#logo_question1 {
   .container_box {
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
   }
 

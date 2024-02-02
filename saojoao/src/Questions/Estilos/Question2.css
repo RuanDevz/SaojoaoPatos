@@ -47,7 +47,8 @@
     .title_question2 {
       position: relative;
       bottom: 50px;
-      font-size: 1.5em;
+      text-align: center;
+      font-size: 1.2em;
     }
   
     .avaliar img {

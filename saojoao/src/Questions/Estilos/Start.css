@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../assets/Background/Background.png');
+    background-image: url('../../assets/Background/Background1.png');
     background-size: auto;
 }
 
@@ -27,6 +27,10 @@ p#p_center {
     font-size: 1.7em;
 }
 
+button#start_button{
+    background-color: rgb(19, 189, 19);
+}
+
 @media only screen and (max-width: 750px) {
     .logo {
         width: 150px;
@@ -35,6 +39,7 @@ p#p_center {
     .paragrafo-start {
         display: block;
         margin: 0 auto;
+        margin-top: 10px;
         max-width: 320px;
         font-size: 0.9em;
     }

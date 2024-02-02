@@ -8,12 +8,13 @@ import './Estilos/Finish.css'
 const Finish = () => {
   return (
     <div className='container_finish'>
-      <h1 className='title_finish'>Obrigado pela sua Avaliação!</h1>
+      <div className='container_logo_finish'>
+      <img id='logo_finish' src={logo} alt="Logo" />
+      </div>
+      <h1 className='title_finish'>Agradecemos por dedicar seu tempo para compartilhar suas opiniões na nossa Pesquisa de Satisfação do São João 2023. </h1>
+      <p>Te esperamos no São João 2024, até breve!</p>
       <div className='container_face'>
       <IoMdHappy className='happyface' />
-      </div>
-      <div className='container_logo_finish'>
-        <img id='logo_finish' src={logo} alt="Logo" />
       </div>
     </div>
   )

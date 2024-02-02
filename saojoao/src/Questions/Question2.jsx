@@ -7,7 +7,6 @@ import Ruim from '../assets/rostinhos/Ruim.png';
 import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 
 const Question2 = () => {
   const [error, setError] = useState(false);
@@ -29,7 +28,7 @@ const Question2 = () => {
 
   return (
     <div>
-      <h1 className='title_question2'>O que você achou das atrações?</h1>
+      <h1 className='title_question2'>Qual o seu nível de satisfação com as atracões? Sendo: 01 estrela para fraco e 05 estrelas para excelente</h1>
       <div className='avaliar'>
         <span id='fraco'>Fraco</span>
         <img className={`carinha carinha-Péssimo ${avaliacao === 'Péssimo' && 'selecionada'}`} src={Pessimo} alt="Péssimo" onClick={() => handleAvaliacaoClick('Péssimo')} />
@@ -42,9 +41,6 @@ const Question2 = () => {
       {error && <p className="error_message">É necessário escolher uma opção.</p>}
       <div className='container_button'>
         <button id='question2_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='logoquestion2' src={logo} alt="logo" />
       </div>
     </div>
   );

@@ -13,27 +13,26 @@
     margin-top: 60px;
 }
 
+.container_logo_finish{
+    display: flex;
+    justify-content: center;
+}
+
 .container_face{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container_logo_finish{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 img#logo_finish{
-    position: absolute;
-    bottom: 120px;
-    width: 200px;
+
 }
 
 @media only screen and (max-width: 750px){
     .title_finish{
-        font-size: 2em;
+        font-size: 1.2em;
+        text-align: center;
     }
     
     .happyface{
@@ -41,18 +40,20 @@ img#logo_finish{
     }
 
     img#logo_finish{
-        display: none;
+        position: relative;
+        top: 170px;
+        width: 140px;
+    }
+
+    .container_finish{
+        margin-top: 40px;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px){
-    img#logo_finish{
-        display: none;
-    }
+
 }
 
 @media only screen and (min-width: 1367px){
-    img#logo_finish{
-        display: none;
-    }
+
 }

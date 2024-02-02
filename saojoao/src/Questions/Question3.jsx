@@ -7,7 +7,6 @@ import Bom from '../assets/bonecos/Bom.png';
 import Muitobom from '../assets/bonecos/Muitobom.png';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -48,9 +47,6 @@ const Question3 = () => {
       {error && <p className="error_message">É necessário escolher uma opção.</p>}
       <div className='container_button'>
         <button id='button_question3' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img  id='container3' src={logo} alt="logo" />
       </div>
     </div>
   );

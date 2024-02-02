@@ -1,6 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png'
 import './Estilos/Question9.css'
 
 const Question9 = () => {
@@ -28,28 +28,25 @@ const Question9 = () => {
         <div className='Block'></div>
         <p className='nota_question9'>Ruim</p>
         <div className={`block ${nota === 1 ? 'selected' : ''}`} id='red' onClick={() => handleNotaClick(1)}>
-          <span>1</span>
+          <span id='opcaonumerica'>1</span>
         </div>
         <div className={`block ${nota === 2 ? 'selected' : ''}`} id='orange' onClick={() => handleNotaClick(2)}>
-          <span>2</span>
+          <span id='opcaonumerica'>2</span>
         </div>
         <div className={`block ${nota === 3 ? 'selected' : ''}`} id='yellow' onClick={() => handleNotaClick(3)}>
-          <span>3</span>
+          <span id='opcaonumerica'>3</span>
         </div>
         <div className={`block ${nota === 4 ? 'selected' : ''}`} id='green-light' onClick={() => handleNotaClick(4)}>
-          <span>4</span>
+          <span id='opcaonumerica'>4</span>
         </div>
         <div className={`block ${nota === 5 ? 'selected' : ''}`} id='green' onClick={() => handleNotaClick(5)}>
-          <span>5</span>
+          <span id='opcaonumerica'>5</span>
         </div>
         <p className='nota_question9' id='satisfeito'>Muito Bom</p>
       </div>
       {error && <p className="error_message">Selecione uma nota antes de continuar.</p>}
       <div className='container_button'>
         <button id='button_question9' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='logo_question9' src={logo} alt="logo" />
       </div>
     </div>
   );

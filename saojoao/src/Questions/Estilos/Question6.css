@@ -5,6 +5,7 @@
   }
 
   .question-title{
+    text-align: center;
     margin-bottom: 80px;
   }
   
@@ -23,7 +24,7 @@
    
    .container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     position: relative;
     cursor: pointer;
@@ -108,8 +109,22 @@ button#button_question6{
     top: -20px;
     width: 150px;
   }
+
+  .container_geral{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  .container{
+    display: flex;
+    justify-content: left;
+  }
   @media only screen and (max-width: 600px) {
     .question-title{
+      text-align: center;
       font-size: 1.5em;
     }
 

@@ -14,6 +14,7 @@ input:focus{
 }
 
 button#optional_button{
+    background-color: rgb(245, 58, 58);
     position: relative;
     top: 70px;
     width: 630px;

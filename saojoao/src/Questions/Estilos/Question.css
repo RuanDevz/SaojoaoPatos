@@ -11,9 +11,6 @@ h1 {
   margin-top: 140px;
 }
 
-.error_message{
-  color: rgb(255, 0, 0);
-}
 
 .checkbox {
   width: 145px;
@@ -31,6 +28,12 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 1.1em;
+}
+
+.error_message_question1{
+  position: relative;
+  top: 50px;
+  color: rgb(255, 0, 0);
 }
 
 .container_box {
@@ -99,6 +102,12 @@ img#logo_question1 {
       font-size: 1.3em;
   }
 
+  .error_message_question1{
+    position: relative;
+    top: 105px;
+    color: rgb(255, 0, 0);
+  }
+
   .checkbox {
       position: relative;
       transform: translateY(120%);
@@ -113,7 +122,11 @@ img#logo_question1 {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      flex-direction: row;
+  }
+
+  .error_message{
+    position: relative;
+    bottom: 0;
   }
   
 

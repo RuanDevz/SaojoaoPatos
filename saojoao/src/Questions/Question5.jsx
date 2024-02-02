@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 import './Estilos/Question5.css';
 import Input from '../Components/Form/Input/Input';
 
@@ -33,12 +32,9 @@ const Question5 = () => {
       <Input type='text' placeholder='Escreva aqui...' onchange={handleInputChange}/>
       
       </div>
-      {error && <p className="error_message">É necessário preencher este campo.</p>}
+      {error && <p className="error_message_question5">É necessário preencher este campo.</p>}
       <div className='container_button'>
         <button id='button_question5' onClick={handleNextQuestion}>Próxima pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='question5_logo' src={logo} alt="logo" />
       </div>
     </div>
   );

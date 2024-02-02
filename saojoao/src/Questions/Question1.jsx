@@ -1,16 +1,12 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
 
-
 const Question1 = () => {
-  const { selectedOption, setSelectedOption} = useState(null)
+  const [selectedOption, setSelectedOption] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
-
-  console.log(selectedOption)
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
@@ -32,20 +28,20 @@ const Question1 = () => {
       </div>
       <div className="container_box">
         <div
-          className={`checkbox ${selectedOption === 'red_light' ? 'selected' : ''}`}
-          id="red_light"
-          onClick={() => handleOptionSelect('red_light')}
-          style={{ border: selectedOption === 'red_light' ? '2px solid #fff' : 'none' }}
+          className={`checkbox ${selectedOption === 'green_light' ? 'selected' : ''}`}
+          id="green_light"
+          onClick={() => handleOptionSelect('green_light')}
+          style={{ border: selectedOption === 'green_light' ? '2px solid #fff' : 'none' }}
         >
-          <p>Não satisfez</p>
+          <p>Superou</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'red' ? 'selected' : ''}`}
-          id="red"
-          onClick={() => handleOptionSelect('red')}
-          style={{ border: selectedOption === 'red' ? '2px solid #fff' : 'none' }}
+          className={`checkbox ${selectedOption === 'green' ? 'selected' : ''}`}
+          id="green"
+          onClick={() => handleOptionSelect('green')}
+          style={{ border: selectedOption === 'green' ? '2px solid #fff' : 'none' }}
         >
-          <p>Atendeu em partes</p>
+          <p>Atendeu Plenamente</p>
         </div>
         <div
           className={`checkbox ${selectedOption === 'yellow' ? 'selected' : ''}`}
@@ -56,26 +52,25 @@ const Question1 = () => {
           <p>Indiferente</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'green' ? 'selected' : ''}`}
-          id="green"
-          onClick={() => handleOptionSelect('green')}
-          style={{ border: selectedOption === 'green' ? '2px solid #fff' : 'none' }}
+          className={`checkbox ${selectedOption === 'red' ? 'selected' : ''}`}
+          id="red"
+          onClick={() => handleOptionSelect('red')}
+          style={{ border: selectedOption === 'red' ? '2px solid #fff' : 'none' }}
         >
-          <p>Superou</p>
+          <p>Atendeu em partes</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'green_light' ? 'selected' : ''}`}
-          id="green_light"
-          onClick={() => handleOptionSelect('green_light')}
-          style={{ border: selectedOption === 'green_light' ? '2px solid #fff' : 'none' }}
+          className={`checkbox ${selectedOption === 'red_light' ? 'selected' : ''}`}
+          id="red_light"
+          onClick={() => handleOptionSelect('red_light')}
+          style={{ border: selectedOption === 'red_light' ? '2px solid #fff' : 'none' }}
         >
-          <p>Atendeu Plenamente</p>
+          <p>Não satisfez</p>
         </div>
       </div>
-      {error && <p className="error_message">É necessário escolher uma opção.</p>}
+      {error && <p className="error_message_question1">É necessário escolher uma opção.</p>}
       <div className="container_button">
-        <button id="button_question1" onClick={handleNextQuestion}>
-          Próxima Pergunta
+        <button id="button_question1" onClick={handleNextQuestion}>Próxima Pergunta
         </button>
       </div>
       <div className="logosaojoao">

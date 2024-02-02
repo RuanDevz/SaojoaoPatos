@@ -12,9 +12,9 @@ const Start = () => {
      <div className='cont-logo'>
       <img id='logo_start' className='logo' src={Logo} alt="Logo" />
       <div>
-        <p className='paragrafo-start'>O São João 2023 foi um sucesso, mas queremos deixar tudo cada vez melhor, então bora contar o que você achou na nossa Pesquisa de Satisfação? </p>
-        <p className='paragrafo-start'>Queremos saber tudo: o que curtiu, o que não curtiu, e como podemos fazer o São João ficar ainda mais a nossa cara nas próximas edições.</p>
-        <p  id='p_center'>Contamos com seu feedback,Vamos lá?!</p>
+        <p className='paragrafo-start'>O São João 2023 sem dúvidas foi um sucesso! Mas como sempre queremos deixar tudo cada vez melhor, precisamos saber achou na nossa da nossa festa, então bora contar o que você Pesquisa de Satisfação? </p>
+        <p className='paragrafo-start'>Queremos saber tudo: o que curtiu, o que não curtiu, e como podemos fazer o São João da gente ficar ainda mais a nossa cara nas próximas edições. </p>
+        <p  id='p_center'>Contamos com seu feedback, Vamos lá?!</p>
       </div>
       <div className='container_button'>
         <button id='start_button' onClick={() => navigate('/Question1')}>INICIAR</button>

@@ -11,6 +11,11 @@
         height: 90px;
     }
 
+    span#opcaonumerica{
+        position: relative;
+        top: 13px;
+    }
+
     p#mediravaliacao{
         display: none;
     }

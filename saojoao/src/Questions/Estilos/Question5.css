@@ -6,6 +6,15 @@
     justify-content: center;
 }
 
+.error_message_question5{
+    color: red;
+    position: relative;
+    top: 50px;
+    font-size: 1em;
+}
+
+
+
 @media only screen and (min-width: 1024px) and (max-width: 1366px){
     img#question5_logo{
         position: fixed;

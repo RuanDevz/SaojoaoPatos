@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 
 const Question4 = () => {
   const [nota, setNota] = useState(null);
@@ -48,9 +47,6 @@ const Question4 = () => {
       {error && <p className="error_message">É necessário escolher uma nota.</p>}
       <div className='container_button'>
         <button id='question4_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
-      <div className='logosaojoao'>
-        <img id='logo_question4' src={logo} alt="logo" />
       </div>
     </div>
   );

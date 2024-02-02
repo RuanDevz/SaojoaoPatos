@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Pessimo from '../assets/bonecos/Pessimo.png';
 import Ruim from '../assets/bonecos/Ruim.png';

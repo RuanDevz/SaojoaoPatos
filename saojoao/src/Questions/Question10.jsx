@@ -29,8 +29,6 @@ import Slider from 'react-slick';
 import logo from '../assets/Logo/Logo.png'
 import { useNavigate } from 'react-router-dom';
 
-
-
 const Question10 = () => {
 
   const navigate = useNavigate()

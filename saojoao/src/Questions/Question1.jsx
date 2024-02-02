@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
-import Usecontext from '../context/Usecontext';
+import {QuestionContextProvider} from '../context/QuestionContext';
 
-const use
 
 const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const { selectedOption, setSelectedOption} = useContext(QuestionContextProvider)
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+
+  console.log(selectedOption)
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);

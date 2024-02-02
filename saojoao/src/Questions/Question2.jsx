@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useContext, useState } from 'react';
 import Muitobom from '../assets/rostinhos/Muitobom.png';
 import Bom from '../assets/rostinhos/Bom.png';
 import Indiferente from '../assets/rostinhos/Indiferente.png';
@@ -7,11 +8,12 @@ import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png';
+import {QuestionContextProvider} from '../context/QuestionContext';
 
 const Question2 = () => {
-  const [avaliacao, setAvaliacao] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate(); 
+  const [avaliacao, setAvaliacao] = useContext(QuestionContextProvider)
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     setAvaliacao(valorAvaliacao);

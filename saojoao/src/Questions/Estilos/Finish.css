@@ -40,7 +40,8 @@ img#logo_finish{
     }
     
     .happyface{
-        font-size: 15em;
+        font-size: 12em;
+        margin-bottom: 40px;
     }
 
     img#logo_finish{
@@ -54,7 +55,11 @@ img#logo_finish{
     }
 
     img#logo_finish{
-        margin-top: 0px;
+        margin-top: 50px;
+    }
+
+    .container_p_finish{
+        max-width: 300px;
     }
 }
 

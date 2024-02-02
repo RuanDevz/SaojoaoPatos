@@ -7,15 +7,15 @@ import logo from '../assets/Logo/Logo.png';
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState({
-    atracoes: false,
-    estruturas: false,
-    ativacoes: false,
-    bares: false,
-    organizacao: false,
-    limpeza: false,
-    seguranca: false,
-    outros: false,
-    outrosText: '',
+    'ATRAÇÕES': false,
+    'ESTRUTURAS': false,
+    'ATIVAÇÕES': false,
+    'BARES': false,
+    'ORGANIZAÇÃO': false,
+    'LIMPEZA': false,
+    'SEGURANÇA': false,
+    'outros': false,
+    'outrosText': '',
   });
   const [error, setError] = useState(false);
 
@@ -37,14 +37,14 @@ const FaixaEtariaQuestion = () => {
   const handleOutrosTextChange = (event) => {
     setSelectedFaixaEtaria((prevSelected) => ({
       ...prevSelected,
-      outrosText: event.target.value,
+      'outrosText': event.target.value,
     }));
   };
 
   const handleNextQuestion = () => {
-    const { atracoes, estruturas, ativacoes, bares, organizacao, limpeza, seguranca, outros } = selectedFaixaEtaria;
+    const { ATRAÇÕES, ESTRUTURAS, ATIVAÇÕES, BARES, ORGANIZAÇÃO, LIMPEZA, SEGURANÇA, outros } = selectedFaixaEtaria;
     
-    if (!(atracoes || estruturas || ativacoes || bares || organizacao || limpeza || seguranca || outros)) {
+    if (!(ATRAÇÕES || ESTRUTURAS || ATIVAÇÕES || BARES || ORGANIZAÇÃO || LIMPEZA || SEGURANÇA || outros)) {
       setError(true);
     } else {
       setError(false);
@@ -57,7 +57,7 @@ const FaixaEtariaQuestion = () => {
       <h1 className='question-title'>O que você <span id='menos'>menos</span> gostou ?</h1>
       <div className='container_geral_question8'>
         {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
-          if (key !== 'outrosText') {
+          if (key !== 'outrosText' && key !== 'outros') {
             return (
               <div key={key}>
                 <label className='container' htmlFor={key}>
@@ -68,7 +68,7 @@ const FaixaEtariaQuestion = () => {
                     onChange={handleFaixaEtariaChange}
                   />
                   <div className='checkmark'></div>
-                  <span>{key.toUpperCase()}</span>
+                  <span>{key}</span>
                 </label>
               </div>
             );
@@ -76,12 +76,12 @@ const FaixaEtariaQuestion = () => {
           return null;
         })}
       </div>
-      {selectedFaixaEtaria.outros && (
+      {selectedFaixaEtaria['outros'] && (
         <div className='container_input_especifique'>
           <input
             className='especifique'
             type="text"
-            value={selectedFaixaEtaria.outrosText}
+            value={selectedFaixaEtaria['outrosText']}
             onChange={handleOutrosTextChange}
             placeholder="Especifique"
           />

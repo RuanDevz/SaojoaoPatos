@@ -44,20 +44,20 @@ const Question1 = () => {
           <p>Atendeu Plenamente</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'yellow' ? 'selected' : ''}`}
+          className={`checkbox ${selectedOption === 'yellow' ? 'indifferent' : ''}`}
           id="yellow"
           onClick={() => handleOptionSelect('yellow')}
           style={{ border: selectedOption === 'yellow' ? '2px solid #fff' : 'none' }}
         >
-          <p>Indiferente</p>
+          <p>Atendeu em partes</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'red' ? 'selected' : ''}`}
+          className={`checkbox ${selectedOption === 'red' ? 'indifferent' : ''}`}
           id="red"
           onClick={() => handleOptionSelect('red')}
           style={{ border: selectedOption === 'red' ? '2px solid #fff' : 'none' }}
         >
-          <p>Atendeu em partes</p>
+          <p>Indiferente</p>
         </div>
         <div
           className={`checkbox ${selectedOption === 'red_light' ? 'selected' : ''}`}
@@ -70,8 +70,7 @@ const Question1 = () => {
       </div>
       {error && <p className="error_message_question1">É necessário escolher uma opção.</p>}
       <div className="container_button">
-        <button id="button_question1" onClick={handleNextQuestion}>Próxima Pergunta
-        </button>
+        <button id="button_question1" onClick={handleNextQuestion}>Próxima Pergunta</button>
       </div>
     </div>
   );

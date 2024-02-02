@@ -141,6 +141,9 @@ button#button_question6{
     span#fontquestion6{
       font-size: 1em;
     }
+    span#fontquestion66{
+      font-size: 1em;
+    }
 
     .error_message_question6{
       color: red;

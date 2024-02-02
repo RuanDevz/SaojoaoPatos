@@ -48,4 +48,8 @@ button#button_question8{
         position: relative;
         left: 8px;
     }
+
+    .container_geral_question8{
+        margin-left: 97px;
+    }
   }

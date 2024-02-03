@@ -26,6 +26,8 @@ const Question3 = () => {
     if (selectedCard === null) {
       setError(true); 
     } else {
+      _feedbacks.push(selectedCard)
+      setFeedbacks(_feedbacks)
       navigate("/question4");
     }
   };

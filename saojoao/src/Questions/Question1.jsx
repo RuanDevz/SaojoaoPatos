@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    setError(false); 
+    setError(false);
   };
 
   const handleNextQuestion = () => {
     if (!selectedOption) {
       setError(true); 
     } else {
+      _feedbacks.push(selectedOption)
+      setFeedbacks(_feedbacks)
+      console.log(feedbacks)
       navigate('/question2');
     }
   };
 
   return (
-    <div className="container_question">
+    <div className="container_question">i 
       <div className="container_title_question1">
         <h1 className="title_question1">Sobre sua expectativa em relação ao São João 2023:</h1>
       </div>

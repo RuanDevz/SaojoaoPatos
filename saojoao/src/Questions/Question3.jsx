@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Pessimo from '../assets/bonecos/Pessimo.png';
 import Ruim from '../assets/bonecos/Ruim.png';
 import Indiferente from '../assets/bonecos/Indiferente.png';
@@ -7,11 +7,15 @@ import Bom from '../assets/bonecos/Bom.png';
 import Muitobom from '../assets/bonecos/Muitobom.png';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleCardClick = (index) => {
     setSelectedCard(index);

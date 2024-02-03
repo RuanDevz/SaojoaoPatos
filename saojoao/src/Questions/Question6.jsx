@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Estilos/Question6.css';
 import { useNavigate } from 'react-router-dom';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
   const [error, setError] = useState(false);
+
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleFaixaEtariaChange = (event) => {
     const selectedValue = event.target.value;
@@ -21,6 +25,8 @@ const FaixaEtariaQuestion = () => {
     if (!selectedFaixaEtaria) {
       setError(true); 
     } else {
+      _feedbacks.push(selectedFaixaEtaria)
+      setFeedbacks(_feedbacks)
       navigate('/question7');
     }
   };

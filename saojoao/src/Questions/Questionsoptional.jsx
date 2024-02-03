@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Estilos/Questionoptional.css';
 import { useNavigate } from 'react-router-dom';
 import Input from '../Components/Form/Input/Input';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Questionsoptional = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState(false);
   const [name, setName] = useState('')
   const navigate = useNavigate();
+
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const isValidEmail = (email) => {
     // Expressão regular para validar o formato do e-mail

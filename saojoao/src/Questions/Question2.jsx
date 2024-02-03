@@ -7,11 +7,15 @@ import Ruim from '../assets/rostinhos/Ruim.png';
 import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question2 = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate(); 
   const [avaliacao, setAvaliacao] = useState(null);
+
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleAvaliacaoClick = (valorAvaliacao) => {
     setAvaliacao(valorAvaliacao);
@@ -22,6 +26,9 @@ const Question2 = () => {
     if (!avaliacao) {
       setError(true); 
     } else {
+      _feedbacks.push(avaliacao)
+      setFeedbacks(_feedbacks)
+      console.log(feedbacks)
       navigate('/question3');
     }
   };

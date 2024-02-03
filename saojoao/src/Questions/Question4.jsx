@@ -1,12 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question4 = () => {
   const [nota, setNota] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleNotaClick = (notaSelecionada) => {
     setNota(notaSelecionada);
@@ -17,6 +21,8 @@ const Question4 = () => {
     if (nota === null) {
       setError(true); 
     } else {
+      _feedbacks.push(nota)
+      setFeedbacks(_feedbacks)
       navigate('/question5');
     }
   };

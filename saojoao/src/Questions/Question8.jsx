@@ -1,8 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Estilos/Question8.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo/Logo.png';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
@@ -18,6 +19,9 @@ const FaixaEtariaQuestion = () => {
     'outrosText': '',
   });
   const [error, setError] = useState(false);
+
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleFaixaEtariaChange = (event) => {
     const { id, checked } = event.target;
@@ -48,6 +52,8 @@ const FaixaEtariaQuestion = () => {
       setError(true);
     } else {
       setError(false);
+      _feedbacks.push(selectedFaixaEtaria)
+      setFeedbacks(_feedbacks)
       navigate('/question9');
     }
   };

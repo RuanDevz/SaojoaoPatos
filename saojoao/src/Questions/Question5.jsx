@@ -1,13 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question5.css';
 import Input from '../Components/Form/Input/Input';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question5 = () => {
   const [input, setInput] = useState('');
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleInputChange = (e) => {
     setInput(e.target.value);
@@ -19,6 +22,8 @@ const Question5 = () => {
     if (!input.trim()) {
       setError(true); 
     } else {
+      _feedbacks.push(input)
+      setFeedbacks(_feedbacks)
       console.log('Navegando para a próxima pergunta...');
       navigate('/question6');
     }

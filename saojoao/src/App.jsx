@@ -1,16 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Start from './Questions/Start';
-<<<<<<< HEAD
 import { ReplyQuestions } from './Context/ReplyQuestions';
-
-const App = () => {
-  const [selectedOption, setSelectedOption] = useState(null)
-  return (
-    <div>
-      <ReplyQuestions.Provider value={{ selectedOption, setSelectedOption}}>
-        <Start />
-        </ReplyQuestions.Provider>
-=======
 import { feedbackContext } from './Context/FeedbackContext';
 import Question1 from './Questions/Question1';
 import Question2 from './Questions/Question2';
@@ -23,36 +14,37 @@ import Question8 from './Questions/Question8';
 import Question9 from './Questions/Question9';
 import Question10 from './Questions/Question10';
 import Questionsoptional from './Questions/Questionsoptional';
-import Finish from './Questions/Finish'
+import Finish from './Questions/Finish';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const [feedbacks, setFeedbacks, question, setQuestion] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [feedbacks, setFeedbacks] = useState([]);
+  const [question, setQuestion] = useState(null);
 
   return (
     <div>
       <Router>
-      <feedbackContext.Provider value={{ feedbacks, setFeedbacks, question, setQuestion }}>
-    
-      <Routes>
-        <Route path='/' element={<Start/>}></Route>
-        <Route path='/question1' element={<Question1/>}></Route>
-        <Route path='/question2' element={<Question2/>}></Route>
-        <Route path='/question3' element={<Question3/>}></Route>
-        <Route path='/question4' element={<Question4/>}></Route>
-        <Route path='/question5' element={<Question5/>}></Route>
-        <Route path='/question6' element={<Question6/>}></Route>
-        <Route path='/question7' element={<Question7/>}></Route>
-        <Route path='/question8' element={<Question8/>}></Route>
-        <Route path='/question9' element={<Question9/>}></Route>
-        <Route path='/question10' element={<Question10 />}></Route>
-        <Route path='/Questionsoptional' element={<Questionsoptional />}></Route>
-        <Route path='/Finish' element={<Finish />}></Route>
-        
-      </Routes>
-      </feedbackContext.Provider>
-    </Router>
->>>>>>> eefc31ad23ac35825c9d49a627419faaecfe71b7
+        <ReplyQuestions.Provider value={{ selectedOption, setSelectedOption }}>
+          <feedbackContext.Provider value={{ feedbacks, setFeedbacks, question, setQuestion }}>
+            <Routes>
+              <Route path='/' element={<Start />} />
+              <Route path='/question1' element={<Question1 />} />
+              <Route path='/question2' element={<Question2 />} />
+              <Route path='/question3' element={<Question3 />} />
+              <Route path='/question4' element={<Question4 />} />
+              <Route path='/question5' element={<Question5 />} />
+              <Route path='/question6' element={<Question6 />} />
+              <Route path='/question7' element={<Question7 />} />
+              <Route path='/question8' element={<Question8 />} />
+              <Route path='/question9' element={<Question9 />} />
+              <Route path='/question10' element={<Question10 />} />
+              <Route path='/Questionsoptional' element={<Questionsoptional />} />
+              <Route path='/Finish' element={<Finish />} />
+            </Routes>
+          </feedbackContext.Provider>
+        </ReplyQuestions.Provider>
+      </Router>
     </div>
   );
 };

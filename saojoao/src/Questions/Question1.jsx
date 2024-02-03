@@ -2,18 +2,15 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
-<<<<<<< HEAD
 import { ReplyQuestions } from '../Context/ReplyQuestions';
-
-const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useContext(ReplyQuestions);
-=======
 import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useContext(ReplyQuestions);
 
->>>>>>> eefc31ad23ac35825c9d49a627419faaecfe71b7
+
+const Question1 = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   
@@ -90,5 +87,6 @@ const Question1 = () => {
     </div>
   );
 };
+}
 
 export default Question1;

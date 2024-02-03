@@ -18,13 +18,11 @@ const Question5 = () => {
   };
 
   const handleNextQuestion = () => {
-    console.log('Valor do input:', input);
     if (!input.trim()) {
       setError(true); 
     } else {
       _feedbacks.push(input)
       setFeedbacks(_feedbacks)
-      console.log('Navegando para a próxima pergunta...');
       navigate('/question6');
     }
   };

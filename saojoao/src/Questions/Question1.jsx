@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import logo from '../assets/Logo/Logo.png';
+import { ReplyQuestions } from '../Context/ReplyQuestions';
 
 const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useContext(ReplyQuestions);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 

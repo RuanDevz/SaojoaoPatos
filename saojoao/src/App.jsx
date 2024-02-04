@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [error, setError] = useState(false)
   const [feedbacks, setFeedbacks] = useState([]);
   const [question, setQuestion] = useState(null);
 
@@ -26,7 +27,7 @@ const App = () => {
     <div>
       <Router>
         <ReplyQuestions.Provider value={{ selectedOption, setSelectedOption }}>
-          <feedbackContext.Provider value={{ feedbacks, setFeedbacks, question, setQuestion }}>
+          <feedbackContext.Provider value={{ feedbacks, setFeedbacks, question, setQuestion, error, setError }}>
             <Routes>
               <Route path='/' element={<Start />} />
               <Route path='/question1' element={<Question1 />} />

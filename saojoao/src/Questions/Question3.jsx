@@ -24,11 +24,11 @@ const Question3 = () => {
     if (selectedCard === null) {
       setError(true); 
     } else {
-      // Mapear o índice do cartão selecionado para a opção correspondente
+      
       const options = ['Muito Bom', 'Bom', 'Indiferente', 'Ruim', 'Péssimo'];
       const selectedOption = options[selectedCard];
 
-      // Adicionar a opção selecionada ao array de feedbacks
+      
       setFeedbacks(prevFeedbacks => [...prevFeedbacks, selectedOption]);
       
       navigate("/question4");

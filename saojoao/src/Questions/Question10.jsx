@@ -33,19 +33,20 @@ const Question10 = () => {
 
   const navigate = useNavigate()
   const [artists, setArtists] = useState([]);
-  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  const { feedbacks, setFeedbacks, error, setError } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleArtistClick = (artist) => {
     let _artists = Array.isArray(artists) ? artists : [];
     if (_artists.includes(artist)) {
+      setError(true)
       _artists = _artists.filter(a => a !== artist);
       setArtists(_artists)
     } else if (_artists.length < 3){
       _artists.push(artist)
       setArtists(_artists)
     } else {
-      alert("nao podeeee aaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAA")
+      setError(false)
     }
     console.log(_artists)
   }
@@ -54,11 +55,10 @@ const Question10 = () => {
     if (artists === null) {
       setError(true);
     } else {
+      navigate('/question5');
       _feedbacks.push(artists)
       setFeedbacks(_feedbacks)
       console.log(_feedbacks)
-      setError(false);
-      navigate('/questionoptional');
     }
   };
 
@@ -158,19 +158,19 @@ const Question10 = () => {
           <img src={RaíSaiaRodada} alt="RaíSaiaRodada" />
           <h3>Raí Saia Rodada</h3>
         </div>
-        <div onClick={() => handleArtistClick("SimoneMendes")}>
+        <div onClick={() => handleArtistClick("Simone Mendes")}>
           <img src={SimoneMendes} alt="SimoneMendes" />
           <h3>Simone Mendes</h3>
         </div>
         <div onClick={() => handleArtistClick("Vintage culture")}>
-          <img src={Vintageculture} alt="Vintageculture" />
+          <img src={Vintageculture} alt="Vintage culture" />
           <h3>Vintage Culture</h3>
         </div>
         <div onClick={() => handleArtistClick("Wesley Safadão")}>
           <img src={WS} alt="WS" />
           <h3>Wesley Safadão</h3>
         </div>
-        <div onClick={() => handleArtistClick("XandAvião")}>
+        <div onClick={() => handleArtistClick("Xand Avião")}>
           <img src={XandAvião} alt="XandAvião" />
           <h3>Xand Avião</h3>
         </div>
@@ -178,6 +178,7 @@ const Question10 = () => {
           <img src={ZeVaqueiro} alt="ZeVaqueiro" />
           <h3>Zé Vaqueiro</h3>
         </div>
+        {error && <p>é necessário escolher pelomenos 3 artistas</p>}
         </Slider>
           <h2 id='roleatela'>*ROLE A TELA PARA ESCOLHER*</h2>
       <div className='container_button'>

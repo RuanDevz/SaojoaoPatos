@@ -52,9 +52,10 @@ const FaixaEtariaQuestion = () => {
       setError(true);
     } else {
       setError(false);
-      _feedbacks.push(selectedFaixaEtaria)
-      setFeedbacks(_feedbacks)
-      navigate('/question9');
+      const selectedFeedback = Object.fromEntries(Object.entries(selectedFaixaEtaria).filter(([key, value]) => value === true));
+      _feedbacks.push(selectedFeedback);
+      setFeedbacks(_feedbacks);
+      navigate('/question2');
     }
   };
 

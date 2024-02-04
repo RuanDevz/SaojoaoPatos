@@ -23,7 +23,7 @@ const Question9 = () => {
       _feedbacks.push(nota)
       setFeedbacks(_feedbacks)
       setError(false);
-      navigate('/question10');
+      navigate('/question7');
     }
   };
 

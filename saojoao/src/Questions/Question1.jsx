@@ -25,7 +25,7 @@ const Question1 = () => {
       _feedbacks.push(selectedOption)
       setFeedbacks(_feedbacks)
       console.log(feedbacks)
-      navigate('/question2');
+      navigate('/question9');
     }
   };
 

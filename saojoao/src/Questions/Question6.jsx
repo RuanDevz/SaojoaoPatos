@@ -27,7 +27,7 @@ const FaixaEtariaQuestion = () => {
     } else {
       _feedbacks.push(selectedFaixaEtaria)
       setFeedbacks(_feedbacks)
-      navigate('/question7');
+      navigate('/Questionsoptional');
     }
   };
 

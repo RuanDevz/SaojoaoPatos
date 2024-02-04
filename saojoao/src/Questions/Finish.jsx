@@ -16,7 +16,7 @@ const Finish = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 10000);
+    }, 12000);
 
     
     return () => clearTimeout(timer);

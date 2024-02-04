@@ -23,7 +23,7 @@ const Question5 = () => {
     } else {
       _feedbacks.push(input)
       setFeedbacks(_feedbacks)
-      navigate('/question6');
+      navigate('/Question6');
     }
   };
   

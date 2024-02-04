@@ -33,7 +33,7 @@ const Question10 = () => {
 
   const navigate = useNavigate()
   const [artists, setArtists] = useState([]);
-  const { feedbacks, setFeedbacks,error, setError } = useContext(feedbackContext);
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleArtistClick = (artist) => {
@@ -45,7 +45,7 @@ const Question10 = () => {
       _artists.push(artist)
       setArtists(_artists)
     } else {
-      setError()
+      alert("nao podeeee aaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAA")
     }
     console.log(_artists)
   }
@@ -110,23 +110,23 @@ const Question10 = () => {
           <img src={HenryFreitas} alt="HenryFreitas" />
           <h3>Henry Freitas</h3>
         </div>
-        <div onClick={() => handleArtistClick("Jorgeematheus")}>
+        <div onClick={() => handleArtistClick("Jorge e matheus")}>
           <img src={Jorgeematheus} alt="Jorgeematheus" />
           <h3>Jorge e Mateus</h3>
         </div>
-        <div onClick={() => handleArtistClick("JonasEsticado")}>
+        <div onClick={() => handleArtistClick("Jonas Esticado")}>
           <img src={JonasEsticado} alt="JonasEsticado" />
           <h3>Jonas Esticado</h3>
         </div>
-        <div onClick={() => handleArtistClick("LeoSantana")}>
+        <div onClick={() => handleArtistClick("Leo Santana")}>
           <img src={LeoSantana} alt="LeoSantana" />
           <h3>Leo Santana</h3>
         </div>
-        <div onClick={() => handleArtistClick("LuanEstilizado")}>
+        <div onClick={() => handleArtistClick("Luan Estilizado")}>
           <img src={LuanEstilizado} alt="LuanEstilizado" />
           <h3>Luan Estilizado</h3>
         </div>
-        <div onClick={() => handleArtistClick("LuanSantana")}>
+        <div onClick={() => handleArtistClick("Luan Santana")}>
           <img src={LuanSantana} alt="LuanSantana" />
           <h3>Luan Santana</h3>
         </div>
@@ -134,11 +134,11 @@ const Question10 = () => {
           <img src={MariFernandez} alt="MariFernandez" />
           <h3>Mari Fernandez</h3>
         </div>
-        <div onClick={() => handleArtistClick("MatheuseKauan")}>
+        <div onClick={() => handleArtistClick("Matheus e Kauan")}>
           <img src={MatheuseKauan} alt="MatheuseKaua" />
           <h3>Matheus e Kauan</h3>
         </div>
-        <div onClick={() => handleArtistClick("MuriloRulff")}>
+        <div onClick={() => handleArtistClick("Murilo Rulff")}>
           <img src={MuriloRulff} alt="MuriloRulff" />
           <h3>Murilo Rulff</h3>
         </div>
@@ -146,15 +146,15 @@ const Question10 = () => {
           <img src={Nattan} alt="Nattan" />
           <h3>Nattan</h3>
         </div>
-        <div onClick={() => handleArtistClick("PedroSampaio")}>
+        <div onClick={() => handleArtistClick("Pedro Sampaio")}>
           <img src={PedroSampaio} alt="PedroSampaio" />
           <h3>Pedro Sampaio</h3>
         </div>
-        <div onClick={() => handleArtistClick("ProjetoAvontade")}>
+        <div onClick={() => handleArtistClick("Projeto Àvontade")}>
           <img src={ProjetoAvontade} alt="ProjetoAvontade" />
           <h3>Projeto Àvontade</h3>
         </div>
-        <div onClick={() => handleArtistClick("RaíSaiaRodada")}>
+        <div onClick={() => handleArtistClick("Raí Saia Rodada")}>
           <img src={RaíSaiaRodada} alt="RaíSaiaRodada" />
           <h3>Raí Saia Rodada</h3>
         </div>
@@ -162,11 +162,11 @@ const Question10 = () => {
           <img src={SimoneMendes} alt="SimoneMendes" />
           <h3>Simone Mendes</h3>
         </div>
-        <div onClick={() => handleArtistClick("Vintageculture")}>
+        <div onClick={() => handleArtistClick("Vintage culture")}>
           <img src={Vintageculture} alt="Vintageculture" />
           <h3>Vintage Culture</h3>
         </div>
-        <div onClick={() => handleArtistClick("WesleySafadão")}>
+        <div onClick={() => handleArtistClick("Wesley Safadão")}>
           <img src={WS} alt="WS" />
           <h3>Wesley Safadão</h3>
         </div>
@@ -174,11 +174,10 @@ const Question10 = () => {
           <img src={XandAvião} alt="XandAvião" />
           <h3>Xand Avião</h3>
         </div>
-        <div onClick={() => handleArtistClick("ZeVaqueiro")}>
+        <div onClick={() => handleArtistClick("Ze Vaqueiro")}>
           <img src={ZeVaqueiro} alt="ZeVaqueiro" />
           <h3>Zé Vaqueiro</h3>
         </div>
-        {error && <p className="error_message_question6">É necessário selecionar 3 Artistas</p>}
         </Slider>
           <h2 id='roleatela'>*ROLE A TELA PARA ESCOLHER*</h2>
       <div className='container_button'>

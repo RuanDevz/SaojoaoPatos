@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import Pessimo from '../assets/bonecos/Pessimo.png';
 import Ruim from '../assets/bonecos/Ruim.png';
@@ -15,7 +14,6 @@ const Question3 = () => {
   const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
-  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
@@ -26,8 +24,13 @@ const Question3 = () => {
     if (selectedCard === null) {
       setError(true); 
     } else {
-      _feedbacks.push(selectedCard)
-      setFeedbacks(_feedbacks)
+      // Mapear o índice do cartão selecionado para a opção correspondente
+      const options = ['Muito Bom', 'Bom', 'Indiferente', 'Ruim', 'Péssimo'];
+      const selectedOption = options[selectedCard];
+
+      // Adicionar a opção selecionada ao array de feedbacks
+      setFeedbacks(prevFeedbacks => [...prevFeedbacks, selectedOption]);
+      
       navigate("/question4");
     }
   };
@@ -44,7 +47,7 @@ const Question3 = () => {
           >
             <img src={src} alt={`Opção ${index + 1}`} />
             <p
-              id={index === 0 ? 'otima' : index === 1 ? 'gosteimuito' : index === 2 ? 'indiferente' : index === 3 ? 'ruim' : 'naogostei'}
+              id={index === 0 ? 'otima' : index === 1 ? 'gosteimuito' : index === 2 ? 'indiferente' : index === 3 ? '´pderia ser melhor' : 'naogostei'}
               className={selectedCard === index ? 'selected-text' : ''}
             ></p>
           </div>

@@ -6,10 +6,6 @@ import { ReplyQuestions } from '../Context/ReplyQuestions';
 import { feedbackContext } from '../Context/FeedbackContext';
 
 const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useContext(ReplyQuestions);
-
-
-const Question1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
@@ -34,32 +30,32 @@ const Question1 = () => {
   };
 
   return (
-    <div className="container_question">i 
+    <div className="container_question">
       <div className="container_title_question1">
         <h1 className="title_question1">Sobre sua expectativa em relação ao São João 2023:</h1>
       </div>
       <div className="container_box">
         <div
-          className={`checkbox ${selectedOption === 'green_light' ? 'selected' : ''}`}
+          className={`checkbox ${selectedOption === 'Superou' ? 'selected' : ''}`}
           id="green_light"
-          onClick={() => handleOptionSelect('green_light')}
-          style={{ border: selectedOption === 'green_light' ? '2px solid #fff' : 'none' }}
+          onClick={() => handleOptionSelect('Superou')}
+          style={{ border: selectedOption === 'Superou' ? '2px solid #fff' : 'none' }}
         >
           <p>Superou</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'green' ? 'selected' : ''}`}
+          className={`checkbox ${selectedOption === 'Atendeu Plenamente' ? 'selected' : ''}`}
           id="green"
-          onClick={() => handleOptionSelect('green')}
-          style={{ border: selectedOption === 'green' ? '2px solid #fff' : 'none' }}
+          onClick={() => handleOptionSelect('Atendeu Plenamente')}
+          style={{ border: selectedOption === 'Atendeu Plenamente' ? '2px solid #fff' : 'none' }}
         >
           <p>Atendeu Plenamente</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'yellow' ? 'indifferent' : ''}`}
+          className={`checkbox ${selectedOption === 'Atendeu em parte' ? 'indifferent' : ''}`}
           id="yellow"
-          onClick={() => handleOptionSelect('yellow')}
-          style={{ border: selectedOption === 'yellow' ? '2px solid #fff' : 'none' }}
+          onClick={() => handleOptionSelect('Atendeu em parte')}
+          style={{ border: selectedOption === 'Atendeu em parte' ? '2px solid #fff' : 'none' }}
         >
           <p>Atendeu em partes</p>
         </div>
@@ -72,10 +68,10 @@ const Question1 = () => {
           <p>Indiferente</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'red_light' ? 'selected' : ''}`}
+          className={`checkbox ${selectedOption === 'Não satisfez' ? 'selected' : ''}`}
           id="red_light"
-          onClick={() => handleOptionSelect('red_light')}
-          style={{ border: selectedOption === 'red_light' ? '2px solid #fff' : 'none' }}
+          onClick={() => handleOptionSelect('Não satisfez')}
+          style={{ border: selectedOption === 'Não satisfez' ? '2px solid #fff' : 'none' }}
         >
           <p>Não satisfez</p>
         </div>
@@ -87,6 +83,5 @@ const Question1 = () => {
     </div>
   );
 };
-}
 
 export default Question1;

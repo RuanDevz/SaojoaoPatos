@@ -60,10 +60,10 @@ const Question1 = () => {
           <p>Atendeu em partes</p>
         </div>
         <div
-          className={`checkbox ${selectedOption === 'red' ? 'indifferent' : ''}`}
+          className={`checkbox ${selectedOption === 'Indiferente' ? 'indifferent' : ''}`}
           id="red"
-          onClick={() => handleOptionSelect('red')}
-          style={{ border: selectedOption === 'red' ? '2px solid #fff' : 'none' }}
+          onClick={() => handleOptionSelect('Indiferente')}
+          style={{ border: selectedOption === 'Indiferente' ? '2px solid #fff' : 'none' }}
         >
           <p>Indiferente</p>
         </div>

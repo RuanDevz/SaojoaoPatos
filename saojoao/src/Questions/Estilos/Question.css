@@ -121,6 +121,7 @@ img#logo_question1 {
   .container_box {
       display: flex;
       justify-content: center;
+      flex-direction: row;
       flex-wrap: wrap;
   }
 

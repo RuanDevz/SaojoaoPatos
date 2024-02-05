@@ -54,4 +54,8 @@
         position: fixed;
         bottom: 0;
     }
+    span#opcaonumerica{
+        position: relative;
+        top: 12px;
+    }
   }

@@ -90,7 +90,7 @@ const Question10 = () => {
     <div>
       <h1 className='title_question10'>Quem você chamaria para o São João 2024? (Escolha até 3 opções)</h1>
         <Slider className='container_images' {...settings}>
-        <div onClick={() => handleArtistClick("BellMarques")}>
+        <div className='selectedd' onClick={() => handleArtistClick("BellMarques")} >
           <img src={BellMarques} alt="BellMarques" />
           <h3>Bell Marques</h3>
         </div>

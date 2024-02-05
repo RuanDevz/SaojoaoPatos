@@ -98,8 +98,8 @@ const FaixaEtariaQuestion = () => {
             checked={selectedFaixaEtaria === 'acimade60'}
             onChange={handleFaixaEtariaChange}
           />
-          <div id='checked' className='checkmark'></div>
-          <span id='fontquestion66'>Acima de 60 anos</span>
+            <div id='checked' className='checkmark'></div>
+            <span id='fontquestion66'>Acima de 60 anos</span>
         </label>
       </div>
       {error && <p className="error_message_question6">É necessário selecionar uma faixa etária.</p>}

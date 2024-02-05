@@ -164,5 +164,10 @@ img#logo_question1 {
     bottom: 10px;
     width: 150px;
   }
+
+  .container_box p{
+    position: relative;
+    top: 10px;
+  }
 }
 

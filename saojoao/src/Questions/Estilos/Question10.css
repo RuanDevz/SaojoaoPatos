@@ -131,5 +131,25 @@ img#logo_question10 {
         margin-bottom: 100px;
     }
 
+ /* Adicione esses estilos ao seu arquivo Question10.css */
+
+.container_images div {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .container_images img{
+    width: 90%;
+  }
+  
+  .container_images div:hover {
+    transform: scale(1);
+  }
+  
+  .selectedd {
+    border: none;
+  }
+  
+
     
 }

@@ -1,26 +1,17 @@
-
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import { IoMdHappy } from 'react-icons/io';
 import logo from '../assets/Logo/Logo.png';
 import './Estilos/Finish.css';
-import { useNavigate } from 'react-router-dom';
-import { feedbackContext } from '../Context/FeedbackContext';
 
 const Finish = () => {
-  const navigate = useNavigate();
-
-  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
-  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
-
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/');
-    }, 12000);
+      
+    }, 2000);
 
-    
     return () => clearTimeout(timer);
-  }, []); 
+  }, []);
 
   return (
     <div className='container_finish'>

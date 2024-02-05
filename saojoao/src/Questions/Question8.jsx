@@ -46,15 +46,28 @@ const FaixaEtariaQuestion = () => {
   };
 
   const handleNextQuestion = () => {
-    const { ATRAÇÕES, ESTRUTURAS, ATIVAÇÕES, BARES, ORGANIZAÇÃO, LIMPEZA, SEGURANÇA, outros } = selectedFaixaEtaria;
+    const { ATRAÇÕES, ESTRUTURAS, ATIVAÇÕES, BARES, ORGANIZAÇÃO, LIMPEZA, SEGURANÇA, outros, outrosText } = selectedFaixaEtaria;
     
     if (!(ATRAÇÕES || ESTRUTURAS || ATIVAÇÕES || BARES || ORGANIZAÇÃO || LIMPEZA || SEGURANÇA || outros)) {
       setError(true);
     } else {
       setError(false);
-      const selectedFeedback = Object.fromEntries(Object.entries(selectedFaixaEtaria).filter(([key, value]) => value === true));
-      _feedbacks.push(selectedFeedback);
+      const selectedItems = [];
+      
+      if (ATRAÇÕES) selectedItems.push('ATRAÇÕES');
+      if (ESTRUTURAS) selectedItems.push('ESTRUTURAS');
+      if (ATIVAÇÕES) selectedItems.push('ATIVAÇÕES');
+      if (BARES) selectedItems.push('BARES');
+      if (ORGANIZAÇÃO) selectedItems.push('ORGANIZAÇÃO');
+      if (LIMPEZA) selectedItems.push('LIMPEZA');
+      if (SEGURANÇA) selectedItems.push('SEGURANÇA');
+      if (outros) selectedItems.push(outrosText);
+
+      // Salvar os itens selecionados em uma variável ou estado
+      _feedbacks.push(selectedItems);
       setFeedbacks(_feedbacks);
+
+      // Navegar para a próxima pergunta
       navigate('/question2');
     }
   };

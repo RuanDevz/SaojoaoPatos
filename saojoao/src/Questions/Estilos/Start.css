@@ -1,4 +1,5 @@
-body{
+/* Estilos padrão */
+body {
     background-image: url("../../assets//Background/Background.png");
     margin: 0;
     padding: 0;
@@ -15,37 +16,33 @@ body{
     --pinkdark: #dd047b;
 }
 
-
-.container_logo{
+.container_logo {
     display: flex;
     justify-content: center;
 }
 
-.container_logo img{
+.container_logo img {
     position: relative;
     top: 40px;
-}
-
-.container_logo img{
     width: 250px;
 }
 
-.container_geral{
+.container_geral {
     display: flex;
     justify-content: center;
 }
 
-.start-first-section{
+.start-first-section {
     max-width: 1000px;
 }
 
-.start-segund-section{
+.start-segund-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.start-first-section p{
+.start-first-section p {
     text-align: center;
     color: #fff;
     font-weight: 500;
@@ -53,25 +50,26 @@ body{
     margin: 15px 0px;
 }
 
-span#ocean{
+span#ocean {
     color: var(--ocean);
     font-weight: bolder;
 }
-span#orange{
+
+span#orange {
     color: orange;
     font-weight: bolder;
 }
 
-span#pink{
+span#pink {
     color: var(--pink);
     font-weight: bolder;
 }
 
-.paragrafo-styled span{
+.paragrafo-styled span {
     font-size: 1.3em;
 }
 
-.container_input{
+.container_input {
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -79,9 +77,9 @@ span#pink{
     align-items: center;
     width: 100%;
 }
-.container_input input{
-    max-width: 500px;
-    width: 100%;
+
+.container_input input {
+    width: 500px;
     padding: 8px;
     border-radius: 20px;
     border: 2px solid var(--orange);
@@ -89,15 +87,17 @@ span#pink{
     color: #fff;
     font-size: 1.1em;
 }
-.container_input input:focus{
+
+.container_input input:focus {
     border: 2px solid var(--orange);
     outline: var(--orange);
 }
 
-.container_input input::placeholder{
+.container_input input::placeholder {
     color: #ffffff8a;
 }
-.container_input button{
+
+.container_input button {
     color: #fff;
     background-color: var(--pink);
     border: 2px solid #fff;
@@ -107,57 +107,99 @@ span#pink{
     font-weight: bolder;
     margin-top: 20px;
 }
-.container_input button:hover{
-    background-color:var(--pinkdark);
+
+.container_input button:hover {
+    background-color: var(--pinkdark);
     cursor: pointer;
 }
-.name_button{
+
+.name_button {
     font-size: 1.4em;
 }
 
+.container_message_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_message_error p {
+    color: red;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 767px) {
+    .start-first-section{
+        max-width: 700px;
+    }
+
+    .start-first-section p{
+        font-size: 1.7em;
+        margin-bottom: 40px;
+    }
+
+    .container_input input{
+        border: 5px solid orange;
+        height: 55px;
+        font-size: 1.7em;
+    }
+
+    .container_input button{
+        width: 200px;
+        padding: 10px 10px;
+    }
+
+    .name_button{
+        font-size: 1.6em;
+        font-weight: bolder;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
-    body{
+    body {
         background-attachment: local;
     }
+
     .container_logo img {
         width: 200px;
         margin: 0;
     }
 
-    .container_logo img{
+    .container_logo img {
         position: relative;
         top: 0px;
     }
-    
-    .start-first-section{
+
+    .start-first-section {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         max-width: 320px;
     }
-    .start-first-section p{
-        text-align: justify;
-    }
 
-    .start-first-section p{
+    .start-first-section p {
+        text-align: justify;
         font-size: 1.15em;
     }
 
-    .start-segund-section{
+    .start-segund-section {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
-    .container_input input{
+    .container_input input {
         width: 300px;
         margin-bottom: 120px;
     }
 
-    .container_input button{
+    .container_input button {
         position: relative;
         bottom: 120px;
         padding: 5px 15px;
     }
-
 }

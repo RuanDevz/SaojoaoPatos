@@ -77,7 +77,7 @@ const Question1 = () => {
       </div>
       {error && <p className="error_message_question1">É necessário escolher uma opção.</p>}
       <div className="container_button">
-        <button id="button_question1" onClick={handleNextQuestion}>Próxima Pergunta</button>
+        <button className='name_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
       </div>
     </div>
   );

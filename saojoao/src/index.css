@@ -19,9 +19,6 @@ button{
   z-index: 1;
 }
 
-.error_message{
-  color: red;
-}
 
 .slick-slide {
   border: none;

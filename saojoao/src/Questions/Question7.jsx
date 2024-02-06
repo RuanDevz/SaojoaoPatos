@@ -1,8 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question7.css';
-import Button from '../Components/Form/Button/Button';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 import { feedbackContext } from '../Context/FeedbackContext';
 
 const FaixaEtariaQuestion = () => {

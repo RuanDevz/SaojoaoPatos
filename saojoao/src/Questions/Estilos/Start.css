@@ -114,3 +114,50 @@ span#pink{
 .name_button{
     font-size: 1.4em;
 }
+
+@media screen and (max-width: 600px) {
+    body{
+        background-attachment: local;
+    }
+    .container_logo img {
+        width: 200px;
+        margin: 0;
+    }
+
+    .container_logo img{
+        position: relative;
+        top: 0px;
+    }
+    
+    .start-first-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 320px;
+    }
+    .start-first-section p{
+        text-align: justify;
+    }
+
+    .start-first-section p{
+        font-size: 1.15em;
+    }
+
+    .start-segund-section{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_input input{
+        width: 300px;
+        margin-bottom: 120px;
+    }
+
+    .container_input button{
+        position: relative;
+        bottom: 120px;
+        padding: 5px 15px;
+    }
+
+}

@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Questionoptional.css';
-import Input from '../Components/Form/Input/Input';
 import { feedbackContext } from '../Context/FeedbackContext';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const Questionsoptional = () => {
   const [email, setEmail] = useState('');

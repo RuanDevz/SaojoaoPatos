@@ -172,7 +172,7 @@ span#pink {
 
 @media screen and (max-width: 600px) {
     body {
-        background-attachment: local;
+        background-attachment: fixed;
     }
 
     .container_logo img {

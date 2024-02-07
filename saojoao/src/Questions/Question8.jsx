@@ -2,7 +2,6 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question8.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo/Logo.png';
 import { feedbackContext } from '../Context/FeedbackContext';
 
 const FaixaEtariaQuestion = () => {

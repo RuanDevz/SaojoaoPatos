@@ -9,13 +9,6 @@ body {
     width: 100vw;
 }
 
-:root {
-    --orange: #ffb700;
-    --ocean: #05bd85;
-    --pink: #ff008e;
-    --pinkdark: #dd047b;
-}
-
 .container_logo {
     display: flex;
     justify-content: center;
@@ -89,7 +82,7 @@ span#pink {
 }
 
 .container_input input:focus {
-    border: 2px solid var(--orange);
+    border: 4px solid var(--orange);
     outline: var(--orange);
 }
 
@@ -130,33 +123,52 @@ span#pink {
     margin-top: 15px;
 }
 
-@media screen and (min-width: 767px) {
-    .start-first-section{
+/* Media Queries */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .start-first-section {
         max-width: 700px;
     }
 
-    .start-first-section p{
+    .start-first-section p {
         font-size: 1.7em;
         margin-bottom: 40px;
     }
 
-    .container_input input{
+    .container_input input {
         border: 5px solid orange;
         height: 55px;
         font-size: 1.7em;
     }
 
-    .container_input button{
+    .container_input button {
         width: 200px;
         padding: 10px 10px;
     }
 
-    .name_button{
+    .name_button {
         font-size: 1.6em;
         font-weight: bolder;
     }
 }
 
+@media screen and (min-width: 1280px) {
+    body {
+        background-attachment: local;
+    }
+
+    .start-first-section p {
+        font-size: 1.2em;
+    }
+
+    .container_input input {
+        margin-bottom: 50px;
+    }
+
+    .container_input button {
+        position: relative;
+        bottom: 50px;
+    }
+}
 
 @media screen and (max-width: 600px) {
     body {

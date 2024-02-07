@@ -1,0 +1,151 @@
+/*desktop*/
+:root {
+    --orange: #ffb700;
+    --ocean: #05bd85;
+    --pink: #ff008e;
+    --pinkdark: #dd047b;
+    --green_button: #00c600;
+    --darkgreen_button: #007200;
+    --yellow_button: #ffb000;
+    --darkred_button: #950a0a;
+    --red_button: #ff0000;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.title-white{
+    color: #fff;
+    font-size: 3em;
+    text-align: left;
+}
+
+.container_main_geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container_button{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_button button{
+    margin: 20px 0px;
+    padding: 20px 60px;
+    border-radius: 50px;
+    color: #fff;
+    border: 3px solid #fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+button#green{
+    background-color: var(--green_button);
+}
+
+button#darkgreen{
+    white-space: nowrap;
+    background-color: var(--darkgreen_button);
+}
+
+button#yellow{
+    white-space: nowrap;
+    background-color: var(--yellow_button);
+}
+
+button#darkred{
+    background-color: var(--darkred_button);
+}
+
+button#red{
+    white-space: nowrap;
+    background-color: var(--red_button);
+}
+
+button#green:hover{
+    background-color: #01ad01;
+}
+
+button#darkgreen:hover{
+    white-space: nowrap;
+    background-color: #016101;
+}
+
+button#yellow:hover{
+    white-space: nowrap;
+    background-color: #e29b01;
+}
+
+button#darkred:hover{
+    background-color: #860909;
+}
+
+button#red:hover{
+    white-space: nowrap;
+    background-color: #da0303;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container_main_geral {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .title-white{
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .container_button button{
+        padding: 20px 100px;
+    }
+}
+
+/* Celular */
+@media screen and (max-width: 767px) {
+    .container_main_geral {
+        flex-direction: column;
+        gap: 0px;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+
+    .title-white {
+        text-align: center;
+        font-size: 2em;
+        margin: 10px 0;
+    }
+
+    .container_button {
+        justify-content: center;
+    }
+
+    .container_button button {
+        margin: 15px 0;
+        padding: 15px 50px;
+    }
+}
+
+/* Dispositivos grandes */
+@media screen and (min-width: 1024px) {
+    .container_main_geral {
+        gap: 300px;
+    }
+
+    .container_button button{
+        font-size: 1.2em;
+    }
+}

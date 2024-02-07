@@ -29,56 +29,19 @@ const Question1 = () => {
   };
 
   return (
-    <div className="container_question">
-      <div className="container_title_question1">
-        <h1 className="title_question1">Sobre sua expectativa em relação ao São João 2023:</h1>
-      </div>
-      <div className="container_box">
-        <div
-          className={`checkbox ${selectedOption === 'Superou' ? 'selected' : ''}`}
-          id="green_light"
-          onClick={() => handleOptionSelect('Superou')}
-          style={{ border: selectedOption === 'Superou' ? '2px solid #fff' : 'none' }}
-        >
-          <p>Superou</p>
-        </div>
-        <div
-          className={`checkbox ${selectedOption === 'Atendeu Plenamente' ? 'selected' : ''}`}
-          id="green"
-          onClick={() => handleOptionSelect('Atendeu Plenamente')}
-          style={{ border: selectedOption === 'Atendeu Plenamente' ? '2px solid #fff' : 'none' }}
-        >
-          <p>Atendeu Plenamente</p>
-        </div>
-        <div
-          className={`checkbox ${selectedOption === 'Atendeu em parte' ? 'indifferent' : ''}`}
-          id="yellow"
-          onClick={() => handleOptionSelect('Atendeu em parte')}
-          style={{ border: selectedOption === 'Atendeu em parte' ? '2px solid #fff' : 'none' }}
-        >
-          <p>Atendeu em partes</p>
-        </div>
-        <div
-          className={`checkbox ${selectedOption === 'Indiferente' ? 'indifferent' : ''}`}
-          id="red"
-          onClick={() => handleOptionSelect('Indiferente')}
-          style={{ border: selectedOption === 'Indiferente' ? '2px solid #fff' : 'none' }}
-        >
-          <p>Indiferente</p>
-        </div>
-        <div
-          className={`checkbox ${selectedOption === 'Não satisfez' ? 'selected' : ''}`}
-          id="red_light"
-          onClick={() => handleOptionSelect('Não satisfez')}
-          style={{ border: selectedOption === 'Não satisfez' ? '2px solid #fff' : 'none' }}
-        >
-          <p>Não satisfez</p>
-        </div>
-      </div>
-      {error && <p className="error_message_question1">É necessário escolher uma opção.</p>}
-      <div className="container_button">
-        <button className='name_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
+    <div>
+      <main className='container_main_geral'>
+        <section className='first-section-question1'>
+          <h1 className='title-white'><span id='pink'>SOBRE SUA </span> EXPECTATIVA <span id='orange'>EM RELAÇÃO AO </span>SÃO JOÃO 2023:</h1>
+        </section>
+        <section className='container_button'>
+          <button id='green'>SUPEROU</button>
+          <button id='darkgreen'>ATENDEU PLENAMENTE</button>
+          <button id='yellow'>ATENDEU EM PARTES</button>
+          <button id='darkred'>INDIFERENTE</button>
+          <button id='red'>NÃO SATISFEITO</button>
+        </section>
+      </main>
     </div>
   );
 };

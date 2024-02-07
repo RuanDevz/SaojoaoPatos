@@ -27,3 +27,15 @@ button{
 .slick-slide slick-active{
   border: none;
 }
+
+:root {
+  --orange: #ffb700;
+  --ocean: #05bd85;
+  --pink: #ff008e;
+  --pinkdark: #dd047b;
+  --green_button: #00c600;
+  --darkgreen_button: #007200;
+  --yellow_button: #ffb000;
+  --darkred_button: #950a0a;
+  --red_button: #ff0000;
+}

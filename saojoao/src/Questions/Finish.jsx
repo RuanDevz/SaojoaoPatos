@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
 import { IoMdHappy } from 'react-icons/io';
-import logo from '../assets/Logo/Logo.png';
+import logo from '../assets/Logo São João/Logosaojoao.png';
 import './Estilos/Finish.css';
 
 const Finish = () => {

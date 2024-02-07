@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import '../Questions/Estilos/Start.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo/logo.png';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const Start = () => {
   const [email, setEmail] = useState('');

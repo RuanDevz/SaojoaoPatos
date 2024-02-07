@@ -1,0 +1,30 @@
+.containergeral_question3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_question3 p{
+    color: #fff;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.container_button_question3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.container_button_question3 button{
+    padding: 30px 60px;
+    margin-bottom: 100px;
+}

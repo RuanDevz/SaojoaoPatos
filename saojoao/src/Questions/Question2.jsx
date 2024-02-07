@@ -1,13 +1,9 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useContext, useState } from 'react';
-import Muitobom from '../assets/rostinhos/Muitobom.png';
-import Bom from '../assets/rostinhos/Bom.png';
-import Indiferente from '../assets/rostinhos/Indiferente.png';
-import Ruim from '../assets/rostinhos/Ruim.png';
-import Pessimo from '../assets/rostinhos/Péssimo.png';
 import './Estilos/Question2.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
+import Button from '../Components/Form/Button/ButtonProximapagina'
+import ButtonProximapagina from '../Components/Form/Button/ButtonProximapagina';
 
 const Question2 = () => {
   const [error, setError] = useState(false);
@@ -29,25 +25,46 @@ const Question2 = () => {
       _feedbacks.push(avaliacao)
       setFeedbacks(_feedbacks)
       console.log(feedbacks)
-      navigate('/question3');
+      navigate('/question1');
     }
   };
 
   return (
     <div>
-      <h1 className='title_question2'>Qual o seu nível de satisfação com as atracões? Sendo: 01 estrela para fraco e 05 estrelas para excelente</h1>
-      <div className='avaliar'>
-        <span id='fraco'>Fraco</span>
-        <img className={`carinha carinha-Péssimo ${avaliacao === 'Péssimo' && 'selecionada'}`} src={Pessimo} alt="Péssimo" onClick={() => handleAvaliacaoClick('Péssimo')} />
-        <img className={`carinha carinha-Ruim ${avaliacao === 'Ruim' && 'selecionada'}`} src={Ruim} alt="Ruim" onClick={() => handleAvaliacaoClick('Ruim')} />
-        <img className={`carinha carinha-Indiferente ${avaliacao === 'Indiferente' && 'selecionada'}`} src={Indiferente} alt="Indiferente" onClick={() => handleAvaliacaoClick('Indiferente')} />
-        <img className={`carinha carinha-Bom ${avaliacao === 'Bom' && 'selecionada'}`} src={Bom} alt="Bom" onClick={() => handleAvaliacaoClick('Bom')} />
-        <img className={`carinha carinha-MuitoBom ${avaliacao === 'Muito Bom' && 'selecionada'}`} src={Muitobom} alt="Muito Bom" onClick={() => handleAvaliacaoClick('Muito Bom')} />
-        <span id='excelente'>Excelente</span>
-      </div>
-      {error && <p className="error_message">É necessário escolher uma opção.</p>}
-      <div className='container_button'>
-        <button id='question2_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
+      <main className='container_geral_question2'>
+        <section className='first-section-question2'>
+          <p id='paragrafo-question2'>QUAL <br /> SUA <br /> <span id='orange'>FAIXA</span> <br /> <span id='pink'>ETÁRIA ?</span></p>
+        </section>
+        <section className='container_section2_question2'>
+          <label htmlFor="abaixode20">
+            <input type="checkbox" name="faixaEtaria" id="abaixode20" value="abaixode20" onChange={() => handleAvaliacaoClick("abaixode20")} checked={avaliacao === "abaixode20"} />
+            <strong>Abaixo de 20 anos</strong>
+          </label>
+          <label htmlFor="entre20e29">
+            <input type="checkbox" name="faixaEtaria" id="entre20e29" value="entre20e29" onChange={() => handleAvaliacaoClick("entre20e29")} checked={avaliacao === "entre20e29"} />
+            <strong>Entre 20 e 29 anos</strong>
+          </label>
+          <label htmlFor="entre30e39">
+            <input type="checkbox" name="faixaEtaria" id="entre30e39" value="entre30e39" onChange={() => handleAvaliacaoClick("entre30e39")} checked={avaliacao === "entre30e39"} />
+            <strong>Entre 30 a 39 anos</strong>
+          </label>
+          <label htmlFor="entre40e49">
+            <input type="checkbox" name="faixaEtaria" id="entre40e49" value="entre40e49" onChange={() => handleAvaliacaoClick("entre40e49")} checked={avaliacao === "entre40e49"} />
+            <strong>Entre 40 a 49 anos</strong>
+          </label>
+          <label htmlFor="entre50e59">
+            <input type="checkbox" name="faixaEtaria" id="entre50e59" value="entre50e59" onChange={() => handleAvaliacaoClick("entre50e59")} checked={avaliacao === "entre50e59"} />
+            <strong>Entre 50 e 59 anos</strong>
+          </label>
+          <label htmlFor="acimade60">
+            <input type="checkbox" name="faixaEtaria" id="acimade60" value="acimade60" onChange={() => handleAvaliacaoClick("acimade60")} checked={avaliacao === "acimade60"} />
+             <strong id='six'>Acima de 60 anos</strong>
+             <ButtonProximapagina id='question2' onClick={handleNextQuestion} Children='PRÓXIMA PERGUNTA >>>' />
+          </label>
+        </section>
+      </main>
+      <div className='container_button_question2'>
+      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma faixa etária.</p>}
       </div>
     </div>
   );

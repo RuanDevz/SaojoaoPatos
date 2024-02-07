@@ -1,13 +1,14 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Start.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
+import { feedbackContext } from '../Context/FeedbackContext';
 
 const Start = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
 
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,15 +20,13 @@ const Start = () => {
     if (!validateEmail(email)) {
       setError('Email inválido');
     } else {
-      navigate('/question1');
+      setFeedbacks(prevFeedbacks => [...prevFeedbacks, email]);
+      navigate('/question2');
     }
   };
 
   return (
     <div className='divgeral'>
-      <header className='container_logo'>
-        <img src={logo} alt="Logo" />
-      </header>
       <main className='container_geral'>
         <section className='start-first-section'>
           <p>O São João sem dúvidas foi um sucesso! Mas como sempre queremos deixar tudo cada vez melhor. Por isso, precisamos saber o que você achou da nossa festa. Então bora contar tudo na pesquisa de satisfação?</p>

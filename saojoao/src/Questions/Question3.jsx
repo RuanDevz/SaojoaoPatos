@@ -1,12 +1,9 @@
 import React, { useState, useContext } from 'react';
-import Pessimo from '../assets/bonecos/Pessimo.png';
-import Ruim from '../assets/bonecos/Ruim.png';
-import Indiferente from '../assets/bonecos/Indiferente.png';
-import Bom from '../assets/bonecos/Bom.png';
-import Muitobom from '../assets/bonecos/Muitobom.png';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
+import buttonProximapagina from '../Components/Form/Button/ButtonProximapagina'
+import ButtonProximapagina from '../Components/Form/Button/ButtonProximapagina';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -36,29 +33,26 @@ const Question3 = () => {
   };
 
   return (
-    <div>
-      <h1 id='title_question3'>Sobre a estrutura do evento, você gostou?</h1>
-      <div className='container-bonecos'>
-        {[Muitobom, Bom, Indiferente, Ruim, Pessimo].map((src, index) => (
-          <div
-            key={index}
-            className={`card ${selectedCard === index ? 'selected' : ''}`}
-            onClick={() => handleCardClick(index)}
-          >
-            <img src={src} alt={`Opção ${index + 1}`} />
-            <p
-              id={index === 0 ? 'otima' : index === 1 ? 'gosteimuito' : index === 2 ? 'indiferente' : index === 3 ? '´pderia ser melhor' : 'naogostei'}
-              className={selectedCard === index ? 'selected-text' : ''}
-            ></p>
-          </div>
-        ))}
-      </div>
-      {error && <p className="error_message">É necessário escolher uma opção.</p>}
+    <div className='containergeral_question3'>
+      <main>
+        <section className='section_question3'>
+          <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023?</span></p>
+        </section>
+        <section className='container_button_question3'>
+          <button id='red'>1</button>
+          <button id='darkred'>2</button>
+          <button id='yellow'>3</button>
+          <button id='darkgreen'>4</button>
+          <button id='green'>5</button>
+        </section>
+      </main>
       <div className='container_button'>
-        <button id='button_question3' onClick={handleNextQuestion}>Próxima Pergunta</button>
+        <ButtonProximapagina Children='PRÓXIMA PERGUNTA >>>'  />
       </div>
     </div>
-  );
+  )
+
+      
 };
 
 export default Question3;

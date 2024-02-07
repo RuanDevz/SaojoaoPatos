@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Rockwell'; 
+    src: url('../../assets/FONTE/Rockwell Bold Italic.ttf') format('truetype');
+}
+
+body{
+    background-image: url("../../assets/Background/Background.png");
+}
+
+   .container_geral_question2{
+    display: flex;
+    justify-content: space-around;
+   }
+   
+    .container_geral_question2 p, span{
+        font-family: 'Rockwell';
+    }
+
+    p#paragrafo-question2{
+        color: #fff;
+        font-size: 5em;
+    }
+
+    .container_section2_question2{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    .container_section2_question2 label{
+        margin-right: 20px;
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .container_geral_question2{
+        display: flex;
+        gap: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    strong{
+        margin-left: 30px;
+    }
+
+    .container_section2_question2 input[type="checkbox"] {
+        appearance: none; /* Remove o estilo padrão do navegador */
+        -webkit-appearance: none; /* Para compatibilidade com WebKit browsers */
+        -moz-appearance: none; /* Para compatibilidade com Firefox */
+        width: 30px; /* Defina a largura da checkbox */
+        height: 30px; /* Defina a altura da checkbox */
+        border-radius: 50%; /* Deixa a checkbox redonda */
+        outline: none; /* Remove a borda ao focar */
+        cursor: pointer; /* Muda o cursor ao passar por cima */
+        vertical-align: middle; /* Alinha verticalmente */
+        position: relative; /* Define a posição para permitir que o ::before seja posicionado em relação a esta checkbox */
+    }
+    
+    .container_section2_question2 input[type="checkbox"]::before {
+        content: ''; /* Adiciona o pseudo-elemento antes da checkbox */
+        display: inline-block; /* Permite alinhar verticalmente */
+        width: 30px; /* Define a largura do pseudo-elemento */
+        height: 30px; /* Define a altura do pseudo-elemento */
+        border-radius: 50%;
+        background-color: #fff; 
+        transition: background-color 0.3s ease;  
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+    }
+    
+    .container_section2_question2 input[type="checkbox"]:checked::before {
+        background-color: #ff008e; /* Cor do fundo quando a checkbox está marcada */
+    }
+    
+    .container_section2_question2 input[type="checkbox"]::after {
+        content: ''; 
+        display: inline-block; 
+        width: 38px; 
+        height: 38px; 
+        border-radius: 50%; 
+        border: 5px solid #ff008e; 
+        box-sizing: border-box; 
+        position: absolute; 
+        top: -5px; 
+        left: -5px; 
+    }
+
+    .container_button_question2 button{
+        padding: 20px 50px;
+        border-radius: 50px;
+        color: #fff;
+        background-color: #1D46BB;
+        font-weight: bold;
+        font-size: 1.3em;
+        border: 4px solid #fff;
+        position: absolute;
+        bottom: 168px;
+        right: 733px;
+    }
+
+    .container_button_question2 button:hover{
+        background-color: #2657df;
+        cursor: pointer;
+    }
+
+    p#error_msg{
+        position: absolute;
+        bottom: 118px;
+        right: 710px;
+        font-size: 1.3em;
+        font-weight: bolder;
+    }
+
+    @media screen and (max-width: 767px){
+        .container_geral_question2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p#paragrafo-question2{
+            font-size: 1em;
+        }
+    
+        strong{
+            font-size: 0.7em;
+        }
+        .container_section2_question2 input[type="checkbox"]{
+            width: 10px;
+            height: 10px;
+        }
+        .container_button_question2 button{
+            padding: 10px 30px; /* Reduzindo o padding dos botões */
+            border-radius: 25px; /* Reduzindo o border-radius dos botões */
+            font-size: 1em; /* Ajustando o tamanho da fonte dos botões */
+            bottom: 118px; /* Ajustando a posição dos botões */
+            right: 710px; /* Ajustando a posição dos botões */
+        }
+        p#error_msg{
+            bottom: 68px; /* Ajustando a posição da mensagem de erro */
+            right: 710px; /* Ajustando a posição da mensagem de erro */
+        }
+    }
+    

@@ -81,9 +81,6 @@ const FaixaEtariaQuestion = () => {
         <section className='container_section_question7'>
           <p><span id='pink'>QUAL </span> <span id='orange'>SEU NÍVEL <br /></span>DE SATISFAÇÃO <br /> <span id='pink'>COM AS</span><span id='ocean'> ATRAÇÕES ?</span></p>
         </section>
-        <section>
-          <h1>EM DESENVOLVIMENTO FALTANDO ACRESCENTAR OS ROSTINHOS</h1>
-        </section>
       </main>
       <div className='container_button_question7'>
         <button onClick={() => navigate('/question8')}>PROXIMA PERGUNTA >>></button>

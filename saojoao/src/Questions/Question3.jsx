@@ -51,7 +51,7 @@ const Question3 = () => {
         </section>
       </main>
       <div id='button_nextquestion' className='container_button_question3'>
-        <button>PRÓXIMA PERGUNTA >>></button>
+        <button onClick={() => navigate('/question4')}>PRÓXIMA PERGUNTA >>></button>
       </div>
     </div>
   )

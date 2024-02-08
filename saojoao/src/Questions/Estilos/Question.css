@@ -94,6 +94,14 @@ button#red:hover{
     background-color: #da0303;
 }
 
+.container_button_question1 button{
+        background-color: #1D46BB;
+}
+
+.container_button_question1 button:hover{
+    background-color: #183b9c;
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .container_main_geral {
@@ -125,7 +133,7 @@ button#red:hover{
 
     .title-white {
         text-align: center;
-        font-size: 2em;
+        font-size: 1.5em;
         margin: 10px 0;
     }
 

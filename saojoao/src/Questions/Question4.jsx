@@ -1,59 +1,126 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const Question4 = () => {
-  const [nota, setNota] = useState(null);
+  const [selectedOptions, setSelectedOptions] = useState('');
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const handleNotaClick = (notaSelecionada) => {
-    setNota(notaSelecionada);
-    setError(false); 
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    if (checked) {
+      setSelectedOptions((prevSelectedOptions) => {
+        if (prevSelectedOptions === '') {
+          return name;
+        } else {
+          return prevSelectedOptions + ',' + name;
+        }
+      });
+    } else {
+      setSelectedOptions((prevSelectedOptions) => {
+        return prevSelectedOptions
+          .split(',')
+          .filter((option) => option !== name)
+          .join(',');
+      });
+    }
   };
 
   const handleNextQuestion = () => {
-    if (nota === null) {
-      setError(true); 
+    if (selectedOptions === '') {
+      setError(true);
     } else {
-      _feedbacks.push(nota)
-      setFeedbacks(_feedbacks)
-      navigate('/question10');
+      _feedbacks.push(selectedOptions);
+      setFeedbacks(_feedbacks);
+      navigate('/question5');
     }
   };
 
   return (
-    <div className='container_geral_question4'>
-      <h1 className='title'>Em uma escala de 1 a 5, quanto Você ficou satisfeito com a organização do evento?</h1>
-      <div className='container-block'>
-        <div className='Block'></div>
-        <p id='mediravaliacao'>Pouco satisfeito</p>
-        <div className={`block ${nota === 1 ? 'selected' : ''}`} id='red' onClick={() => handleNotaClick(1)}>
-          <span id='cores1a5'>1</span>
+    <div>
+      <header className='container_header_question4'>
+        <img src={logo} alt="logo" />
+      </header>
+      <main>
+        <section className='container_section_question4'>
+          <p><span id='orange'>O QUE </span>VOCÊ <br /> MAIS <span id='pink'>GOSTOU?</span></p>
+        </section>
+        <section className='container_section2_question4'>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Atracoes"
+              id="checkbox2"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox2">Atrações</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Estruturas"
+              id="checkbox3"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox3">Estruturas</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Ativacoes"
+              id="checkbox4"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox4">Ativações</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Bares"
+              id="checkbox5"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox5">Bares</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Organizacao"
+              id="checkbox6"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox6">Organização</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Limpeza"
+              id="checkbox7"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox7">Limpeza</label>
+          </div>
+          <div className='checkbox-item'>
+            <input
+              type="checkbox"
+              name="Seguranca"
+              id="checkbox7"
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor="checkbox7">Segurança</label>
+          </div>
+          {error && <p style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
+        </section>
+        <div className='container_button_question4'>
+        <button onClick={handleNextQuestion}>Próxima Pergunta</button>
         </div>
-        <div className={`block ${nota === 2 ? 'selected' : ''}`} id='orange' onClick={() => handleNotaClick(2)}>
-          <span id='cores1a5'>2</span>
-        </div>
-        <div className={`block ${nota === 3 ? 'selected' : ''}`} id='yellow' onClick={() => handleNotaClick(3)}>
-          <span id='cores1a5'>3</span>
-        </div>
-        <div className={`block ${nota === 4 ? 'selected' : ''}`} id='green-light' onClick={() => handleNotaClick(4)}>
-          <span id='cores1a5'>4</span>
-        </div>
-        <div className={`block ${nota === 5 ? 'selected' : ''}`} id='green' onClick={() => handleNotaClick(5)}>
-          <span id='cores1a5'>5</span>
-        </div>
-        <p id='mediravaliacao'>Muito satisfeito</p>
-      </div>
-      {error && <p className="error_message">É necessário escolher uma nota.</p>}
-      <div className='container_button'>
-        <button id='question4_button' onClick={handleNextQuestion}>Próxima Pergunta</button>
-      </div>
+      </main>
     </div>
   );
 };

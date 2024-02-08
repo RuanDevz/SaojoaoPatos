@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question6.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 import { feedbackContext } from '../Context/FeedbackContext';
 
 const FaixaEtariaQuestion = () => {
@@ -33,78 +34,38 @@ const FaixaEtariaQuestion = () => {
 
   return (
     <div>
-      <h1 className='question-title'>Qual sua faixa etária?</h1>
-      <div className='container_geral'>
-        <label className='container' htmlFor="abaixode20">
-          <input
-            type="checkbox"
-            id='abaixode20'
-            value='abaixode20'
-            checked={selectedFaixaEtaria === 'abaixode20'}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span id='fontquestion6'>Abaixo de 20 anos</span>
-        </label>
-        <label className='container' htmlFor="acimade20">
-          <input
-            type="checkbox"
-            id='acimade20'
-            value='acimade20'
-            checked={selectedFaixaEtaria === 'acimade20'}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span id='fontquestion6'>Entre 20 e 29 anos</span>
-        </label>
-        <label className='container' htmlFor="acimade30">
-          <input
-            type="checkbox"
-            id='acimade30'
-            value='acimade30'
-            checked={selectedFaixaEtaria === 'acimade30'}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span id='fontquestion6'>Entre 30 e 39 anos</span>
-        </label>
-        <label className='container' htmlFor="acimade40">
-          <input
-            type="checkbox"
-            id='acimade40'
-            value='acimade40'
-            checked={selectedFaixaEtaria === 'acimade40'}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span id='fontquestion6'>Entre 40 e 49 anos</span>
-        </label>
-        <label className='container' htmlFor="acimade50">
-          <input
-            type="checkbox"
-            id='acimade50'
-            value='acimade50'
-            checked={selectedFaixaEtaria === 'acimade50'}
-            onChange={handleFaixaEtariaChange}
-          />
-          <div className='checkmark'></div>
-          <span id='fontquestion6'>Entre 50 e 59 anos</span>
-        </label>
-        <label className='container' htmlFor="acimade60">
-          <input
-            type="checkbox"
-            id='acimade60'
-            value='acimade60'
-            checked={selectedFaixaEtaria === 'acimade60'}
-            onChange={handleFaixaEtariaChange}
-          />
-            <div id='checked' className='checkmark'></div>
-            <span id='fontquestion66'>Acima de 60 anos</span>
-        </label>
-      </div>
-      {error && <p className="error_message_question6">É necessário selecionar uma faixa etária.</p>}
-      <div className='container_button'>
-        <button id='button_question6' onClick={handleNextQuestion}>Próxima Pergunta</button>
+      <header className='container_logo_question6'>
+        <img src={logo} alt="logo" />
+      </header>
+      <main>
+        <section className='container_section_question6'>
+          <p>SOBRE A <span id='orange'>ESTRUTURA <br /></span> DO <span id='pink'>EVENTO</span> VOCÊ <br /><span id='ocean'> GOSTOU ?</span></p>
+        </section>
+        <section className='container_section2_question6'>
+          <div>
+            <div></div>
+            <button>NÃO GOSTEI</button>
+          </div>
+          <div>
+            <div></div>
+            <button>PODERIA MELHORAR</button>
+          </div>
+          <div>
+            <div></div>
+            <button>INDIFERENTE</button>
+          </div>
+          <div>
+            <div></div>
+            <button>GOSTEI</button>
+          </div>
+          <div>
+            <div></div>
+            <button>GOSTEI MUITO</button>
+          </div>
+        </section>
+      </main>
+      <div id='button_nextquestion' className='container_button_question4'>
+        <button onClick={() => navigate('/question4')}>PRÓXIMA PERGUNTA >>></button>
       </div>
     </div>
   );

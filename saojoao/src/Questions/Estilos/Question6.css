@@ -1,0 +1,65 @@
+.container_logo_question6 img {
+    width: 130px;
+}
+
+.container_logo_question6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_section_question6 {
+    display: flex;
+    justify-content: center;
+}
+
+.container_section_question6 p {
+    color: #fff;
+    font-weight: bold;
+    font-family: rockwell;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.container_section2_question6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_section2_question6 > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container_section2_question6 > div > div {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid red;
+    margin-right: 10px; /* Adicionei essa margem para separar o triângulo do texto */
+    padding: 5px;
+}
+
+
+
+.container_section2_question6 div button {
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 30px;
+    padding: 5px;
+    width: 300px;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container_button_question4 button {
+    margin: 10px;
+}

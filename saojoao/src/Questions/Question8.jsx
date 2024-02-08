@@ -1,8 +1,8 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import './Estilos/Question8.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const FaixaEtariaQuestion = () => {
         }
       }
     }
-
+   
     setSelectedFaixaEtaria(updatedSelection);
   };
 
@@ -52,7 +52,7 @@ const FaixaEtariaQuestion = () => {
     } else {
       setError(false);
       const selectedItems = [];
-      
+  
       if (ATRAÇÕES) selectedItems.push('ATRAÇÕES');
       if (ESTRUTURAS) selectedItems.push('ESTRUTURAS');
       if (ATIVAÇÕES) selectedItems.push('ATIVAÇÕES');
@@ -61,56 +61,38 @@ const FaixaEtariaQuestion = () => {
       if (LIMPEZA) selectedItems.push('LIMPEZA');
       if (SEGURANÇA) selectedItems.push('SEGURANÇA');
       if (outros) selectedItems.push(outrosText);
-
-      // Salvar os itens selecionados em uma variável ou estado
+  
+      
       _feedbacks.push(selectedItems);
       setFeedbacks(_feedbacks);
-
-      // Navegar para a próxima pergunta
-      navigate('/question2');
+  
+      
+      navigate('/question8');
     }
   };
+  
 
   return (
-    <div>
-      <h1 className='question-title'>O que você <span id='menos'>menos</span> gostou ?</h1>
-      <div className='container_geral_question8'>
-        {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
-          if (key !== 'outrosText' && key !== 'outros') {
-            return (
-              <div key={key}>
-                <label className='container' htmlFor={key}>
-                  <input
-                    type="checkbox"
-                    id={key}
-                    checked={value}
-                    onChange={handleFaixaEtariaChange}
-                  />
-                  <div className='checkmark'></div>
-                  <span>{key}</span>
-                </label>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>
-      {selectedFaixaEtaria['outros'] && (
-        <div className='container_input_especifique'>
-          <input
-            className='especifique'
-            type="text"
-            value={selectedFaixaEtaria['outrosText']}
-            onChange={handleOutrosTextChange}
-            placeholder="Especifique"
-          />
-        </div>
-      )}
-      {error && <p className="error_message">Selecione pelo menos uma opção.</p>}
-      <div className='container_button'>
-        <button id='button_7' onClick={handleNextQuestion}>Próxima pergunta</button>
-      </div>
-    </div>
+<div className='envolvente'>
+  <header className='container_logo_question6'>
+    <img src={logo} alt="logo" />
+  </header>
+  <main className='container_geral_question7'>
+    <section className='container_section_question7'>
+      <p>EM UMA ESCALA DE <span id='orange'>1 A 5</span>, QUANTO VOCÊ FICOU <span id='pink'>SATISFEITO</span>COM A ORGANIZAÇÃO DO <span id='ocean'> EVENTO ?</span></p>
+    </section>
+    <section className='container_button_question3'>
+          <button id='red'>1</button>
+          <button id='darkred'>2</button>
+          <button id='yellow'>3</button>
+          <button id='darkgreen'>4</button>
+          <button id='green'>5</button>
+        </section>
+  </main>
+  <div className='container_button_question7'>
+    <button>PROXIMA PERGUNTA >>></button>
+  </div>
+</div>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import './Estilos/Question7.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
@@ -72,45 +73,22 @@ const FaixaEtariaQuestion = () => {
   
 
   return (
-<div className='envolvente'>
-  <h1 className='question-title'>O que você <span id='mais'>mais</span> gostou ?</h1>
-  <div className='container_geral'>
-    {Object.entries(selectedFaixaEtaria).map(([key, value]) => {
-      if (key !== 'outrosText' && key !== 'outros') {
-        return (
-          <div key={key}>
-            <label className='container' htmlFor={key}>
-              <input
-                type="checkbox"
-                id={key}
-                checked={value}
-                onChange={handleFaixaEtariaChange}
-              />
-              <div className='checkmark'></div>
-              <span>{key}</span>
-            </label>
-          </div>
-        );
-      }
-      return null;
-    })}
-  </div>
-  {selectedFaixaEtaria['outros'] && (
-    <div className='container_input_especifique'>
-      <input
-        className='especifique'
-        type="text"
-        value={selectedFaixaEtaria['outrosText']}
-        onChange={handleOutrosTextChange}
-        placeholder="Especifique"
-      />
+    <div>
+      <header className='container_logo_question7'>
+        <img src={logo} alt="logo" />
+      </header>
+      <main>
+        <section className='container_section_question7'>
+          <p><span id='pink'>QUAL </span> <span id='orange'>SEU NÍVEL <br /></span>DE SATISFAÇÃO <br /> <span id='pink'>COM AS</span><span id='ocean'> ATRAÇÕES ?</span></p>
+        </section>
+        <section>
+
+        </section>
+      </main>
+      <div className='container_button_question7'>
+        <button onClick={() => navigate('/question8')}>PROXIMA PERGUNTA >>></button>
+      </div>
     </div>
-  )}
-  {error && <p className="error_message">Selecione pelo menos uma opção.</p>}
-  <div className='container_button'>
-    <button id='button_7' onClick={handleNextQuestion}>Próxima pergunta</button>
-  </div>
-</div>
   );
 };
 

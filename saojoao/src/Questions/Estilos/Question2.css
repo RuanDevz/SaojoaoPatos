@@ -58,20 +58,20 @@
 }
 
 input[type="checkbox"] {
-    appearance: none; /* Remove a aparência padrão */
-    -webkit-appearance: none; /* Para compatibilidade com navegadores WebKit */
-    -moz-appearance: none; /* Para compatibilidade com navegadores Firefox */
-    width: 25px; /* Defina a largura do checkbox */
-    height: 25px; /* Defina a altura do checkbox */
-    border: 3px solid #ff008e; /* Adicione a borda rosa */
-    border-radius: 50%; /* Torne o checkbox redondo */
-    outline: none; /* Remova o contorno padrão */
-    cursor: pointer; /* Mude o cursor para indicar que é clicável */
+    appearance: none; 
+    -webkit-appearance: none;  
+    -moz-appearance: none;  
+    width: 25px;
+    height: 25px; 
+    border: 3px solid #ff008e; 
+    border-radius: 50%; 
+    outline: none; 
+    cursor: pointer; 
     background-color: #fff;
-    margin-right: 10px; /* Adicione margem à direita para espaçamento */
+    margin-right: 10px; 
   }
   
-  /* Adicione estilo quando o checkbox estiver marcado */
+ 
   input[type="checkbox"]:checked {
-    background-color: #ff008e; /* Adicione uma cor de fundo rosa quando marcado */
+    background-color: #ff008e; 
   }

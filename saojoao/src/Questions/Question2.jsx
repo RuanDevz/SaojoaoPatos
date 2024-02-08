@@ -70,7 +70,7 @@ const Question2 = () => {
         </section>
       </main>
       <div className='container_button_question2'>
-        <button>PROXIMA PERGUNTA >>></button>
+        <button onClick={() => navigate('/Question3')}>PROXIMA PERGUNTA >>></button>
       </div>
       <div className='container_button_question2'>
       {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma faixa etária.</p>}

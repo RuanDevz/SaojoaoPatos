@@ -41,9 +41,6 @@ const Question1 = () => {
           <button id='yellow'>ATENDEU EM PARTES</button>
           <button id='darkred'>INDIFERENTE</button>
           <button id='red'>NÃO SATISFEITO</button>
-          <div className='container_button_question1'>
-            <button onClick={() => navigate('/question2')}>PRÓXIMA PERGUNTA >>></button>
-          </div>
         </section>
       </main>
     </div>

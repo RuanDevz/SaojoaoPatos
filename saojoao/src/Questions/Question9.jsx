@@ -72,9 +72,6 @@ const Question9 = () => {
           </div>
         </section>
       </main>
-      <div className='container_button_question9'>
-        <button onClick={() => navigate('/question10')}>PROXIMA PERGUNTA >>></button>
-      </div>
     </div>
   );
 };

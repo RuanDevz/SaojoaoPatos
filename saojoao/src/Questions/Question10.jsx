@@ -82,9 +82,6 @@ const Question10 = () => {
               <p>HENRY FREITAS</p>
           </div>
         </section>
-        <div className='container_button_question9'>
-          <button onClick={() => navigate('/question11')}>PRÓXIMA PERGUNTA >>></button>
-        </div>
       </main> 
     </div>
   );

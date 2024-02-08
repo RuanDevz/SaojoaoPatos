@@ -64,9 +64,6 @@ const FaixaEtariaQuestion = () => {
           </div>
         </section>
       </main>
-      <div id='button_nextquestion' className='container_button_question4'>
-        <button onClick={() => navigate('/question7')}>PRÓXIMA PERGUNTA >>></button>
-      </div>
     </div>
   );
 };

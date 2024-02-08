@@ -64,9 +64,6 @@ const Question11= () => {
           </div>
         </section>
         </main>
-        <div className='container_button_question11'>
-          <button onClick={() => navigate('/finish')}>PRÓXIMA PERGUNTA >>></button>
-        </div>
     </div>
   );
 };

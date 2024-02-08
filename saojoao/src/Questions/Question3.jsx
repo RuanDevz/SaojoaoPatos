@@ -50,9 +50,6 @@ const Question3 = () => {
           <button id='green'>5</button>
         </section>
       </main>
-      <div id='button_nextquestion' className='container_button_question3'>
-        <button onClick={() => navigate('/question4')}>PRÓXIMA PERGUNTA >>></button>
-      </div>
     </div>
   )
 

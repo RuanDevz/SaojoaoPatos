@@ -15,9 +15,6 @@ const Question12 = () => {
           <input type="text" placeholder='Digite seu nome...' />
         </div>
       </main>
-      <div className='container_button_question12'>
-        <button>FINALIZAR</button>
-      </div>
     </div>
   )
 }

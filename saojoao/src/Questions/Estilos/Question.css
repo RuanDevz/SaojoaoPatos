@@ -27,11 +27,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 350px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .container_button{
@@ -129,17 +124,15 @@ button#red:hover{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 0px;
-        top: 0%;
-        left: 0%;
-        transform: translate(22%, 0%);
     }
 
+    .first-section-question1{
+        margin-bottom: 40px;
+    }
     .title-white {
         text-align: center;
         font-size: 1.5em;
         margin: 10px 0;
-        margin-bottom: 40px;
     }
 
     .container_button {

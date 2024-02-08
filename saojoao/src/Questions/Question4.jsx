@@ -118,6 +118,9 @@ const Question4 = () => {
           {error && <p style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
         </section>
       </main>
+        <div className='container_button_question4'>
+          <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
+        </div>
     </div>
   );
 };

@@ -118,7 +118,7 @@ const Question5 = () => {
           {error && <p style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
         </section>
         <div className='container_button_question4'>
-          
+          <button>PRÓXIMA PERGUNTA</button>
         </div>
       </main>
     </div>

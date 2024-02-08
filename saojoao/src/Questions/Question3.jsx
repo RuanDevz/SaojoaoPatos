@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
 import buttonProximapagina from '../Components/Form/Button/ButtonProximapagina'
 import ButtonProximapagina from '../Components/Form/Button/ButtonProximapagina';
+import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -34,6 +35,9 @@ const Question3 = () => {
 
   return (
     <div className='containergeral_question3'>
+      <div className='container_logo_question3'>
+        <img src={logo} alt="LOGO" />
+      </div>
       <main>
         <section className='section_question3'>
           <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023?</span></p>
@@ -46,8 +50,8 @@ const Question3 = () => {
           <button id='green'>5</button>
         </section>
       </main>
-      <div className='container_button'>
-        <ButtonProximapagina Children='PRÓXIMA PERGUNTA >>>'  />
+      <div id='button_nextquestion' className='container_button_question3'>
+        <button>PRÓXIMA PERGUNTA >>></button>
       </div>
     </div>
   )

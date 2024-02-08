@@ -13,7 +13,8 @@ import Question7 from './Questions/Question7';
 import Question8 from './Questions/Question8';
 import Question9 from './Questions/Question9';
 import Question10 from './Questions/Question10';
-import Questionsoptional from './Questions/Questionsoptional';
+import Question11 from './Questions/Question11';
+import Question12 from './Questions/Question12'
 import Finish from './Questions/Finish';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -40,7 +41,8 @@ const App = () => {
               <Route path='/question8' element={<Question8 />} />
               <Route path='/question9' element={<Question9 />} />
               <Route path='/question10' element={<Question10 />} />
-              <Route path='/Questionsoptional' element={<Questionsoptional />} />
+              <Route path='/Question11' element={<Question11/>} />
+              <Route path='/Question12' element={<Question12 />} />
               <Route path='/Finish' element={<Finish />} />
             </Routes>
           </feedbackContext.Provider>

@@ -143,8 +143,36 @@ body{
             right: 710px; /* Ajustando a posição dos botões */
         }
         p#error_msg{
-            bottom: 68px; /* Ajustando a posição da mensagem de erro */
-            right: 710px; /* Ajustando a posição da mensagem de erro */
+            bottom: 68px; 
+            right: 710px; 
         }
+
+          .container_section2_question2 label{
+            font-size: 1.5em;
+            width: 100%;
+            
+        }
+
+        .container_section2_question2 input[type="checkbox"]::before{
+            width: 10px;
+            height: 10px;
+        }
+
+        .container_section2_question2 input[type="checkbox"]{
+            width: 10px;
+            height: 10px;
+        }
+
+        .container_desenvolvimeto button{
+            padding: 10px 20px;
+            width: 310px;
+            border-radius: 50px;
+            color: #fff;
+            background-color: #1D46BB;
+            font-weight: bold;
+            font-size: 1.2em;
+            border: 3px solid #fff;
+        }
+        
     }
     

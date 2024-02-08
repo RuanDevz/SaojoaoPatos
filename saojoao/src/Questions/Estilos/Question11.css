@@ -1,0 +1,15 @@
+.container_button_question11{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.container_button_question11 button{
+    padding: 5px 20px;
+    width: 310px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #1D46BB;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 3px solid #fff;
+}

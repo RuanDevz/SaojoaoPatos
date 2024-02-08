@@ -1,0 +1,22 @@
+.container_logo_finish{
+    display: flex;
+    justify-content: center;
+}
+
+.container_logo_finish img{
+    width: 200px;
+}
+
+.container_main_finish{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.container_main_finish h1{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-family: 'rockwell';
+}

@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
-import { IoMdHappy } from 'react-icons/io';
 import logo from '../assets/Logo São João/Logosaojoao.png';
 import './Estilos/Finish.css';
 
@@ -14,19 +13,14 @@ const Finish = () => {
   }, []);
 
   return (
-    <div className='container_finish'>
-      <div className='container_logo_finish'>
-        <img id='logo_finish' src={logo} alt='Logo' />
-      </div>
-      <div className='container_p_finish'>
-        <h1 className='title_finish'>
-          Agradecemos por dedicar seu tempo para compartilhar suas opiniões na nossa Pesquisa de Satisfação do São João 2023.
-        </h1>
-        <p className='last-manssage'>Te esperamos no São João 2024, até breve!</p>
-        <div className='container_face'>
-          <IoMdHappy className='happyface' />
-        </div>
-      </div>
+    <div>
+      <header className='container_logo_finish'>
+        <img src={logo} alt="logo" />
+      </header>
+      <main className='container_main_finish'>
+        <h1><span id='pink'>AGRADECEMOS</span> PORA DEDICAR SEU TEMPO PARA <span id='ocean'>COMPARTILHAR SUAS OPINIÕES</span> NA NOSSA PESQUISA DE SATISFAÇÃO DO SÃO JOÃO 2023.</h1>
+        <h1>TE ESPERAMOS NO <span id='orange'>SÃO JOÃO DA GENTE - 2024</span>, ATÉ BREVE!</h1>
+      </main>
     </div>
   );
 };

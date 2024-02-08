@@ -90,7 +90,7 @@ const FaixaEtariaQuestion = () => {
         </section>
   </main>
   <div className='container_button_question7'>
-    <button>PROXIMA PERGUNTA >>></button>
+    <button onClick={() => navigate('/question9')}>PROXIMA PERGUNTA >>></button>
   </div>
 </div>
   );

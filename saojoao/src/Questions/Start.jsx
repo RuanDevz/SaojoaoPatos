@@ -1,26 +1,46 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import '../Questions/Estilos/Start.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const Start = () => {
-  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setError('Email inválido');
+    if (!validateNumber(number)) {
+      setError('Número inválido');
     } else {
       navigate('/question1');
     }
+  };
+
+  const validateNumber = (number) => {
+    // Verifica se o número possui o formato correto (dd) 98840-7953
+    const re = /^\(\d{2}\) \d{5}-\d{4}$/;
+    return re.test(String(number));
+  };
+
+  const handleChange = (e) => {
+    let inputNumber = e.target.value;
+    // Limita o número de caracteres a 11
+    inputNumber = inputNumber.slice(0, 15);
+    // Aplica a máscara ao número digitado
+    const formattedNumber = formatNumber(inputNumber);
+    setNumber(formattedNumber);
+  };
+
+  const formatNumber = (number) => {
+    // Remove caracteres não numéricos
+    const cleaned = ('' + number).replace(/\D/g, '');
+    // Aplica a máscara
+    const match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+    if (match) {
+      return `(${match[1]}) ${match[2]}-${match[3]}`;
+    }
+    return number;
   };
 
   return (
@@ -37,7 +57,7 @@ const Start = () => {
       </main>
       <section className='start-segund-section'>
         <form onSubmit={handleSubmit} className='container_input'>
-          <input type="email" placeholder='Digite seu e-mail...' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="text" placeholder='Digite seu telefone...' value={number} onChange={handleChange} />
           <button type="submit"><p className='name_button'>INICIAR</p></button>
         </form>
       </section>

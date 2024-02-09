@@ -3,6 +3,11 @@ import './Estilos/Question6.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo São João/Logosaojoao.png'
 import { feedbackContext } from '../Context/FeedbackContext';
+import Pessimo from '../assets/TRIANGULOS/Pessimo.png'
+import Ruim from '../assets/TRIANGULOS/Ruim.png'
+import Indiferente from '../assets/TRIANGULOS/Indiferente.png'
+import Bom from '../assets/TRIANGULOS/Bom.png'
+import Muitobom from '../assets/TRIANGULOS/Muitobom.png'
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
@@ -43,23 +48,23 @@ const FaixaEtariaQuestion = () => {
         </section>
         <section className='container_section2_question6'>
           <div>
-            <div></div>
+            <img src={Pessimo} alt=">NÃO GOSTEI" />
             <button>NÃO GOSTEI</button>
           </div>
           <div>
-            <div></div>
+            <img src={Ruim} alt="PODERIA MELHORAR" />
             <button>PODERIA MELHORAR</button>
           </div>
           <div>
-            <div></div>
+             <img src={Indiferente} alt="INDIFERENTE" />
             <button>INDIFERENTE</button>
           </div>
           <div>
-            <div></div>
+             <img src={Bom} alt="GOSTEI" />
             <button>GOSTEI</button>
           </div>
           <div>
-            <div></div>
+             <img src={Muitobom} alt="GOSTEI MUITO" />
             <button>GOSTEI MUITO</button>
           </div>
         </section>

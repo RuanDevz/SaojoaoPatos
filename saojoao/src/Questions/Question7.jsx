@@ -8,6 +8,8 @@ import Ruim from '../assets/Rostinhos/2.png'
 import Indiferente from '../assets/Rostinhos/3.png'
 import Bom from '../assets/Rostinhos/4.png'
 import Muitobom from '../assets/Rostinhos/5.png'
+import { FaStar } from "react-icons/fa";
+
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate();
@@ -87,11 +89,46 @@ const FaixaEtariaQuestion = () => {
           <p><span id='pink'>QUAL </span> <span id='orange'>SEU NÍVEL <br /></span>DE SATISFAÇÃO <br /> <span id='pink'>COM AS</span><span id='ocean'> ATRAÇÕES ?</span></p>
         </section>
         <section className='container_section_question7'>
-          <img src={Pessimo} alt="Pessimo" />
-          <img src={Ruim} alt="Ruim" />
-          <img src={Indiferente} alt="Indiferente" />
-          <img src={Bom} alt="Bom" />
-          <img src={Muitobom} alt="Muitobom" />
+          <div onClick={() => navigate('/question8')} id='carinhas' className='pessimo'>
+            <div className='check-box-star'>
+              <img src={Pessimo} alt="Pessimo" />
+              <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => navigate('/question8')} id='carinhas' className='ruim'>
+            <div className='check-box-star'>
+              <img src={Ruim} alt="Ruim" />
+              <FaStar id='star' />
+              <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => navigate('/question8')} id='carinhas' className='indiferente'>
+            <div className='check-box-star'>
+              <img src={Indiferente} alt="Indiferente" />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => navigate('/question8')} id='carinhas' className='bom'>
+            <div className='check-box-star'>
+              <img src={Bom} alt="Bom" />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => navigate('/question8')} id='carinhas' className='muitobom'>
+            <div className='check-box-star'>
+              <img src={Muitobom} alt="Muitobom" />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+              <FaStar id='star' />
+            </div>
+          </div>
         </section>
       </main>
 

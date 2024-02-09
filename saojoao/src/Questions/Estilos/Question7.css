@@ -17,7 +17,8 @@
     text-align: center;
     font-size: 1.5em;
     color: #fff;
-    font-family: rockwell;
+    font-family: 'rockwell';
+    margin-bottom: 20px;
 }
 .container_button_question7{
     display: flex;
@@ -32,7 +33,6 @@
     font-weight: bold;
     font-size: 1.2em;
     border: 3px solid #fff;
-
 }
 
 .container_button_question7 button{
@@ -41,7 +41,38 @@
 .container_section_question7{
     display: flex;
     flex-direction: column;
+    gap: 7px;
 }
 .container_section_question7 img{
-    width: 150px;
+    width: 70px;
+}
+
+#star{
+    color: #fff;
+}
+
+.check-box-star{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pessimo{
+    margin-right: 94px;
+}
+
+.ruim{
+    margin-right: 70px;
+}
+
+.indiferente{
+    margin-right: 43px;
+}
+
+.bom{
+    margin-right: 16px ;
+}
+
+.muitobom{
+    margin-left: 8px;
 }

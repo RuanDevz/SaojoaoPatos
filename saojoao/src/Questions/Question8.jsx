@@ -71,7 +71,7 @@ const FaixaEtariaQuestion = () => {
     <img src={logo} alt="logo" />
   </header>
   <main className='container_geral_question7'>
-    <section className='container_section_question7'>
+    <section className='container_section_question8'>
       <p>EM UMA ESCALA DE <span id='orange'>1 A 5</span>, QUANTO VOCÊ FICOU <span id='pink'>SATISFEITO</span>COM A ORGANIZAÇÃO DO <span id='ocean'> EVENTO ?</span></p>
     </section>
     <section className='container_button_question3'>

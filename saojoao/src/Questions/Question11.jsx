@@ -59,8 +59,8 @@ const Question11= () => {
               <p>LEO SANTANA</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('')}>25</button>
-              <p>DENIS DJ</p>/question
+              <button onClick={() => navigate('/question12')}>25</button>
+              <p>DENIS DJ</p>
           </div>
         </section>
         </main>

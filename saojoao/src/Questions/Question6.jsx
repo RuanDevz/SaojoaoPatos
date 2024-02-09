@@ -49,23 +49,23 @@ const FaixaEtariaQuestion = () => {
         <section className='container_section2_question6'>
           <div>
             <img src={Pessimo} alt=">NÃO GOSTEI" />
-            <button>NÃO GOSTEI</button>
+            <button onClick={() => navigate('/question7')}>NÃO GOSTEI</button>
           </div>
           <div>
             <img src={Ruim} alt="PODERIA MELHORAR" />
-            <button>PODERIA MELHORAR</button>
+            <button onClick={() => navigate('/question7')}>PODERIA MELHORAR</button>
           </div>
           <div>
              <img src={Indiferente} alt="INDIFERENTE" />
-            <button>INDIFERENTE</button>
+            <button onClick={() => navigate('/question7')}>INDIFERENTE</button>
           </div>
           <div>
              <img src={Bom} alt="GOSTEI" />
-            <button>GOSTEI</button>
+            <button onClick={() => navigate('/question7')}>GOSTEI</button>
           </div>
           <div>
              <img src={Muitobom} alt="GOSTEI MUITO" />
-            <button>GOSTEI MUITO</button>
+            <button onClick={() => navigate('/question7')}>GOSTEI MUITO</button>
           </div>
         </section>
       </main>

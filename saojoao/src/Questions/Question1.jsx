@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
 import { feedbackContext } from '../Context/FeedbackContext';
@@ -6,10 +6,14 @@ import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question1 = () => {
   const navigate = useNavigate();
-  const { setFeedbacks } = useContext(feedbackContext);
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const handleNextQuestion = () => {
-    
+  const handleNextQuestion = (event) => {
+    const option = event.target.textContent;
+    _feedbacks.push(option);
+    setFeedbacks(_feedbacks);
+    console.log(_feedbacks);
     navigate('/question2');
   };
 
@@ -24,7 +28,7 @@ const Question1 = () => {
           <button onClick={handleNextQuestion} id='darkgreen'>ATENDEU PLENAMENTE</button>
           <button onClick={handleNextQuestion} id='yellow'>ATENDEU EM PARTES</button>
           <button onClick={handleNextQuestion} id='darkred'>INDIFERENTE</button>
-          <button onClick={handleNextQuestion} id='red'>NÃO SATISFEITO</button>
+          <button onClick={handleNextQuestion} id='red'>NÃO SATISFEZ</button>
         </section>
       </main>
     </div>

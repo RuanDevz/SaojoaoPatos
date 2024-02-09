@@ -30,9 +30,6 @@
     text-align: center;
 }
 
-span#blue{
-    color: var(--blue);
-}
 
 .selected-cantores{
     display: flex;

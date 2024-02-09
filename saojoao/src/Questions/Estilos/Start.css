@@ -46,16 +46,25 @@ body {
 span#ocean {
     color: var(--ocean);
     font-weight: bolder;
+    font-family: 'Rockwell';
 }
 
 span#orange {
     color: orange;
     font-weight: bolder;
+    font-family: 'Rockwell';
 }
 
 span#pink {
     color: var(--pink);
     font-weight: bolder;
+    font-family: 'Rockwell';
+}
+
+span#blue{
+    color: var(--blue);
+    font-weight: bolder;
+    font-family: 'Rockwell';
 }
 
 .paragrafo-styled span {

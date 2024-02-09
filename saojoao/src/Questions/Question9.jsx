@@ -39,35 +39,35 @@ const Question9 = () => {
         </section>
         <section>
           <div className='selected-cantores'>
-              <button>1</button>
+              <button onClick={() => navigate('/question10')}>1</button>
               <p>NATTAN</p>
           </div>
           <div className='selected-cantores'>
-              <button>2</button>
+              <button onClick={() => navigate('/question10')}>2</button>
               <p>JONAS ESTICADO</p>
           </div>
           <div className='selected-cantores'>
-              <button>3</button>
+              <button onClick={() => navigate('/question10')}>3</button>
               <p>ALOK</p>
           </div>
           <div className='selected-cantores'>
-              <button>4</button>
+              <button onClick={() => navigate('/question10')}>4</button>
               <p>VINTAGE CULTURE</p>
           </div>
           <div className='selected-cantores'>
-              <button>5</button>
+              <button onClick={() => navigate('/question10')}>5</button>
               <p>LUAN ESTILIZADO</p>
           </div>
           <div className='selected-cantores'>
-              <button>6</button>
+              <button onClick={() => navigate('/question10')}>6</button>
               <p>CALCINHA PRETA</p>
           </div>
           <div className='selected-cantores'>
-              <button>7</button>
+              <button onClick={() => navigate('/question10')}>7</button>
               <p>MARI FERNANDES</p>
           </div>
           <div className='selected-cantores'>
-              <button>8</button>
+              <button onClick={() => navigate('/question10')}>8</button>
               <p>JORGE MATEUS</p>
           </div>
         </section>

@@ -43,11 +43,11 @@ const Question3 = () => {
           <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023?</span></p>
         </section>
         <section className='container_button_question3'>
-          <button id='red'>1</button>
-          <button id='darkred'>2</button>
-          <button id='yellow'>3</button>
-          <button id='darkgreen'>4</button>
-          <button id='green'>5</button>
+          <button onClick={() => navigate('/question4')} id='red'>1</button>
+          <button onClick={() => navigate('/question4')} id='darkred'>2</button>
+          <button onClick={() => navigate('/question4')} id='yellow'>3</button>
+          <button onClick={() => navigate('/question4')} id='darkgreen'>4</button>
+          <button onClick={() => navigate('/question4')} id='green'>5</button>
         </section>
       </main>
     </div>

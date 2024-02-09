@@ -1,32 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
-import { ReplyQuestions } from '../Context/ReplyQuestions';
 import { feedbackContext } from '../Context/FeedbackContext';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question1 = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [error, setError] = useState(false);
   const navigate = useNavigate();
-  
-  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
-  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setError(false);
-  };
+  const { setFeedbacks } = useContext(feedbackContext);
 
   const handleNextQuestion = () => {
-    if (!selectedOption) {
-      setError(true); 
-    } else {
-      _feedbacks.push(selectedOption)
-      setFeedbacks(_feedbacks)
-      console.log(feedbacks)
-      navigate('/question9');
-    }
+    
+    navigate('/question2');
   };
 
   return (
@@ -36,11 +20,11 @@ const Question1 = () => {
           <h1 className='title-white'><span id='pink'>SOBRE SUA <br /> </span> EXPECTATIVA <span id='orange'>EM <br /> RELAÇÃO AO </span>SÃO <br /> JOÃO 2023:</h1>
         </section>
         <section className='container_button'>
-          <button id='green'>SUPEROU</button>
-          <button id='darkgreen'>ATENDEU PLENAMENTE</button>
-          <button id='yellow'>ATENDEU EM PARTES</button>
-          <button id='darkred'>INDIFERENTE</button>
-          <button id='red'>NÃO SATISFEITO</button>
+          <button onClick={handleNextQuestion} id='green'>SUPEROU</button>
+          <button onClick={handleNextQuestion} id='darkgreen'>ATENDEU PLENAMENTE</button>
+          <button onClick={handleNextQuestion} id='yellow'>ATENDEU EM PARTES</button>
+          <button onClick={handleNextQuestion} id='darkred'>INDIFERENTE</button>
+          <button onClick={handleNextQuestion} id='red'>NÃO SATISFEITO</button>
         </section>
       </main>
     </div>

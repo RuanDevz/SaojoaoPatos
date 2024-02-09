@@ -53,14 +53,7 @@ const FaixaEtariaQuestion = () => {
       setError(false);
       const selectedItems = [];
   
-      if (ATRAÇÕES) selectedItems.push('ATRAÇÕES');
-      if (ESTRUTURAS) selectedItems.push('ESTRUTURAS');
-      if (ATIVAÇÕES) selectedItems.push('ATIVAÇÕES');
-      if (BARES) selectedItems.push('BARES');
-      if (ORGANIZAÇÃO) selectedItems.push('ORGANIZAÇÃO');
-      if (LIMPEZA) selectedItems.push('LIMPEZA');
-      if (SEGURANÇA) selectedItems.push('SEGURANÇA');
-      if (outros) selectedItems.push(outrosText);
+
   
       
       _feedbacks.push(selectedItems);
@@ -82,11 +75,11 @@ const FaixaEtariaQuestion = () => {
       <p>EM UMA ESCALA DE <span id='orange'>1 A 5</span>, QUANTO VOCÊ FICOU <span id='pink'>SATISFEITO</span>COM A ORGANIZAÇÃO DO <span id='ocean'> EVENTO ?</span></p>
     </section>
     <section className='container_button_question3'>
-          <button id='red'>1</button>
-          <button id='darkred'>2</button>
-          <button id='yellow'>3</button>
-          <button id='darkgreen'>4</button>
-          <button id='green'>5</button>
+          <button onClick={() => navigate('/question9')} id='red'>1</button>
+          <button onClick={() => navigate('/question9')} id='darkred'>2</button>
+          <button onClick={() => navigate('/question9')} id='yellow'>3</button>
+          <button onClick={() => navigate('/question9')} id='darkgreen'>4</button>
+          <button onClick={() => navigate('/question9')} id='green'>5</button>
         </section>
   </main>
 </div>

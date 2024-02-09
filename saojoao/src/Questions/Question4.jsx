@@ -5,7 +5,7 @@ import { feedbackContext } from '../Context/FeedbackContext';
 import logo from '../assets/Logo São João/Logosaojoao.png'
 
 const Question4 = () => {
-  const [selectedOptions, setSelectedOptions] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   
@@ -15,35 +15,24 @@ const Question4 = () => {
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
     if (checked) {
-      setSelectedOptions((prevSelectedOptions) => {
-        if (prevSelectedOptions === '') {
-          return name;
-        } else {
-          return prevSelectedOptions + ',' + name;
-        }
-      });
+      setSelectedOption(name);
     } else {
-      setSelectedOptions((prevSelectedOptions) => {
-        return prevSelectedOptions
-          .split(',')
-          .filter((option) => option !== name)
-          .join(',');
-      });
+      setSelectedOption('');
     }
   };
 
   const handleNextQuestion = () => {
-    if (selectedOptions === '') {
+    if (selectedOption === '') {
       setError(true);
     } else {
-      _feedbacks.push(selectedOptions);
+      _feedbacks.push(selectedOption);
       setFeedbacks(_feedbacks);
       navigate('/question5');
     }
   };
 
   return (
-    <div>
+    <div className='container_geral_question4_'>
       <header className='container_header_question4'>
         <img src={logo} alt="logo" />
       </header>
@@ -58,6 +47,7 @@ const Question4 = () => {
               name="Atracoes"
               id="checkbox2"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Atracoes"}
             />
             <label htmlFor="checkbox2">Atrações</label>
           </div>
@@ -67,6 +57,7 @@ const Question4 = () => {
               name="Estruturas"
               id="checkbox3"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Estruturas"}
             />
             <label htmlFor="checkbox3">Estruturas</label>
           </div>
@@ -76,6 +67,7 @@ const Question4 = () => {
               name="Ativacoes"
               id="checkbox4"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Ativacoes"}
             />
             <label htmlFor="checkbox4">Ativações</label>
           </div>
@@ -85,6 +77,7 @@ const Question4 = () => {
               name="Bares"
               id="checkbox5"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Bares"}
             />
             <label htmlFor="checkbox5">Bares</label>
           </div>
@@ -94,6 +87,7 @@ const Question4 = () => {
               name="Organizacao"
               id="checkbox6"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Organizacao"}
             />
             <label htmlFor="checkbox6">Organização</label>
           </div>
@@ -103,6 +97,7 @@ const Question4 = () => {
               name="Limpeza"
               id="checkbox7"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Limpeza"}
             />
             <label htmlFor="checkbox7">Limpeza</label>
           </div>
@@ -110,17 +105,18 @@ const Question4 = () => {
             <input
               type="checkbox"
               name="Seguranca"
-              id="checkbox7"
+              id="checkbox8"
               onChange={handleCheckboxChange}
+              checked={selectedOption === "Seguranca"}
             />
-            <label htmlFor="checkbox7">Segurança</label>
+            <label htmlFor="checkbox8">Segurança</label>
           </div>
-          {error && <p style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
+          {error && <p style={{ color: 'red' }}>Por favor, selecione apenas uma opção.</p>}
         </section>
       </main>
-        <div className='container_button_question4'>
-          <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
-        </div>
+      <div className='container_button_question4'>
+        <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
+      </div>
     </div>
   );
 };

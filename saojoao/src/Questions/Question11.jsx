@@ -27,40 +27,40 @@ const Question11= () => {
         </section>
         <section>
           <div className='selected-cantores'>
-              <button>17</button>
+              <button onClick={() => navigate('/question12')}>17</button>
               <p>ERIC LAND</p>
           </div>
           <div className='selected-cantores'>
-              <button>18</button>
+              <button onClick={() => navigate('/question12')}>18</button>
               <p>FELIPE AMORIM</p>
           </div>
           <div className='selected-cantores'>
-              <button>19</button>
+              <button onClick={() => navigate('/question12')}>19</button>
               <p>WESLEY SAFADÃO</p>
           </div>
           <div className='selected-cantores'>
-              <button>20</button>
+              <button onClick={() => navigate('/question12')}>20</button>
               <p>ZÉ VAQUEIRO</p>
           </div>
           <div className='selected-cantores'>
-              <button>21</button>
+              <button onClick={() => navigate('/question12')}>21</button>
               <p>MAIARA E MARAISA</p>
           </div>
           <div className='selected-cantores'>
-              <button>22</button>
+              <button onClick={() => navigate('/question12')}>22</button>
               <p>BELL MARQUES</p>
           </div>
           <div className='selected-cantores'>
-              <button>23</button>
+              <button onClick={() => navigate('/question12')}>23</button>
               <p>PEDRO SAMPAIO</p>
           </div>
           <div className='selected-cantores'>
-              <button>24</button>
+              <button onClick={() => navigate('/question12')}>24</button>
               <p>LEO SANTANA</p>
           </div>
           <div className='selected-cantores'>
-              <button>25</button>
-              <p>DENIS DJ</p>
+              <button onClick={() => navigate('')}>25</button>
+              <p>DENIS DJ</p>/question
           </div>
         </section>
         </main>

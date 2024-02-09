@@ -24,6 +24,10 @@
     margin-top: 50px;
 }
 
+.container_main_question12 p{
+    font-size: 1.5em;
+}
+
 .container_input_question12 input{
     width: 320px;
     padding: 10px;

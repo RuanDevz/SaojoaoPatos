@@ -1,15 +1,15 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question6.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 import { feedbackContext } from '../Context/FeedbackContext';
-import Pessimo from '../assets/TRIANGULOS/Pessimo.png'
-import Ruim from '../assets/TRIANGULOS/Ruim.png'
-import Indiferente from '../assets/TRIANGULOS/Indiferente.png'
-import Bom from '../assets/TRIANGULOS/Bom.png'
-import Muitobom from '../assets/TRIANGULOS/Muitobom.png'
+import Pessimo from '../assets/TRIANGULOS/Pessimo.png';
+import Ruim from '../assets/TRIANGULOS/Ruim.png';
+import Indiferente from '../assets/TRIANGULOS/Indiferente.png';
+import Bom from '../assets/TRIANGULOS/Bom.png';
+import Muitobom from '../assets/TRIANGULOS/Muitobom.png';
 
-const FaixaEtariaQuestion = () => {
+const Question6 = () => {
   const navigate = useNavigate();
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
   const [error, setError] = useState(false);
@@ -17,24 +17,12 @@ const FaixaEtariaQuestion = () => {
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const handleFaixaEtariaChange = (event) => {
-    const selectedValue = event.target.value;
-
-    if (selectedFaixaEtaria === selectedValue) {
-      setSelectedFaixaEtaria('');
-    } else {
-      setSelectedFaixaEtaria(selectedValue);
-    }
-  };
-
-  const handleNextQuestion = () => {
-    if (!selectedFaixaEtaria) {
-      setError(true); 
-    } else {
-      _feedbacks.push(selectedFaixaEtaria)
-      setFeedbacks(_feedbacks)
-      navigate('/Questionsoptional');
-    }
+  const handlevote = (value) => {
+    setSelectedFaixaEtaria(value);
+    _feedbacks.push(value);
+    setFeedbacks(_feedbacks);
+    console.log(_feedbacks);
+    navigate('/question7');
   };
 
   return (
@@ -48,29 +36,30 @@ const FaixaEtariaQuestion = () => {
         </section>
         <section className='container_section2_question6'>
           <div>
-            <img src={Pessimo} alt=">NÃO GOSTEI" />
-            <button onClick={() => navigate('/question7')}>NÃO GOSTEI</button>
+            <img src={Pessimo} alt="NÃO GOSTEI" />
+            <button onClick={() => handlevote('NÃO GOSTEI')}>NÃO GOSTEI</button>
           </div>
           <div>
             <img src={Ruim} alt="PODERIA MELHORAR" />
-            <button onClick={() => navigate('/question7')}>PODERIA MELHORAR</button>
+            <button onClick={() => handlevote('PODERIA MELHORAR')}>PODERIA MELHORAR</button>
           </div>
           <div>
              <img src={Indiferente} alt="INDIFERENTE" />
-            <button onClick={() => navigate('/question7')}>INDIFERENTE</button>
+            <button onClick={() => handlevote('INDIFERENTE')}>INDIFERENTE</button>
           </div>
           <div>
              <img src={Bom} alt="GOSTEI" />
-            <button onClick={() => navigate('/question7')}>GOSTEI</button>
+            <button onClick={() => handlevote('GOSTEI')}>GOSTEI</button>
           </div>
           <div>
              <img src={Muitobom} alt="GOSTEI MUITO" />
-            <button onClick={() => navigate('/question7')}>GOSTEI MUITO</button>
+            <button onClick={() => handlevote('GOSTEI MUITO')}>GOSTEI MUITO</button>
           </div>
         </section>
+        {error && <p style={{ color: 'red' }}>Por favor, selecione uma opção.</p>}
       </main>
     </div>
   );
 };
 
-export default FaixaEtariaQuestion;
+export default Question6;

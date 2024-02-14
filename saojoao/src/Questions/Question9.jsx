@@ -1,28 +1,28 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Estilos/Question9.css'
+import './Estilos/Question9.css';
 import { feedbackContext } from '../Context/FeedbackContext';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question9 = () => {
-  const [nota, setNota] = useState(null);
+  const [selectedCantor, setSelectedCantor] = useState(null);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const handleNotaClick = (notaSelecionada) => {
-    setNota(notaSelecionada);
+  const handleCantorClick = (cantor) => {
+    setSelectedCantor(cantor);
+    handleNextQuestion();
   };
 
   const handleNextQuestion = () => {
-    if (nota === null) {
+    if (selectedCantor === null) {
       setError(true);
     } else {
-      _feedbacks.push(nota)
-      setFeedbacks(_feedbacks)
+      _feedbacks.push(selectedCantor);
+      setFeedbacks(_feedbacks);
       setError(false);
       navigate('/question10');
     }
@@ -38,39 +38,40 @@ const Question9 = () => {
           <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
         </section>
         <section>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>1</button>
-              <p>NATTAN</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('NATTAN')}>
+            <button>1</button>
+            <p>NATTAN</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>2</button>
-              <p>JONAS ESTICADO</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('JONAS ESTICADO')}>
+            <button>2</button>
+            <p>JONAS ESTICADO</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>3</button>
-              <p>ALOK</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
+            <button>3</button>
+            <p>ALOK</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>4</button>
-              <p>VINTAGE CULTURE</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('VINTAGE CULTURE')}>
+            <button>4</button>
+            <p>VINTAGE CULTURE</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>5</button>
-              <p>LUAN ESTILIZADO</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('LUAN ESTILIZADO')}>
+            <button>5</button>
+            <p>LUAN ESTILIZADO</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>6</button>
-              <p>CALCINHA PRETA</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('CALCINHA PRETA')}>
+            <button>6</button>
+            <p>CALCINHA PRETA</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>7</button>
-              <p>MARI FERNANDES</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('MARI FERNANDES')}>
+            <button>7</button>
+            <p>MARI FERNANDES</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question10')}>8</button>
-              <p>JORGE MATEUS</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('JORGE MATEUS')}>
+            <button>8</button>
+            <p>JORGE MATEUS</p>
           </div>
         </section>
+        {error && <p style={{ color: 'red' }}>Por favor, selecione um cantor.</p>}
       </main>
     </div>
   );

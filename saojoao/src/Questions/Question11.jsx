@@ -1,20 +1,31 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question11.css';
 import { feedbackContext } from '../Context/FeedbackContext';
-import {useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
-const Question11= () => {
-
+const Question11 = () => {
   const navigate = useNavigate();
-  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  const [selectedCantor, setSelectedCantor] = useState(null);
+  const { feedbacks, setFeedbacks, setError } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const isValidEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+  const handleCantorClick = (cantor) => {
+    setSelectedCantor(cantor);
+    handleNextQuestion(cantor);
   };
 
+  const handleNextQuestion = (cantor) => {
+    if (cantor === "") {
+      setError(true);
+    } else {
+      _feedbacks.push(cantor);
+      setFeedbacks(_feedbacks);
+      console.log(_feedbacks);
+      setError(false);
+      navigate('/question12');
+    }
+  };
 
   return (
     <div>
@@ -27,43 +38,43 @@ const Question11= () => {
         </section>
         <section>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>17</button>
-              <p>ERIC LAND</p>
+            <button onClick={() => handleCantorClick("ERIC LAND")}>17</button>
+            <p>ERIC LAND</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>18</button>
-              <p>FELIPE AMORIM</p>
+            <button onClick={() => handleCantorClick("FELIPE AMORIM")}>18</button>
+            <p>FELIPE AMORIM</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>19</button>
-              <p>WESLEY SAFADÃO</p>
+            <button onClick={() => handleCantorClick("WESLEY SAFADÃO")}>19</button>
+            <p>WESLEY SAFADÃO</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>20</button>
-              <p>ZÉ VAQUEIRO</p>
+            <button onClick={() => handleCantorClick("ZÉ VAQUEIRO")}>20</button>
+            <p>ZÉ VAQUEIRO</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>21</button>
-              <p>MAIARA E MARAISA</p>
+            <button onClick={() => handleCantorClick("MAIARA E MARAISA")}>21</button>
+            <p>MAIARA E MARAISA</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>22</button>
-              <p>BELL MARQUES</p>
+            <button onClick={() => handleCantorClick("BELL MARQUES")}>22</button>
+            <p>BELL MARQUES</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>23</button>
-              <p>PEDRO SAMPAIO</p>
+            <button onClick={() => handleCantorClick("PEDRO SAMPAIO")}>23</button>
+            <p>PEDRO SAMPAIO</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>24</button>
-              <p>LEO SANTANA</p>
+            <button onClick={() => handleCantorClick("LEO SANTANA")}>24</button>
+            <p>LEO SANTANA</p>
           </div>
           <div className='selected-cantores'>
-              <button onClick={() => navigate('/question12')}>25</button>
-              <p>DENIS DJ</p>
+            <button onClick={() => handleCantorClick("DENIS DJ")}>25</button>
+            <p>DENIS DJ</p>
           </div>
         </section>
-        </main>
+      </main>
     </div>
   );
 };

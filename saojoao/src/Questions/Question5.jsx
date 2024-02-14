@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Question5.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question5 = () => {
   const [selectedOptions, setSelectedOptions] = useState('');
@@ -36,8 +36,10 @@ const Question5 = () => {
     if (selectedOptions === '') {
       setError(true);
     } else {
+      setError(false);
       _feedbacks.push(selectedOptions);
       setFeedbacks(_feedbacks);
+      console.log(_feedbacks);
       navigate('/question6'); // Alterei a rota para a próxima pergunta
     }
   };

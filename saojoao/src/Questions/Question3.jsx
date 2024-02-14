@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
-import { feedbackContext } from '../Context/FeedbackContext';
 import buttonProximapagina from '../Components/Form/Button/ButtonProximapagina'
 import ButtonProximapagina from '../Components/Form/Button/ButtonProximapagina';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import { feedbackContext } from '../Context/FeedbackContext';
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -12,23 +12,21 @@ const Question3 = () => {
   const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
+  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
-    setError(false); 
-  };
-
-  const handleNextQuestion = () => {
+    setError(false);
     if (selectedCard === null) {
-      setError(true); 
+      setError(true);
     } else {
-      
-      const options = ['Muito Bom', 'Bom', 'Indiferente', 'Ruim', 'Péssimo'];
+      const options = ['1', '2', '3', '4', '5'];
       const selectedOption = options[selectedCard];
-
       
-      setFeedbacks(prevFeedbacks => [...prevFeedbacks, selectedOption]);
       
+      _feedbacks.push(selectedOption)
+      setFeedbacks(_feedbacks)
+      console.log(_feedbacks)
       navigate("/question4");
     }
   };
@@ -43,17 +41,16 @@ const Question3 = () => {
           <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023?</span></p>
         </section>
         <section className='container_button_question3'>
-          <button onClick={() => navigate('/question4')} id='red'>1</button>
-          <button onClick={() => navigate('/question4')} id='darkred'>2</button>
-          <button onClick={() => navigate('/question4')} id='yellow'>3</button>
-          <button onClick={() => navigate('/question4')} id='darkgreen'>4</button>
-          <button onClick={() => navigate('/question4')} id='green'>5</button>
+          <button onClick={() => handleCardClick(0)} id='red'>1</button>
+          <button onClick={() => handleCardClick(1)} id='darkred'>2</button>
+          <button onClick={() => handleCardClick(2)} id='yellow'>3</button>
+          <button onClick={() => handleCardClick(3)} id='darkgreen'>4</button>
+          <button onClick={() => handleCardClick(4)} id='green'>5</button>
         </section>
       </main>
+      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma nota.</p>}
     </div>
-  )
-
-      
+  );
 };
 
 export default Question3;

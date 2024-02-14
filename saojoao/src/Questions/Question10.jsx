@@ -1,44 +1,33 @@
 // eslint-disable-next-line no-unused-vars
-import React, {useRef, useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import './Estilos/Question10.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question10 = () => {
-
-  const navigate = useNavigate()
-  const [artists, setArtists] = useState([]);
-  const { feedbacks, setFeedbacks, error, setError } = useContext(feedbackContext);
+  const navigate = useNavigate();
+  const [selectedCantor, setSelectedCantor] = useState(null);
+  const { feedbacks, setFeedbacks, setError } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-  const handleArtistClick = (artist) => {
-    let _artists = Array.isArray(artists) ? artists : [];
-    if (_artists.includes(artist)) {
-      setError(true)
-      _artists = _artists.filter(a => a !== artist);
-      setArtists(_artists)
-    } else if (_artists.length < 3){
-      _artists.push(artist)
-      setArtists(_artists)
-    } else {
-      setError(false)
-    }
-    console.log(_artists)
-  }
+  const handleCantorClick = (cantor) => {
+    setSelectedCantor(cantor);
+    handleNextQuestion();
+  };
 
   const handleNextQuestion = () => {
-    if (artists === null) {
+    if (selectedCantor === null) {
       setError(true);
     } else {
-      navigate('/question5');
-      _feedbacks.push(artists)
-      setFeedbacks(_feedbacks)
+      _feedbacks.push(selectedCantor);
+      setFeedbacks(_feedbacks);
       console.log(_feedbacks)
+      setError(false);
+      navigate('/question11');
     }
   };
 
-  
   return (
     <div>
       <header className='container_logo_question9'>
@@ -49,37 +38,37 @@ const Question10 = () => {
           <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
         </section>
         <section>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>9</button>
-              <p>PROJETO À VONTADE</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('PROJETO À VONTADE')}>
+            <button>9</button>
+            <p>PROJETO À VONTADE</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>10</button>
-              <p>MURILO HULFF</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('MURILO HULFF')}>
+            <button>10</button>
+            <p>MURILO HULFF</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>11</button>
-              <p>MATHEUS E KAUAN</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('MATHEUS E KAUAN')}>
+            <button>11</button>
+            <p>MATHEUS E KAUAN</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>12</button>
-              <p>SIMONE MENDES</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('SIMONE MENDES')}>
+            <button>12</button>
+            <p>SIMONE MENDES</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>13</button>
-              <p>LUAN SANTANA</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('LUAN SANTANA')}>
+            <button>13</button>
+            <p>LUAN SANTANA</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>14</button>
-              <p>GUSTAVO LIMA</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('GUSTAVO LIMA')}>
+            <button>14</button>
+            <p>GUSTAVO LIMA</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>15</button>
-              <p>XAND AVIÃO</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('XAND AVIÃO')}>
+            <button>15</button>
+            <p>XAND AVIÃO</p>
           </div>
-          <div className='selected-cantores'>
-              <button onClick={() => navigate('/question11')}>16</button>
-              <p>HENRY FREITAS</p>
+          <div className='selected-cantores' onClick={() => handleCantorClick('HENRY FREITAS')}>
+            <button>16</button>
+            <p>HENRY FREITAS</p>
           </div>
         </section>
       </main> 

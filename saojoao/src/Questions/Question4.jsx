@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
 import { feedbackContext } from '../Context/FeedbackContext';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question4 = () => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -14,19 +14,18 @@ const Question4 = () => {
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    if (checked) {
-      setSelectedOption(name);
-    } else {
-      setSelectedOption('');
-    }
+    setSelectedOption(name);
+    setError(false);
   };
 
   const handleNextQuestion = () => {
     if (selectedOption === '') {
       setError(true);
     } else {
+      setError(false);
       _feedbacks.push(selectedOption);
       setFeedbacks(_feedbacks);
+      console.log(_feedbacks);
       navigate('/question5');
     }
   };

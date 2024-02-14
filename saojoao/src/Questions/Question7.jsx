@@ -20,7 +20,7 @@ const FaixaEtariaQuestion = () => {
     _feedbacks.push(rating);
     setFeedbacks(_feedbacks);
     console.log(_feedbacks);
-    navigate('/question8'); // Navegando para a próxima pergunta
+    navigate('/question8');
   };
 
   return (
@@ -33,22 +33,11 @@ const FaixaEtariaQuestion = () => {
           <p><span id='pink'>QUAL </span> <span id='orange'>SEU NÍVEL <br /></span>DE SATISFAÇÃO <br /> <span id='pink'>COM AS</span><span id='ocean'> ATRAÇÕES ?</span></p>
         </section>
         <section className='container_section_question7'>
-          <div onClick={() => handleRatingChange('Péssimo')} id='carinhas' className='pessimo'>
+          <div onClick={() => handleRatingChange('Muitobom')} id='carinhas' className='muitobom'>
             <div className='check-box-star'>
-              <img src={Pessimo} alt="Pessimo" />
-              <FaStar id='star' />
-            </div>
-          </div>
-          <div onClick={() => handleRatingChange('Ruim')} id='carinhas' className='ruim'>
-            <div className='check-box-star'>
-              <img src={Ruim} alt="Ruim" />
+              <img src={Muitobom} alt="Muitobom" />
               <FaStar id='star' />
               <FaStar id='star' />
-            </div>
-          </div>
-          <div onClick={() => handleRatingChange('Indiferente')} id='carinhas' className='indiferente'>
-            <div className='check-box-star'>
-              <img src={Indiferente} alt="Indiferente" />
               <FaStar id='star' />
               <FaStar id='star' />
               <FaStar id='star' />
@@ -63,13 +52,24 @@ const FaixaEtariaQuestion = () => {
               <FaStar id='star' />
             </div>
           </div>
-          <div onClick={() => handleRatingChange('Muito Bom')} id='carinhas' className='muitobom'>
+          <div onClick={() => handleRatingChange('Indiferente')} id='carinhas' className='indiferente'>
             <div className='check-box-star'>
-              <img src={Muitobom} alt="Muitobom" />
+              <img src={Indiferente} alt="Indiferente" />
               <FaStar id='star' />
               <FaStar id='star' />
               <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => handleRatingChange('Ruim')} id='carinhas' className='ruim'>
+            <div className='check-box-star'>
+              <img src={Ruim} alt="Ruim" />
               <FaStar id='star' />
+              <FaStar id='star' />
+            </div>
+          </div>
+          <div onClick={() => handleRatingChange('Péssimo')} id='carinhas' className='pessimo'>
+            <div className='check-box-star'>
+              <img src={Pessimo} alt="Péssimo" />
               <FaStar id='star' />
             </div>
           </div>

@@ -18,6 +18,7 @@ const Start = () => {
     } else {
       _feedbacks.push(number);
       setFeedbacks(_feedbacks);
+      console.log(_feedbacks)
       navigate('/question1');
 
     }

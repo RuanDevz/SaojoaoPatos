@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question9.css';
 import { feedbackContext } from '../Context/FeedbackContext';
@@ -6,24 +6,24 @@ import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question9 = () => {
   const [selectedCantor, setSelectedCantor] = useState(null);
-  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
+  useEffect(() => {
+    handleNextQuestion();
+  }, [selectedCantor]); // Chama handleNextQuestion sempre que selectedCantor mudar
+
   const handleCantorClick = (cantor) => {
     setSelectedCantor(cantor);
-    handleNextQuestion();
   };
 
   const handleNextQuestion = () => {
-    if (selectedCantor === null) {
-      setError(true);
-    } else {
+    if (selectedCantor !== null) {
       _feedbacks.push(selectedCantor);
       setFeedbacks(_feedbacks);
-      setError(false);
+      console.log(_feedbacks)
       navigate('/question10');
     }
   };
@@ -71,7 +71,6 @@ const Question9 = () => {
             <p>JORGE MATEUS</p>
           </div>
         </section>
-        {error && <p style={{ color: 'red' }}>Por favor, selecione um cantor.</p>}
       </main>
     </div>
   );

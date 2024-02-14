@@ -1,14 +1,11 @@
 import React, { useState, useContext } from 'react';
 import './Estilos/Question3.css';
 import { useNavigate } from 'react-router-dom';
-import buttonProximapagina from '../Components/Form/Button/ButtonProximapagina'
-import ButtonProximapagina from '../Components/Form/Button/ButtonProximapagina';
 import { feedbackContext } from '../Context/FeedbackContext';
 import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question3 = () => {
   const [selectedCard, setSelectedCard] = useState(null);
-  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
@@ -16,20 +13,18 @@ const Question3 = () => {
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
-    setError(false);
-    if (selectedCard === null) {
-      setError(true);
-    } else {
-      const options = ['1', '2', '3', '4', '5'];
-      const selectedOption = options[selectedCard];
-      
-      
-      _feedbacks.push(selectedOption)
-      setFeedbacks(_feedbacks)
-      console.log(_feedbacks)
-      navigate("/question4");
-    }
   };
+
+  
+  if (selectedCard !== null) {
+    const options = ['1', '2', '3', '4', '5'];
+    const selectedOption = options[selectedCard];
+    
+    _feedbacks.push(selectedOption)
+    setFeedbacks(_feedbacks)
+    console.log(_feedbacks)
+    navigate("/question4");
+  }
 
   return (
     <div className='containergeral_question3'>
@@ -48,7 +43,6 @@ const Question3 = () => {
           <button onClick={() => handleCardClick(4)} id='green'>5</button>
         </section>
       </main>
-      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma nota.</p>}
     </div>
   );
 };

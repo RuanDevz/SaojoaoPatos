@@ -22,7 +22,6 @@ const Question11 = () => {
       _feedbacks.push(cantor);
       setFeedbacks(_feedbacks);
       console.log(_feedbacks);
-      setError(false);
       navigate('/question12');
     }
   };

@@ -43,9 +43,9 @@ const Question9 = () => {
               <button>01</button>
               <p>NATTAN</p>
             </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('JONAS ESTICADO')}>
+            <div className='selected-cantores' onClick={() => handleCantorClick('RAÍ SAIA RODADA')}>
               <button>02</button>
-              <p>JONAS ESTICADO</p>
+              <p>RAÍ SAIA RODADA</p>
             </div>
             <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
               <button>03</button>

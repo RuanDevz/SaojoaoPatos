@@ -10,7 +10,7 @@
 .container_main_finish{
     display: block;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 370px;
 }
 
 .container_main_finish h1{
@@ -29,5 +29,26 @@
         font-size: 1.5em;
         text-align: center;
         max-width: 700px;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .container_finish header img{
+        width: 500px;
+    }
+
+    .container_finish{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .container_main_finish{
+        max-width: 600px;
+    }
+
+    .container_main_finish h1{
+        font-size: 2em;
     }
 }

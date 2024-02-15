@@ -37,4 +37,11 @@
     .container_section2_question4 label{
         cursor: pointer;
     }
+
+    .container_button_question4{
+        max-width: 830px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
 }

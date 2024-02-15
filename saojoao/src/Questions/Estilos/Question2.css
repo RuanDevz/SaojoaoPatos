@@ -123,18 +123,41 @@ input[type="checkbox"] {
 
   @media screen and (min-width: 1280px) and (max-width: 1919px){
     .container_logo_question2 img{
-        width: 120px;
+        display: none;
     }
 
     .first-section-question2 p{
         font-size: 1.3em;
     }
+
     .container_section2_question2 strong{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     input[type="checkbox"]{
         width: 20px;
         height: 20px; 
+    }
+
+    .container_geral_question2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        margin-top: 70px;
+    }
+
+    .first-section-question2 p{
+        text-align: left;
+        font-size: 3em;
+        max-width: 250px;
+    }
+
+    .container_button_question2{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
     }
   }

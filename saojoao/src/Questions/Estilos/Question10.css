@@ -17,3 +17,27 @@
         letter-spacing: 2px;
     }
 }
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .container_cantores_question10{
+        display: flex;
+        gap: 50px;
+    }
+
+    .selected-cantores button{
+        margin: 10px 0px;
+    }
+
+    button#cantorselect{
+        cursor: pointer;
+    }
+
+    button#cantorselect:hover{
+        cursor: pointer;
+        background-color: #df027b;
+    }
+
+    .selected-cantores p{
+        cursor: pointer;
+    }
+}

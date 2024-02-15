@@ -48,14 +48,13 @@ const Question12 = () => {
         <h1>QUAL SEU <br /> <span id='orange'>NOME?</span></h1>
         <form action="https://api.sheetmonkey.io/form/hhMBBnwKBRedYAnrdouJKL" method='POST'>
           <div className='container_input_question12'>
-            <input type="text" placeholder='  Digite seu nome...' onChange={(e) => setName(e.target.value)} />
+            <input minLength='3' maxLength='30' type="text" placeholder='  Digite seu nome...' onChange={(e) => setName(e.target.value)} />
           </div>
           <div className='container_button_question12'>
-            <button onClick={handleFinish}>FINALIZAR</button>
+            <button id='proximapergunta' onClick={handleFinish}>FINALIZAR</button>
           </div>
         </form>
       </main>
-      {error && <p id='error_msg'>Digite um nome válido</p>}
     </div>
   );
 };

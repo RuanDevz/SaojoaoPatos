@@ -33,49 +33,51 @@ const Question9 = () => {
       <header className='container_logo_question9'>
         <img src={logo} alt="alta" />
       </header>
-      <main className='container_geral_question9'>
-        <section className='container_section_question9'>
-          <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
-        </section>
-        <section className='container_cantores_question9'>
-          <div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('NATTAN')}>
-              <button>01</button>
-              <p>NATTAN</p>
+      <div>
+        <main className='container_geral_question9'>
+          <section className='container_section_question9'>
+            <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
+          </section>
+          <section className='container_cantores_question9'>
+            <div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('NATTAN')}>
+                <button id='cantorselect'>01</button>
+                <p>NATTAN</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('RAÍ SAIA RODADA')}>
+                <button id='cantorselect'>02</button>
+                <p>RAÍ SAIA RODADA</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
+                <button id='cantorselect'>03</button>
+                <p>ALOK</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('VINTAGE CULTURE')}>
+                <button id='cantorselect'>04</button>
+                <p>VINTAGE CULTURE</p>
+              </div>
             </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('RAÍ SAIA RODADA')}>
-              <button>02</button>
-              <p>RAÍ SAIA RODADA</p>
+            <div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('LUAN ESTILIZADO')}>
+                <button id='cantorselect'>05</button>
+                <p>LUAN ESTILIZADO</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('CALCINHA PRETA')}>
+                <button id='cantorselect'>06</button>
+                <p>CALCINHA PRETA</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('MARI FERNANDES')}>
+                <button id='cantorselect'>07</button>
+                <p>MARI FERNANDES</p>
+              </div>
+              <div className='selected-cantores' onClick={() => handleCantorClick('JORGE MATEUS')}>
+                <button id='cantorselect'>08</button>
+                <p>JORGE MATEUS</p>
+              </div>
             </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
-              <button>03</button>
-              <p>ALOK</p>
-            </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('VINTAGE CULTURE')}>
-              <button>04</button>
-              <p>VINTAGE CULTURE</p>
-            </div>
-          </div>
-          <div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('LUAN ESTILIZADO')}>
-              <button>05</button>
-              <p>LUAN ESTILIZADO</p>
-            </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('CALCINHA PRETA')}>
-              <button>06</button>
-              <p>CALCINHA PRETA</p>
-            </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('MARI FERNANDES')}>
-              <button>07</button>
-              <p>MARI FERNANDES</p>
-            </div>
-            <div className='selected-cantores' onClick={() => handleCantorClick('JORGE MATEUS')}>
-              <button>08</button>
-              <p>JORGE MATEUS</p>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </div>
     </div>
   );
 };

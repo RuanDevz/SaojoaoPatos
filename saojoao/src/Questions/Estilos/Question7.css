@@ -76,3 +76,45 @@
 .muitobom{
     margin-left: 8px;
 }
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .container_logo_question7 img{
+        width: 250px;
+    }
+
+    .container_section_question7 p{
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+
+    .check-box-star img{
+        width: 110px;
+        margin: 10px 0px;
+    }
+
+    #star{
+        font-size: 1.5em;
+    }
+
+    .pessimo{
+        margin-right: 108px;
+    }
+    
+    .ruim{
+        margin-right: 75px;
+    }
+    
+    .indiferente{
+        margin-right: 43px;
+    }
+    
+    .bom{
+        margin-right: 10px ;
+    }
+    
+    .muitobom{
+        margin-left: 24px;
+    }
+
+
+}

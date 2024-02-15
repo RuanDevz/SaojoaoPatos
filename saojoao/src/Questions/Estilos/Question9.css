@@ -66,3 +66,31 @@
     font-size: 1.2em;
     border: 3px solid #fff;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .container_logo_question9 img{
+        width: 250px;
+    }
+
+    .container_section_question9 p{
+        font-size: 2.2em;
+        margin-bottom: 50px;
+    }
+    
+    .container_cantores_question9{
+        display: flex;
+        gap: 70px;
+    }
+
+    .container_cantores_question9 button{
+        padding: 17px 37px;
+        font-size: 1.7em;
+        border: 5px solid #fff;
+        border-radius: 45%;
+        margin: 10px 0px;
+    }
+    
+    .container_cantores_question9 p{
+        font-size: 1.3em;
+    }
+}

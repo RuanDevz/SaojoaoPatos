@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .container_cantores_question10{
+        display: flex;
+        gap: 70px;
+    }
+
+    .selected-cantores button{
+        padding: 17px 30px;
+        font-size: 1.7em;
+        border: 3px solid #fff;
+        border-radius: 45%;
+        margin: 10px 0px;
+    }
+    
+    .selected-cantores p{
+        font-size: 1.3em;
+        letter-spacing: 2px;
+    }
+}

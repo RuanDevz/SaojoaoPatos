@@ -40,38 +40,42 @@ const Question10 = () => {
         <section className='container_section_question9'>
           <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
         </section>
-        <section>
-          <div className='selected-cantores' onClick={() => handleCantorClick('PROJETO À VONTADE')}>
-            <button>9</button>
-            <p>PROJETO À VONTADE</p>
+        <section className='container_cantores_question10'>
+          <div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('PROJETO À VONTADE')}>
+              <button>09</button>
+              <p>PROJETO À VONTADE</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('MURILO HULFF')}>
+              <button>10</button>
+              <p>MURILO HULFF</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('MATHEUS E KAUAN')}>
+              <button>11</button>
+              <p>MATHEUS E KAUAN</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('SIMONE MENDES')}>
+              <button>12</button>
+              <p>SIMONE MENDES</p>
+            </div>
           </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('MURILO HULFF')}>
-            <button>10</button>
-            <p>MURILO HULFF</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('MATHEUS E KAUAN')}>
-            <button>11</button>
-            <p>MATHEUS E KAUAN</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('SIMONE MENDES')}>
-            <button>12</button>
-            <p>SIMONE MENDES</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('LUAN SANTANA')}>
-            <button>13</button>
-            <p>LUAN SANTANA</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('GUSTAVO LIMA')}>
-            <button>14</button>
-            <p>GUSTAVO LIMA</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('XAND AVIÃO')}>
-            <button>15</button>
-            <p>XAND AVIÃO</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('HENRY FREITAS')}>
-            <button>16</button>
-            <p>HENRY FREITAS</p>
+          <div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('LUAN SANTANA')}>
+              <button>13</button>
+              <p>LUAN SANTANA</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('GUSTAVO LIMA')}>
+              <button>14</button>
+              <p>GUSTAVO LIMA</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('XAND AVIÃO')}>
+              <button>15</button>
+              <p>XAND AVIÃO</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('HENRY FREITAS')}>
+              <button>16</button>
+              <p>HENRY FREITAS</p>
+            </div>
           </div>
         </section>
       </main> 

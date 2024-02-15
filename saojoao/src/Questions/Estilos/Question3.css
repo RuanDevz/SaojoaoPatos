@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px){
+
     .section_question3 p{
         font-size: 1.5em;
     }
@@ -29,11 +29,9 @@
     }
     .container_button_question3 button{
         padding: 13px 20px;
-        width: 80px;
         border-radius: 50px;
         color: #fff;
         background-color: #1D46BB;
-        font-weight: bold;
         font-size: 1.2em;
         border: 3px solid #fff;
         margin-top: 30px;
@@ -45,7 +43,35 @@
         display: flex;
         justify-content: center;
     }
-    div#button_nextquestion button{
-        width: 300px;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px){
+        .container_logo_question3 img{
+            width: 250px;
+            margin-top: 50px;
+        }
+
+        .section_question3 p{
+            font-size: 2.5em;
+        }
+
+        .container_button_question3{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 70px;
+            gap: 25px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .container_button_question3 button{
+            border: 5px solid #fff;
+            text-align: center;
+            padding: 30px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
     }
-}

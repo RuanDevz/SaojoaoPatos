@@ -11,7 +11,7 @@ import Muitobom from '../assets/Rostinhos/5.png';
 import { FaStar } from "react-icons/fa";
 
 const FaixaEtariaQuestion = () => {
-  const navigate = useNavigate(); // Usando o hook useNavigate
+  const navigate = useNavigate();
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];

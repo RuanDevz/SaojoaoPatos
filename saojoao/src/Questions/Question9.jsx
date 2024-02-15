@@ -13,7 +13,7 @@ const Question9 = () => {
 
   useEffect(() => {
     handleNextQuestion();
-  }, [selectedCantor]); // Chama handleNextQuestion sempre que selectedCantor mudar
+  }, [selectedCantor]);
 
   const handleCantorClick = (cantor) => {
     setSelectedCantor(cantor);
@@ -37,38 +37,42 @@ const Question9 = () => {
         <section className='container_section_question9'>
           <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
         </section>
-        <section>
-          <div className='selected-cantores' onClick={() => handleCantorClick('NATTAN')}>
-            <button>1</button>
-            <p>NATTAN</p>
+        <section className='container_cantores_question9'>
+          <div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('NATTAN')}>
+              <button>01</button>
+              <p>NATTAN</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('JONAS ESTICADO')}>
+              <button>02</button>
+              <p>JONAS ESTICADO</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
+              <button>03</button>
+              <p>ALOK</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('VINTAGE CULTURE')}>
+              <button>04</button>
+              <p>VINTAGE CULTURE</p>
+            </div>
           </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('JONAS ESTICADO')}>
-            <button>2</button>
-            <p>JONAS ESTICADO</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('ALOK')}>
-            <button>3</button>
-            <p>ALOK</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('VINTAGE CULTURE')}>
-            <button>4</button>
-            <p>VINTAGE CULTURE</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('LUAN ESTILIZADO')}>
-            <button>5</button>
-            <p>LUAN ESTILIZADO</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('CALCINHA PRETA')}>
-            <button>6</button>
-            <p>CALCINHA PRETA</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('MARI FERNANDES')}>
-            <button>7</button>
-            <p>MARI FERNANDES</p>
-          </div>
-          <div className='selected-cantores' onClick={() => handleCantorClick('JORGE MATEUS')}>
-            <button>8</button>
-            <p>JORGE MATEUS</p>
+          <div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('LUAN ESTILIZADO')}>
+              <button>05</button>
+              <p>LUAN ESTILIZADO</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('CALCINHA PRETA')}>
+              <button>06</button>
+              <p>CALCINHA PRETA</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('MARI FERNANDES')}>
+              <button>07</button>
+              <p>MARI FERNANDES</p>
+            </div>
+            <div className='selected-cantores' onClick={() => handleCantorClick('JORGE MATEUS')}>
+              <button>08</button>
+              <p>JORGE MATEUS</p>
+            </div>
           </div>
         </section>
       </main>

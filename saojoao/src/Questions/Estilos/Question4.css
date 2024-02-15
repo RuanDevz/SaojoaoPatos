@@ -71,5 +71,22 @@
 .container_section2_question4 > :first-child {
     margin-top: 10px;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .container_header_question4 img{
+        width: 250px;
+    }
+    input[type="checkbox"]{
+        width: 35px;
+        height: 35px; 
+    }
 
+    .container_section_question4 p{
+        font-size: 2.2em;
+    }
+
+    .checkbox-item label{
+        font-size: 2em;
+    }
+
+}
 

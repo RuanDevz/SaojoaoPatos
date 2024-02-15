@@ -21,6 +21,7 @@ const Question1 = () => {
     <div>
       <main className='container_main_geral'>
         <section className='first-section-question1'>
+          <img src={logo} alt="logo" />
           <h1 className='title-white'><span id='pink'>SOBRE SUA <br /> </span> EXPECTATIVA <span id='orange'>EM <br /> RELAÇÃO AO </span>SÃO <br /> JOÃO 2023:</h1>
         </section>
         <section className='container_button'>

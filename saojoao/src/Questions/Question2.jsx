@@ -26,7 +26,7 @@ const Question2 = () => {
       _feedbacks.push(avaliacao)
       setFeedbacks(_feedbacks)
       console.log(_feedbacks)
-      navigate('/question3');
+      navigate('/question1');
     }
   };
 
@@ -70,7 +70,7 @@ const Question2 = () => {
         </section>
       </main>
       <div className='container_button_question2'>
-        <button onClick={handleNextQuestion}>PROXIMA PERGUNTA >>></button>
+        <button id='proximapergunta' onClick={handleNextQuestion}>PROXIMA PERGUNTA >>></button>
       </div>
       <div className='container_button_question2'>
       {error && <p id='error_msg'>Por favor, selecione uma faixa etária.</p>}

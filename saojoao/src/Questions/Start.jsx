@@ -19,7 +19,7 @@ const Start = () => {
       _feedbacks.push(number);
       setFeedbacks(_feedbacks);
       console.log(_feedbacks)
-      navigate('/question1');
+      navigate('/question2');
 
     }
   };

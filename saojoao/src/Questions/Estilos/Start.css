@@ -133,7 +133,7 @@ span#blue{
 }
 
 /* Media Queries */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
     .start-first-section {
         max-width: 700px;
     }
@@ -160,7 +160,7 @@ span#blue{
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
     body {
         background-attachment: local;
     }
@@ -176,6 +176,10 @@ span#blue{
     .container_input button {
         position: relative;
         bottom: 50px;
+    }
+
+    .container_logo img{
+        width: 200px;
     }
 }
 

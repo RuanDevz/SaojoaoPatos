@@ -30,30 +30,30 @@ const Question6 = () => {
       <header className='container_logo_question6'>
         <img src={logo} alt="logo" />
       </header>
-      <main>
+      <main className='container_geral_question6'>
         <section className='container_section_question6'>
           <p>SOBRE A <span id='orange'>ESTRUTURA <br /></span> DO <span id='pink'>EVENTO</span> VOCÊ <br /><span id='ocean'> GOSTOU ?</span></p>
         </section>
         <section className='container_section2_question6'>
           <div>
             <img src={Pessimo} alt="NÃO GOSTEI" />
-            <button onClick={() => handlevote('NÃO GOSTEI')}>NÃO GOSTEI</button>
+            <button id='naogostei' onClick={() => handlevote('NÃO GOSTEI')}>NÃO GOSTEI</button>
           </div>
           <div>
             <img src={Ruim} alt="PODERIA MELHORAR" />
-            <button onClick={() => handlevote('PODERIA MELHORAR')}>PODERIA MELHORAR</button>
+            <button id='poderiamelhorar' onClick={() => handlevote('PODERIA MELHORAR')}>PODERIA MELHORAR</button>
           </div>
           <div>
              <img src={Indiferente} alt="INDIFERENTE" />
-            <button onClick={() => handlevote('INDIFERENTE')}>INDIFERENTE</button>
+            <button id='indiferenteb' onClick={() => handlevote('INDIFERENTE')}>INDIFERENTE</button>
           </div>
           <div>
              <img src={Bom} alt="GOSTEI" />
-            <button onClick={() => handlevote('GOSTEI')}>GOSTEI</button>
+            <button id='bom' onClick={() => handlevote('GOSTEI')}>GOSTEI</button>
           </div>
           <div>
              <img src={Muitobom} alt="GOSTEI MUITO" />
-            <button onClick={() => handlevote('GOSTEI MUITO')}>GOSTEI MUITO</button>
+            <button id='gosteimuito' onClick={() => handlevote('GOSTEI MUITO')}>GOSTEI MUITO</button>
           </div>
         </section>
         {error && <p style={{ color: 'red' }}>Por favor, selecione uma opção.</p>}

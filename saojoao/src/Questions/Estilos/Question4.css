@@ -94,3 +94,32 @@
 
 }
 
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .container_header_question4 img{
+        display: none;
+    }
+
+    .container_geral_question4_main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 100px;
+        margin-top: 60px;
+    }
+
+    .container_section_question4 p{
+        text-align: left;
+        max-width: 300px;
+        font-size: 3em;
+    }
+
+    input[type="checkbox"]{
+        width: 30px;
+        height: 30px; 
+    }
+
+    .container_button_question4{
+        margin-left: 520px;
+    }
+}
+

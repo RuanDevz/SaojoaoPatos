@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Question4.css';
 import { useNavigate } from 'react-router-dom';
@@ -35,9 +36,9 @@ const Question4 = () => {
       <header className='container_header_question4'>
         <img src={logo} alt="logo" />
       </header>
-      <main>
+      <main className='container_geral_question4_main'>
         <section className='container_section_question4'>
-          <p><span id='orange'>O QUE </span>VOCÊ <br /> MAIS <span id='pink'>GOSTOU?</span></p>
+          <p><span id='orange'>O QUE </span>VOCÊ <br /> MAIS <span id='pink'>GOSTOU</span>?</p>
         </section>
         <div className='container_geral_section2'>
           <section className='container_section2_question4'>
@@ -115,7 +116,7 @@ const Question4 = () => {
         </div>
       </main>
       <div className='container_button_question4'>
-        <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
+        <button id='proximapergunta' onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
       </div>
       {error &&  <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione apenas uma opção.</p>}
     </div>

@@ -5,7 +5,7 @@ import { feedbackContext } from '../Context/FeedbackContext';
 import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const Question5 = () => {
-  const [selectedOptions, setSelectedOptions] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   
@@ -15,29 +15,18 @@ const Question5 = () => {
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
     if (checked) {
-      setSelectedOptions((prevSelectedOptions) => {
-        if (prevSelectedOptions === '') {
-          return name;
-        } else {
-          return prevSelectedOptions + ',' + name;
-        }
-      });
+      setSelectedOption(name);
     } else {
-      setSelectedOptions((prevSelectedOptions) => {
-        return prevSelectedOptions
-          .split(',')
-          .filter((option) => option !== name)
-          .join(',');
-      });
+      setSelectedOption('');
     }
   };
 
   const handleNextQuestion = () => {
-    if (selectedOptions === '') {
+    if (selectedOption === '') {
       setError(true);
     } else {
       setError(false);
-      _feedbacks.push(selectedOptions);
+      _feedbacks.push(selectedOption);
       setFeedbacks(_feedbacks);
       console.log(_feedbacks);
       navigate('/question6');
@@ -49,7 +38,7 @@ const Question5 = () => {
       <header className='container_header_question4'>
         <img src={logo} alt="logo" />
       </header>
-      <main>
+      <main className='container_geral_question5_main'>
         <section className='container_section_question4'>
           <p><span id='orange'>O QUE </span>VOCÊ <br /> MENOS <span id='pink'>GOSTOU?</span></p>
         </section>
@@ -60,6 +49,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Atracoes"
                 id="checkbox2"
+                checked={selectedOption === "Atracoes"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox2">Atrações</label>
@@ -69,6 +59,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Estruturas"
                 id="checkbox3"
+                checked={selectedOption === "Estruturas"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox3">Estruturas</label>
@@ -78,6 +69,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Ativacoes"
                 id="checkbox4"
+                checked={selectedOption === "Ativacoes"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox4">Ativações</label>
@@ -87,6 +79,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Bares"
                 id="checkbox5"
+                checked={selectedOption === "Bares"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox5">Bares</label>
@@ -96,6 +89,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Organizacao"
                 id="checkbox6"
+                checked={selectedOption === "Organizacao"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox6">Organização</label>
@@ -105,6 +99,7 @@ const Question5 = () => {
                 type="checkbox"
                 name="Limpeza"
                 id="checkbox7"
+                checked={selectedOption === "Limpeza"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox7">Limpeza</label>
@@ -114,17 +109,18 @@ const Question5 = () => {
                 type="checkbox"
                 name="Seguranca"
                 id="checkbox8"
+                checked={selectedOption === "Seguranca"}
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="checkbox8">Segurança</label>
             </div>
           </section>
         </div>
-        <div className='container_button_question4'>
-          <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
-        </div>
       </main>
-      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
+      <div className='container_button_question4'>
+        <button id='proximapergunta' onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
+      </div>
+      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma opção.</p>}
     </div>
   );
 };

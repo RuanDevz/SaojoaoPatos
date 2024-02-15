@@ -7,11 +7,11 @@ import { feedbackContext } from '../Context/FeedbackContext';
 const Question12 = () => {
   const navigate = useNavigate();
   const [Name, setName] = useState('');
-  const { feedbacks, setFeedbacks, setError } = useContext(feedbackContext);
+  const { feedbacks, setFeedbacks, setError, error } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleFinish = async (e) => {
-    if (!Name) {
+    if (Name.trim().length < 2) {
       setError(true);
     } else {
       _feedbacks.push(Name);
@@ -55,6 +55,7 @@ const Question12 = () => {
           </div>
         </form>
       </main>
+      {error && <p id='error_msg'>Digite um nome válido</p>}
     </div>
   );
 };

@@ -111,13 +111,13 @@ const Question4 = () => {
               />
               <label htmlFor="checkbox8">Segurança</label>
             </div>
-            {error && <p style={{ color: 'red' }}>Por favor, selecione apenas uma opção.</p>}
           </section>
         </div>
       </main>
       <div className='container_button_question4'>
         <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
       </div>
+      {error &&  <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione apenas uma opção.</p>}
     </div>
   );
 };

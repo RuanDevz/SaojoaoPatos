@@ -73,7 +73,7 @@ const Question2 = () => {
         <button onClick={handleNextQuestion}>PROXIMA PERGUNTA >>></button>
       </div>
       <div className='container_button_question2'>
-      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma faixa etária.</p>}
+      {error && <p id='error_msg'>Por favor, selecione uma faixa etária.</p>}
       </div>
     </div>
   );

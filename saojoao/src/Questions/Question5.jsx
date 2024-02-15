@@ -40,7 +40,7 @@ const Question5 = () => {
       _feedbacks.push(selectedOptions);
       setFeedbacks(_feedbacks);
       console.log(_feedbacks);
-      navigate('/question6'); // Alterei a rota para a próxima pergunta
+      navigate('/question6');
     }
   };
 
@@ -118,13 +118,13 @@ const Question5 = () => {
               />
               <label htmlFor="checkbox8">Segurança</label>
             </div>
-            {error && <p style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
           </section>
         </div>
         <div className='container_button_question4'>
           <button onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
         </div>
       </main>
+      {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione pelo menos uma opção.</p>}
     </div>
   );
 };

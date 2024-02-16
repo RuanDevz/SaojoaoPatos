@@ -20,6 +20,16 @@
     margin-bottom: 30px;
 }
 
+h1#saojoao{
+    font-size: 1.4em;
+    max-width: 350px;
+}
+
+.title-saojoao{
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1280px){
     .container_logo_finish img{
         width: 450px;
@@ -30,9 +40,13 @@
         text-align: center;
         max-width: 700px;
     }
+
+    h1#saojoao{
+        max-width: 800px;
+    }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px){
     .container_finish header img{
         width: 500px;
     }
@@ -49,6 +63,44 @@
     }
 
     .container_main_finish h1{
+        font-size: 2em;
+    }
+
+    h1#saojoao{
+        max-width: 800px;
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container_finish{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container_main_finish{
+        margin-top: 250px;
+    }
+
+    .container_finish header img{
+        position: relative;
+        left: 100px;
+        width: 700px;
+    }
+
+    .container_main_finish{
+        max-width: 750px;
+        margin-bottom: 220px;
+        
+    }
+
+    .container_main_finish h1{
+        position: relative;
+        right: 100px;
+        text-align: justify;
+    }
+
+    h1#saojoao{
         font-size: 2em;
     }
 }

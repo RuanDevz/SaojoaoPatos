@@ -89,6 +89,25 @@
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
 }
+
+.check-box-star {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.check-box-star:hover {
+    transform: scale(1.2); 
+}
+
+#star{
+    cursor: pointer;
+}
+
+.dica{
+    display: none;
+}
+
+
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1280px){
     .container_logo_question7 img{
@@ -181,5 +200,27 @@
 }
 
 @media screen and (min-width: 1920px) {
-    
+    .container_section_question7 p {
+        font-size: 3em;
+        text-align: left;
+        margin-bottom: 120px;
+    }
+
+    .container_geral_question7{
+        margin-top: 100px;
+        display: flex;
+        gap: 170px;
+    }
+
+    .container_section_question7 button{
+        font-family: 'Rockwell';
+        font-size: 1.3em;
+        font-weight: normal;
+        padding: 20px;
+        margin-right: 100px;
+    }
+
+    .check-box-star{
+        margin: 10px 0px;
+    }
 }

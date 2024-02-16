@@ -132,6 +132,7 @@ span#blue{
     margin-top: 15px;
 }
 
+
 /* Media Queries */
 @media screen and (min-width: 769px) and (max-width: 1279px) {
     .start-first-section {

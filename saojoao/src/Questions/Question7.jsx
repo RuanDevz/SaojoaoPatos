@@ -31,7 +31,7 @@ const FaixaEtariaQuestion = () => {
       <main className='container_geral_question7'>
         <section className='container_section_question7'>
           <p><span id='pink'>QUAL </span> <span id='orange'>SEU NÍVEL <br /></span>DE SATISFAÇÃO <br /> <span id='pink'>COM AS</span><span id='ocean'> ATRAÇÕES ?</span></p>
-          <button>01 ESTRELA PARA FRACO E 05 ESTRELAS PARA EXELENTE</button>
+          <div className='dica'><button><strong>01</strong> ESTRELA PARA FRACO E <strong>05</strong> ESTRELAS PARA EXELENTE</button></div>
         </section>
         <section className='container_section_question7'>
           <div onClick={() => handleRatingChange('Muitobom')} id='carinhas' className='muitobom'>

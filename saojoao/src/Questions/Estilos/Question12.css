@@ -91,7 +91,7 @@
     }
 }
 
-@media screen and (min-width: 1280px)  and (max-width: 1919px) {
+@media screen and (min-width: 1280px){
     .container_logo_question12 img{
         display: none;
     }
@@ -107,5 +107,23 @@
         width: 500px;
         border: 4px solid #fff;
         font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container_main_question12{
+        margin-top: 130px;
+    }
+    
+    .container_main_question12{
+        font-size: 1.3em;
+    }
+
+    .container_input_question12 input{
+        width: 600px;
+    }
+
+    .container_button_question12 button{
+        width: 400px;
     }
 }

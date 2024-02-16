@@ -12,7 +12,6 @@ const Finish = () => {
 
     return () => clearTimeout(timer);
   }, [navigate]);
-  
 
   return (
     <div>
@@ -22,7 +21,9 @@ const Finish = () => {
         </header>
         <main className='container_main_finish'>
           <h1><span id='pink'>AGRADECEMOS</span> POR DEDICAR SEU TEMPO PARA <span id='ocean'>COMPARTILHAR SUAS OPINIÕES</span> NA NOSSA PESQUISA DE SATISFAÇÃO DO SÃO JOÃO 2023.</h1>
-          <h1>TE ESPERAMOS NO <span id='orange'>SÃO JOÃO DA GENTE - 2024</span>, ATÉ BREVE!</h1>
+          <div className='title-saojoao'>
+            <h1 id='saojoao'>TE ESPERAMOS NO <span id='orange'>SÃO JOÃO DA GENTE - 2024</span>, ATÉ BREVE!</h1>
+          </div>
         </main>
       </div>
     </div>

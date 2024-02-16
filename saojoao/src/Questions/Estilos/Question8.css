@@ -34,7 +34,7 @@
         }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px){
      .container_section_question8{
         margin-top: 140px;
      }
@@ -44,4 +44,19 @@
         white-space: nowa;
         max-width: 500px;
      }
+}
+
+@media screen and (min-width: 1920px) {
+        .container_section_question8{
+                font-size: 1em;
+                max-width: 800px;
+                margin: 0 auto;
+                margin-top: 170px;
+        }
+
+        .container_section_question8 p span {
+
+                width: 100%;
+            }
+
 }

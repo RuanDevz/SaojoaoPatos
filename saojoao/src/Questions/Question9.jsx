@@ -36,7 +36,7 @@ const Question9 = () => {
       <div>
         <main className='container_geral_question9'>
           <section className='container_section_question9'>
-            <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE <br /></span><span id='pink'>FALTAR</span> NO SÃO JOÃO <br /> DA GENTE ?</p>
+            <p><span id='orange'>QUEM </span><span id='blue'>NÃO PODE </span><span id='pink'>FALTAR</span> NO SÃO JOÃO  DA GENTE ?</p>
           </section>
           <section className='container_cantores_question9'>
             <div>

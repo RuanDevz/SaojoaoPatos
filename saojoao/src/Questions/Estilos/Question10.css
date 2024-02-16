@@ -18,7 +18,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px){
     .container_cantores_question10{
         display: flex;
         gap: 50px;
@@ -39,5 +39,11 @@
 
     .selected-cantores p{
         cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container_geral_question9{
+        margin-top: 200px;
     }
 }

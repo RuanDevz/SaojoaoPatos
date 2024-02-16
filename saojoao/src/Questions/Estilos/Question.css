@@ -159,16 +159,22 @@ button#red:hover{
     }
 }
 
-/* Dispositivos grandes */
-@media screen and (min-width: 1024px) {
+/* nootbook */
+@media screen and (min-width: 1280px) {
     .container_main_geral {
-        gap: 300px;
+        display: flex;
+        justify-content: space-around;
     }
 
-    .container_button button{
+    .first-section-question1 img {
+        display: none;
+    }
+
+    .container_button button {
         font-size: 1.2em;
     }
 }
+
 
 @media screen and (min-width: 1920px) {
     .container_main_geral{

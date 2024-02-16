@@ -59,7 +59,7 @@ const Start = () => {
       </main>
       <section className='start-segund-section'>
         <form onSubmit={handleSubmit} className='container_input'>
-          <input type="text" placeholder='Digite seu telefone...' value={number} onChange={handleChange}  />
+          <input type="tel" placeholder='Digite seu telefone...' value={number} onChange={handleChange}  />
           <button type="submit"><p className='name_button'>INICIAR</p></button>
         </form>
       </section>

@@ -40,7 +40,7 @@ const Question5 = () => {
       </header>
       <main className='container_geral_question5_main'>
         <section className='container_section_question4'>
-          <p><span id='orange'>O QUE </span>VOCÊ <br /> MENOS <span id='pink'>GOSTOU?</span></p>
+          <p><span id='orange'>O QUE </span>VOCÊ <br /> MENOS <span id='ocean'>GOSTOU?</span></p>
         </section>
         <div className='container_geral_section2'>
           <section className='container_section2_question4'>
@@ -118,7 +118,7 @@ const Question5 = () => {
         </div>
       </main>
       <div className='container_button_question4'>
-        <button id='proximapergunta' onClick={handleNextQuestion}>PRÓXIMA PERGUNTA</button>
+        <button id='proximapergunta' onClick={handleNextQuestion}>PRÓXIMA PERGUNTA >>></button>
       </div>
       {error && <p id='error_msg' style={{ color: 'red' }}>Por favor, selecione uma opção.</p>}
     </div>

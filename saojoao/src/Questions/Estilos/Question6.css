@@ -81,7 +81,7 @@
 
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px){
+@media screen and (min-width: 1280px){
     .container_logo_question6 img{
         display: none;
     }
@@ -125,5 +125,25 @@
     button#naogostei:hover{
         background-color:#ff0000;
         cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container_section_question6 p{
+        font-size: 3em;
+    }
+
+    .container_geral_question6{
+        margin-top: 180px;
+    }
+
+    .container_section2_question6 div img{
+        width: 60px;
+    }
+
+    .container_section2_question6 div button{
+        width: 400px;
+        padding: 15px;
+        border-radius: 20px;
     }
 }

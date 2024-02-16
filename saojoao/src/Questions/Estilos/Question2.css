@@ -121,7 +121,7 @@ input[type="checkbox"] {
 
   }
 
-  @media screen and (min-width: 1280px) and (max-width: 1919px){
+  @media screen and (min-width: 1280px){
     .container_logo_question2 img{
         display: none;
     }
@@ -159,5 +159,34 @@ input[type="checkbox"] {
         display: flex;
         justify-content: flex-end;
         margin-top: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .first-section-question2 p{
+        max-width: 400px;
+        font-size: 4.3em;
+    }
+
+    .container_geral_question2{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        width: 100%;
+        margin-top: 130px;
+    }
+
+    .container_section2_question2 strong{
+        font-size: 2em;
+    }
+
+    input[type="checkbox"]{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .container_button_question2 button{
+        width: 400px;
+        padding: 15px 0px;
     }
   }

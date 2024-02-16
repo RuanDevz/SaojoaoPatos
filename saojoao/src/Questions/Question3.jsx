@@ -31,9 +31,9 @@ const Question3 = () => {
       <div className='container_logo_question3'>
         <img src={logo} alt="LOGO" />
       </div>
-      <main>
+      <main className='container_geral_question3'>
         <section className='section_question3'>
-          <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023?</span></p>
+          <p>DE<span id='orange'> 1 A 5</span>, QUAL <span id='pink'>NOTA <br /></span> VOCÊ DARIA PARA <br /> O <span id='ocean'>SÃO JOÃO 2023</span>?</p>
         </section>
         <section className='container_button_question3'>
           <button onClick={() => handleCardClick(0)} id='red'>1</button>

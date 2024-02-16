@@ -147,7 +147,7 @@
 
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px){
+@media screen and (min-width: 1280px){
     .container_logo_question7 img{
         display: none;
     }
@@ -178,4 +178,8 @@
         font-weight: bold;
         font-family: "Montserrat", sans-serif;
     }
+}
+
+@media screen and (min-width: 1920px) {
+    
 }

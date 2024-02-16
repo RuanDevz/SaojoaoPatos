@@ -5,7 +5,7 @@
 
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1280px){
     .container_header_question4 img{
         display: none;
     }
@@ -43,5 +43,20 @@
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container_geral_question5_main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .container_button_question4{
+        display: flex;
+        justify-content: flex-end;
+        width: 900px;
     }
 }

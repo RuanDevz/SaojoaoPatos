@@ -16,13 +16,27 @@ const Start = () => {
     if (!validateNumber(number)) {
       setError('Número inválido');
     } else {
-      _feedbacks.push(number);
+      const currentDate = new Date();
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+      const year = currentDate.getFullYear();
+      const formattedDate = `${day}/${month}/${year}`;
+      const hours = String(currentDate.getHours()).padStart(2, '0'); 
+      const minutes = String(currentDate.getMinutes()).padStart(2, '0'); 
+      const formattedTime = `${hours}:${minutes}`;
+      const dateTimeString = `${formattedDate} ${formattedTime}`;
+      const numberString = `${number}`;
+  
+      _feedbacks.unshift(numberString); 
+      _feedbacks.unshift(dateTimeString); 
       setFeedbacks(_feedbacks);
       console.log(_feedbacks)
       navigate('/question2');
-
     }
   };
+  
+  
+  
 
   const validateNumber = (number) => {
     const re = /^\(\d{2}\) \d{5}-\d{4}$/;

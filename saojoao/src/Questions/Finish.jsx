@@ -8,6 +8,7 @@ const Finish = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
+      window.location.reload();
     }, 6000);
 
     return () => clearTimeout(timer);

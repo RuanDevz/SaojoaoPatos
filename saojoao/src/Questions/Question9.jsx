@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question9.css';
@@ -7,6 +8,11 @@ import logo from '../assets/Logo São João/Logosaojoao.png';
 const Question9 = () => {
   const [selectedCantor, setSelectedCantor] = useState(null);
   const navigate = useNavigate();
+
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
 
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];

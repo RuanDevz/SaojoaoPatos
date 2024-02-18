@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
 import './Estilos/Question8.css';
 import { useNavigate } from 'react-router-dom';
@@ -6,7 +7,11 @@ import logo from '../assets/Logo São João/Logosaojoao.png';
 
 const FaixaEtariaQuestion = () => {
   const navigate = useNavigate(); 
-
+  
+  window.history.pushState(null, "", window.location.href);
+  window.onpopstate = function () {
+  window.history.pushState(null, "", window.location.href);
+  };
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 

@@ -11,6 +11,11 @@ const Question2 = () => {
   const navigate = useNavigate(); 
   const [avaliacao, setAvaliacao] = useState(null);
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 

@@ -14,6 +14,11 @@ const Question6 = () => {
   const [selectedFaixaEtaria, setSelectedFaixaEtaria] = useState('');
   const [error, setError] = useState(false);
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 

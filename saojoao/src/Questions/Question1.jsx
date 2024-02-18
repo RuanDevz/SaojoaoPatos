@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Estilos/Question.css';
@@ -8,6 +9,11 @@ const Question1 = () => {
   const navigate = useNavigate();
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
+
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
 
   const handleNextQuestion = (event) => {
     const option = event.target.textContent;

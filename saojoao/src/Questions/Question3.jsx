@@ -15,6 +15,11 @@ const Question3 = () => {
     setSelectedCard(index);
   };
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
   
   if (selectedCard !== null) {
     const options = ['1', '2', '3', '4', '5'];

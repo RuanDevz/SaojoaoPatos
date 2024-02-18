@@ -10,6 +10,11 @@ const Question12 = () => {
   const { feedbacks, setFeedbacks, setError, error } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
   const handleFinish = async (e) => {
     if (Name.trim().length < 2) {
       setError(true);

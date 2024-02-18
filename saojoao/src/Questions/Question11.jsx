@@ -10,6 +10,11 @@ const Question11 = () => {
   const { feedbacks, setFeedbacks, setError } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
   const handleCantorClick = (cantor) => {
     setSelectedCantor(cantor);
     handleNextQuestion(cantor);

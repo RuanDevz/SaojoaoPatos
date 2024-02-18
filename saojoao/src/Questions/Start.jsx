@@ -11,6 +11,12 @@ const Start = () => {
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
+window.history.pushState(null, "", window.location.href);
+window.onpopstate = function () {
+window.history.pushState(null, "", window.location.href);
+};
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateNumber(number)) {

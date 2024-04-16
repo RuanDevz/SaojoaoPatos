@@ -18,7 +18,9 @@ const Start = () => {
     if (!validateNumber(number)) {
       setError("Número inválido");
     } else {
-      axios.post('http://localhost:3000/tel', { number })
+      axios.post('http://localhost:3000/tel',{
+        Telefone: number
+      })
         .then((response) => {
           console.log(response.data);
         })

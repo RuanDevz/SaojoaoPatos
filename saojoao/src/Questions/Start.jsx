@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
 import '../Questions/Estilos/Start.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Logo São João/Logosaojoao.png'
+import logo from '../assets/Logo São João/Logosaojoao.png';
 import { feedbackContext } from '../Context/FeedbackContext';
+import axios from 'axios';
 
 const Start = () => {
   const [number, setNumber] = useState('');
@@ -11,38 +12,39 @@ const Start = () => {
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
   let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
-window.history.pushState(null, "", window.location.href);
-window.onpopstate = function () {
-window.history.pushState(null, "", window.location.href);
-};
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!validateNumber(number)) {
-      setError('Número inválido');
+      setError("Número inválido");
     } else {
+      axios.post('http://localhost:3000/tel', { number })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error('Erro na requisição:', error);
+          setError('Ocorreu um erro ao enviar a requisição.');
+        });
+
       const currentDate = new Date();
       const day = String(currentDate.getDate()).padStart(2, '0');
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
       const year = currentDate.getFullYear();
       const formattedDate = `${day}/${month}/${year}`;
-      const hours = String(currentDate.getHours()).padStart(2, '0'); 
-      const minutes = String(currentDate.getMinutes()).padStart(2, '0'); 
+      const hours = String(currentDate.getHours()).padStart(2, '0');
+      const minutes = String(currentDate.getMinutes()).padStart(2, '0');
       const formattedTime = `${hours}:${minutes}`;
       const dateTimeString = `${formattedDate} ${formattedTime}`;
       const numberString = `${number}`;
-  
-      _feedbacks.unshift(numberString); 
-      _feedbacks.unshift(dateTimeString); 
+
+      _feedbacks.unshift(numberString);
+      _feedbacks.unshift(dateTimeString);
       setFeedbacks(_feedbacks);
-      console.log(_feedbacks)
+      console.log(_feedbacks);
       navigate('/question2');
     }
-  };
-  
-  
-  
+  }
 
   const validateNumber = (number) => {
     const re = /^\(\d{2}\) \d{5}-\d{4}$/;
@@ -79,7 +81,7 @@ window.history.pushState(null, "", window.location.href);
       </main>
       <section className='start-segund-section'>
         <form onSubmit={handleSubmit} className='container_input'>
-          <input type="tel" placeholder='Digite seu telefone...' value={number} onChange={handleChange}  />
+          <input type="tel" placeholder='Digite seu telefone...' value={number} onChange={handleChange} />
           <button type="submit"><p className='name_button'>INICIAR</p></button>
         </form>
       </section>

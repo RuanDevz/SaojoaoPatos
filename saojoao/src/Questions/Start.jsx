@@ -50,32 +50,6 @@ const Start = () => {
         });
     }
   };
-      axios.post('http://localhost:3000/tel', { number })
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.error('Erro na requisição:', error);
-          setError('Ocorreu um erro ao enviar a requisição.');
-        });
-
-      const currentDate = new Date();
-      const day = String(currentDate.getDate()).padStart(2, '0');
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-      const year = currentDate.getFullYear();
-      const formattedDate = `${day}/${month}/${year}`;
-      const hours = String(currentDate.getHours()).padStart(2, '0');
-      const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-      const formattedTime = `${hours}:${minutes}`;
-      const dateTimeString = `${formattedDate} ${formattedTime}`;
-      const numberString = `${number}`;
-
-      _feedbacks.unshift(numberString);
-      _feedbacks.unshift(dateTimeString);
-      setFeedbacks(_feedbacks);
-      console.log(_feedbacks);
-      navigate('/question2');
-    }
 
   const validateNumber = (number) => {
     const re = /^\(\d{2}\) \d{5}-\d{4}$/;
@@ -121,5 +95,6 @@ const Start = () => {
       </div>
     </div>
   );
+};
 
 export default Start;

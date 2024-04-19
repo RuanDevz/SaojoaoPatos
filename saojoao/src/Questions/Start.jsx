@@ -18,7 +18,6 @@ const Start = () => {
     if (!validateNumber(number)) {
       setError("Número inválido");
     } else {
-<<<<<<< HEAD
       axios.post('http://localhost:3000/tel', {
         Telefone: number
       })
@@ -51,7 +50,6 @@ const Start = () => {
         });
     }
   };
-=======
       axios.post('http://localhost:3000/tel', { number })
         .then((response) => {
           console.log(response.data);
@@ -78,8 +76,6 @@ const Start = () => {
       console.log(_feedbacks);
       navigate('/question2');
     }
-  }
->>>>>>> 511449b086b9aab13ad1ad8e91e610c0b29a0e36
 
   const validateNumber = (number) => {
     const re = /^\(\d{2}\) \d{5}-\d{4}$/;
@@ -125,6 +121,5 @@ const Start = () => {
       </div>
     </div>
   );
-};
 
 export default Start;

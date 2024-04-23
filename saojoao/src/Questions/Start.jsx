@@ -17,38 +17,41 @@ const Start = () => {
 
     if (!validateNumber(number)) {
       setError("Número inválido");
-    } else {
-      axios.post('http://localhost:3000/tel', {
-        Telefone: number
-      })
-        .then((response) => {
-          if (response.data.error) {
-            console.log(response.data.error);
-            setError(response.data.error);
-          } else {
-            const currentDate = new Date();
-            const day = String(currentDate.getDate()).padStart(2, '0');
-            const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-            const year = currentDate.getFullYear();
-            const formattedDate = `${day}/${month}/${year}`;
-            const hours = String(currentDate.getHours()).padStart(2, '0');
-            const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-            const formattedTime = `${hours}:${minutes}`;
-            const dateTimeString = `${formattedDate} ${formattedTime}`;
-            const numberString = `${number}`;
-
-            _feedbacks.unshift(numberString);
-            _feedbacks.unshift(dateTimeString);
-            setFeedbacks(_feedbacks);
-            console.log(_feedbacks);
-            navigate('/question2');
-          }
-        })
-        .catch((error) => {
-          console.error('Erro ao enviar o número:', error);
-          setError('Erro ao enviar o número, por favor, tente novamente.');
-        });
+      return;
     }
+
+    axios
+      .post('https://apisaojoao.onrender.com/telefone', {
+        telefone: number,
+      })
+      .then((response) => {
+        const msg = response.data.msg
+        if (msg) {
+          console.log(msg);
+          setError(msg);
+        } else {
+          const currentDate = new Date();
+          const day = String(currentDate.getDate()).padStart(2, '0');
+          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+          const year = currentDate.getFullYear();
+          const formattedDate = `${day}/${month}/${year}`;
+          const hours = String(currentDate.getHours()).padStart(2, '0');
+          const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+          const formattedTime = `${hours}:${minutes}`;
+          const dateTimeString = `${formattedDate} ${formattedTime}`;
+          const numberString = `${number}`;
+
+          _feedbacks.unshift(numberString);
+          _feedbacks.unshift(dateTimeString);
+          setFeedbacks(_feedbacks);
+          console.log(_feedbacks);
+          navigate('/question2')
+        }
+      })
+      .catch((error) => {
+        console.error('Erro ao enviar o número:', error);
+        setError('Banco de dados inativo');
+      });
   };
 
   const validateNumber = (number) => {

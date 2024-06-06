@@ -3,14 +3,13 @@ import '../Questions/Estilos/Start.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo São João/Logosaojoao.png';
 import { feedbackContext } from '../Context/FeedbackContext';
-import axios from 'axios';
 
 const Start = () => {
   const [number, setNumber] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { feedbacks, setFeedbacks } = useContext(feedbackContext);
-  let _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
+  const _feedbacks = Array.isArray(feedbacks) ? feedbacks : [];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,38 +19,16 @@ const Start = () => {
       return;
     }
 
-    axios
-      .post('https://apisaojoao.onrender.com/telefone', {
-        telefone: number,
-      })
-      .then((response) => {
-        const msg = response.data.msg
-        if (msg) {
-          console.log(msg);
-          setError(msg);
-        } else {
-          const currentDate = new Date();
-          const day = String(currentDate.getDate()).padStart(2, '0');
-          const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-          const year = currentDate.getFullYear();
-          const formattedDate = `${day}/${month}/${year}`;
-          const hours = String(currentDate.getHours()).padStart(2, '0');
-          const minutes = String(currentDate.getMinutes()).padStart(2, '0');
-          const formattedTime = `${hours}:${minutes}`;
-          const dateTimeString = `${formattedDate} ${formattedTime}`;
-          const numberString = `${number}`;
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString();
+    const formattedTime = currentDate.toLocaleTimeString();
+    const dateTimeString = `${formattedDate} ${formattedTime}`;
 
-          _feedbacks.unshift(numberString);
-          _feedbacks.unshift(dateTimeString);
-          setFeedbacks(_feedbacks);
-          console.log(_feedbacks);
-          navigate('/question2')
-        }
-      })
-      .catch((error) => {
-        console.error('Erro ao enviar o número:', error);
-        setError('Banco de dados inativo');
-      });
+    _feedbacks.unshift(number);
+    _feedbacks.unshift(dateTimeString);
+    setFeedbacks(_feedbacks);
+
+    navigate('/question2');
   };
 
   const validateNumber = (number) => {
